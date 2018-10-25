@@ -1,0 +1,90 @@
+
+//==============================
+// Variables
+//==============================
+
+//== colors tests =================
+
+$color_1: #FFFFFF;
+$color_2: #fb2b09; // Vermelho Elohs
+$color_3: #f3ad13; // Amarelo Barneys
+$color_4: #b93e37; // Vermelho Escuro
+$color_5: #f7eadd; // Vermelho Claro 1 
+$color_6: #e2c6aa; // Vemelho Claro 2
+$color_7: #eeeeef; // PRATA ESCURO
+$color_8: #c15f08; // Laranja Escuro
+$color_9: #999999; // Cinza Médio 2
+$color_10: #555555; // Cinza Escuro
+$color_11: #000000; // Preto
+$color_12: #44752f; // verde escuro
+$color_13: #EEEEEE; // verde claro
+$color_14: #efefef; // Cinza Claro 2
+$color_15: #d4cbaf; // Verde opaco claro
+$color_16: #d2c6aa; //BEGE claro
+$color_17: #167614; //Verde escuro botão
+$color_18: #56a256; //Verde
+$color_19: #a18c59; //Bege escuro
+$color_20: #f9ebd9; //Cor da section locais
+$color_21: #f9f9f9; //PRATA CLARO ELOHS SOBRE NÓS
+$color_22: #bb74eb; //ROXO ELOHS
+$color_23: #6b002a; //VERMELHO VINHO INTRO PAGE
+
+
+
+
+//== Utilities =================
+//Colors
+$cor_lilas: #4f4872;
+$cor_yellow: #feb933;
+
+//Fonts
+$fontFamily: "Acumin Pro";
+$font_size_text: 15px;
+$font_size_title_section: 45px;
+$font_size_title_section_m: 35px;
+$font_size_subtitle_section: 18px;
+$font_size_title_item: 16px;
+$font_size_subtitle_item: 16px;
+$line_height: 120%;
+
+
+//== Layout =====================
+//Regular Content
+$h_spacing: 4.166666666666667%;
+$v_spacing: 37.5px;
+
+//== Sizes =====================
+
+//Natural
+$numColumns: 24;
+$sizeColumns: 4.166666666666667%;
+$sizeColumns_px: 50px;
+
+//customizer
+$header_height_m: 100px;
+$header_height: $header_height_m * 1.25;
+
+
+
+
+//==============================
+// Components
+//==============================
+
+
+
+//==============================
+// Variables in queries
+//==============================
+
+$break-xs: 480px;
+$break-sm: 768px;
+$break-md: 960px;
+$break-lg: 1200px;
+$break-ex: 1400px;
+
+
+//==============================
+// Animate
+//==============================
+$time_animate: 0.5s; 

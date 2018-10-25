@@ -1,0 +1,102 @@
+.Site-header{
+	&-content{
+		padding-left: 5%;
+		padding-right: 5%;
+		max-width: 1500px;
+	}
+	background: rgba(0,0,0,0);
+	position: absolute;
+	
+	padding-top: $v_spacing / 4;
+	padding-bottom: $v_spacing / 4;
+
+	&-branding{
+		max-width: 220px;
+		height: 88px;
+		&-img{
+			height: 88px;
+		}
+		&-figure{
+			
+		}
+		&-type{
+			height: 66px;
+			width: 205px;
+			left: 10px;
+			& .ElementImg{
+				left: -20px;
+				letter-spacing: 4px;
+				font-size: 14px;
+				color: $color_2;
+				font-weight: bold;
+			}
+		}
+	}
+
+	@media screen and (min-width: $break-sm){
+
+		padding-top: $v_spacing / 2;
+		padding-bottom: $v_spacing / 2;
+		
+	}
+	
+
+
+
+	
+	// ===================
+	// CUSTOMIZER
+	// ===================
+.Site-header{
+	&-feature{
+		& .Navigation{
+			&-items{
+				&-item{
+					&-link{
+						color: $color_6;
+						&:hover{
+							color:$color_1;
+						}
+						& svg{
+							font-size: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.Site-header-branding-figure{
+	&--white{
+		background: url("../images/logo-elohs.png");
+		background-repeat: no-repeat;
+	  	background-position-x: 10px;
+   		background-position-y: 16px;
+	}
+	&--red{
+		background: url("../images/logo-elohs--red.png");
+		background-repeat: no-repeat;
+	  	background-position-x: 10px;
+   		background-position-y: 16px;
+	}
+    width: 200px;
+    height: 100px;
+}
+
+
+
+	// ===================
+	// CUSTOMIZER - END
+	// ===================
+
+	
+
+}
+
+
+.Branding{
+	&--img{
+	
+	}
+	
+}

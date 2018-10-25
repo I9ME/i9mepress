@@ -1,0 +1,942 @@
+.Button{
+	&--border{
+		&.hover{
+			&:hover{
+				background: $color_2;
+				border-color: $color_2;
+				color: $color_1;
+			}
+		}
+	}
+}
+
+.Section{
+// ===========
+// Structure
+// ===========
+
+	&-header{
+		&-title{
+			font-size: $font_size_title_section_m;
+			font-weight: normal;
+			@media screen and (min-width: $break-sm){
+				font-size: $font_size_title_section;
+			}
+			&--beforeTitleLine{
+				position: relative;
+				&:before{
+					position: absolute;
+					display: block;
+					left: 50%;
+					transform: translateX(-50%);
+					bottom:0px;
+					width: $sizeColumns_px * 1.5;
+					height: 1px;
+					content: "";
+				}
+			}
+		}
+
+		&-subtitle{
+			font-size: $font_size_subtitle_section;
+			margin: 0px;
+			padding: 0px;
+			font-weight: normal;
+			margin-top: 10px;	
+			font-size: $font_size_subtitle_section;
+
+		}
+	}
+	&-content{
+		&-subtitle{
+			font-size: $font_size_subtitle_section;
+			color: $color_11;
+		}
+
+	}
+
+		& .Section-items{
+			&-item{
+				&-figure{
+					&.u-floatLeft{
+							margin-right: 20px;
+							min-height: 90px;
+						}
+					&.FigureIcon{}
+					& .Item-img{
+						max-height: 500px;
+						&--full{
+							width: 100%;
+						}
+					}
+				}
+				&-title{
+					font-size: $font_size_title_item;
+				}
+				&-subtitle{
+					font-size: $font_size_subtitle_item;
+				}
+				&-resume{
+					font-size: $font_size_text;
+				}
+				&-text{
+					font-size: $font_size_text;
+					& p{
+						padding-top: 10px;
+					}
+				}
+
+				& .subSection{
+					&-text{
+						font-size: 16px;
+					}
+
+				}
+
+				&--divisor{
+					//padding-right: 15px;
+					//margin-right: 15px;
+					position: relative;
+						&:before{
+							position: absolute;
+							display: block;
+							width: 1px;
+							height: 50%;
+							background: $color_9;
+							top: 50%;
+							-moz-transform: translateY(-50%);
+							-webkit-transform: translateY(-50%);
+							transform: translateY(-50%);
+							right: -0.5px;
+							content: "";
+							z-index: 2;
+						}
+				}
+				
+
+				&-caption{
+					left: 0px;
+					bottom: 0px;
+					text-align: center;
+					@media screen and (min-width: $break-sm){
+						text-align: left;
+					}
+					& .title{
+						color: $color_1;
+						font-weight: 500;
+						font-size: 16px;
+						& em{
+							font-size: 24px;
+							margin-top: 5px;
+							}
+					}
+					& .ReadMore{
+						font-weight: bold;
+					}
+					&--label{
+						width: auto;
+						padding: 10px;
+						&--footer{
+							bottom: -15px;
+						}
+					}
+					&--light{
+						& h4{
+							font-size: 14px;
+							& em{
+								font-size: 18px;
+							}
+							}	
+					}
+
+				}
+				& .Button{
+					&--border{
+						font-weight: bold;
+					}
+				}
+
+			}
+
+
+		}
+
+		& .Features{
+			&-items{
+				&-item{
+					&-value{
+
+					}
+				}
+			}
+		}
+
+		& .subSection{
+			&-items{
+				&-item{
+					&-content{}
+					&-title{
+						font-size: $font_size_title_item;
+					}
+					&-text{}
+				}
+			}
+
+		}
+
+		& .navController{
+		
+			&--prev{}
+			&--next{}
+			&--content{
+			}	
+
+		}
+
+		
+		& .Navigation{
+			&--tabs{
+				top: 10px;
+				left: 50%;
+				transform: translateX(-50%);
+
+				&-items{
+					&:before{
+						position: absolute;
+						display: block;
+						width: 100%;
+						height: 4px;
+						background: $color_5;
+						content: "";
+						top: 20px;
+					}
+					&-item{
+						& .Navigation-link{
+							color: $color_7;
+							font-size: $font_size_subtitle_section;
+							width: 40px;
+							height: 40px;
+							background: $color_5;
+
+							&--history{
+								border-radius: 50px;
+							}
+							&--photos{
+								border-radius: 50px;
+							}
+							&--videos{
+								border-radius: 50px;
+							}
+							
+						}
+						&.is-active{
+							& .Navigation-link{
+								& .FigureIcon{
+									opacity: 0.5;
+								}
+							}
+						}
+					} //-item	
+				}
+			}	
+			@media screen and (min-width: $break-sm){
+				&--tabs{
+					top: 150px;
+					left: calc(50% - 50px);
+					transform: translateX(-50%);
+					width: 40px !important;
+					height: 300px;
+					padding: 0px !important;
+
+					&-items{
+						&:before{
+							position: absolute;
+							display: block;
+							width: 4px;
+							height: 100%;
+							background: $color_5;
+							content: "";
+							top: 0px;
+							left: 50%;
+							transform: translateX(-50%);
+						}
+						&-item{
+							& .Navigation-link{
+								color: $color_7;
+								font-size: $font_size_subtitle_section;
+								width: 40px;
+								height: 40px;
+								background: $color_5;
+
+								&--history{
+									border-radius: 50px;
+								}
+								&--photos{
+									border-radius: 50px;
+								}
+								&--videos{
+									border-radius: 50px;
+								}
+								
+							}
+							&.is-active{
+								& .Navigation-link{
+									& .FigureIcon{
+										opacity: 0.5;
+									}
+								}
+							}
+						} //-item	
+					}
+				}				
+			}
+		} // .Navigation
+
+		& .Items{
+			&--tabs{
+				& .Item{
+					display: none;
+					&-content{
+						opacity: 0;
+					}
+					&.is-active{
+						display: block;
+						& .Item-content{
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
+
+		& .Section-table{
+			&-thead{
+				&-item{
+					width: 25%;
+					
+					&-title{
+						min-height: 50px;
+						font-size: 14px;
+						& .Display{
+							&--desktop{
+								display: none;
+							}
+							&--mobile{
+								display: block;
+							}
+						}
+
+					}
+					@media screen and (min-width: $break-sm){
+						width: 25%;
+						&-title{
+							min-height: 70px;
+							font-size: 22px;
+							& .Display{
+								&--desktop{
+									display: block;
+								}
+								&--mobile{
+									display: none;
+								}
+							}
+						}
+					}
+				}
+			}
+			&-tbody{
+				&-item{
+					padding: 2px 5px;
+					&-title{
+						font-size: 13px;
+					}
+					& span{
+						display: inline-block;
+						position: relative;
+						padding: 5px 5px;
+						border: 1px solid $color_7;
+						border-radius: 50px;
+						& i{
+							position: relative;
+							display: block;
+							width: 25px;
+							height: 25px;
+							background: none;
+							border-radius: 50px;
+							& svg{
+								display: none;
+								font-size: 18px;
+								color: $color_1;
+								width: 60%;
+								height: 60%;
+								margin: 20% 0 0 0;
+								}
+						}
+					}
+					
+					@media screen and (min-width: $break-sm){
+						&-title{
+							font-size: 18px;
+						}
+						& span{
+							padding: 7px 45px;
+						}
+					}
+				}
+			}
+
+		}
+
+	
+
+
+	
+
+
+	// =============
+	// STYLES
+	// =============
+	&--style1{ //<section> style section
+		color: $color_10;
+
+		& .Section-header{
+			&-title{
+				color: $color_10;
+				&--beforeTitleLine{
+					&:before{
+						background: $color_10;
+					}
+				}
+			}
+			&-subtitle{
+				color: $color_10;
+				font-size: 20px;
+			}
+		}
+
+		& .Section{
+			&-header{
+				&-title{
+					color: $color_11;
+					font-weight: bolder;
+					@media screen and (min-width: $break-md){
+					}
+					&--beforeTitleLine{
+						&:before{
+							background: $color_10;
+						}
+					}
+				}
+				&-subtitle{
+					color: $color_10;
+					font-weight: bolder;
+				}
+			}
+		}
+	
+		& .ReadMore{
+			border-color: $color_2;
+			&--border{
+				color: $color_2;
+				background: none;
+			}
+			&--background{
+				color: $color_1 !important;
+				background: $color_2;
+				&:hover{
+					background: $color_3;
+				}
+			}
+			
+			&--icon{
+				color: $color_1;
+				background: $color_3;
+				border-color: $color_3;
+				&:hover{
+					background: $color_5;
+				}
+			}
+		}
+		& .Section-items{
+			&-item{
+				&-figure{
+					& .FigureIcon{}
+				}
+				&-title,
+				&-title a{
+					color: $color_2;
+				}
+				&-subtitle{
+					color: $color_2;
+				}
+				&-resume{
+					color: $color_10;
+				}
+
+				&-caption{
+					background: rgba(0,0,0,0.5);
+					@media screen and (min-width: $break-sm){
+						text-align: left;
+					}
+					& .title{
+						color: $color_1;
+					}
+					& .ReadMore--border{
+						color: $color_1;
+						border-color: $color_1;
+						background: none;
+					}
+					&--light{
+						background: none;
+					}
+
+				}
+			}
+		}
+		& .Button--border{
+
+					border-color: $color_2;
+					color: $color_2;
+					font-weight: bold;
+		}
+		
+		& .navController{
+			&--prev{}
+			&--next{}
+			&--content{
+				color: $color_1 !important;
+				& svg{
+					font-size: 20px;
+				}
+			}	
+
+			&--border{
+				border-color: $color_8;
+				background: $color_1;
+				color: $color_2;
+				&:hover{
+					border-color: $color_1 !important;
+					box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.25);
+				}
+			}
+			&.ReadMore{
+				&--background{
+					background-color: $color_2;
+					border-color: $color_2;
+					color: $color_1;
+				}
+
+			}
+			&--tabs{
+				background-color: $color_7;
+				border-color: $color_7;
+				color: $color_2;
+				&.active{
+					background-color: $color_2;
+					border-color: $color_2;
+					color: $color_1
+				}
+			}
+		}
+		
+
+		&.LineUp{
+			//border-top: 3px solid $color_2;
+			border-top: none;
+			&:before{
+				position: absolute;
+				display: block;
+				width: 100%;
+				height: 3px;
+				top: 0px;
+				left: 0px;
+				content: "";
+				moz-background: linear-gradient(to right, $color_2 35%, $color_3);
+			    -webkit-background: linear-gradient(to right, $color_2 35%, $color_3);
+			    background: linear-gradient(to right, $color_2 35%, $color_3);
+			}
+		}
+	}
+	
+	&--style2{ //<section> style section
+		color: $color_1;
+		background: $color_2;
+		& .Section-header{
+			&-title{
+				color: $color_1;
+				&--beforeTitleLine{
+					&:before{
+						background: $color_1;
+					}
+				}
+			}
+			&-subtitle{
+				color: $color_1;
+			}
+		}
+		& .ReadMore{
+			border-color: $color_1;
+			&--border{
+				color: $color_1;
+				background: none;
+			}
+			&--background{
+				color: $color_2;
+				background: $color_1;
+			}
+			
+			&--icon{
+				color: $color_1;
+				background: $color_3;
+				border-color: $color_3;
+			}
+		}
+		& .Section-items{
+			&-item{
+				&-figure{
+					& .FigureIcon{}
+				}
+				&-title{
+					color: $color_3;
+				}
+				&-subtitle{
+					color: $color_1;
+				}
+				&-resume{
+					color: $color_1;
+				}
+				
+				&-caption{
+					background: rgba(0,0,0,0.5);
+					@media screen and (min-width: $break-sm){
+						text-align: left;
+					}
+					& .title{
+						color: $color_1;
+					}
+					& .readMore{
+						color: $color_1;
+						border-color: $color_1;
+						background: none;
+					}
+					&--light{
+						background: none;
+					}
+				}
+			}
+		}
+		& .Button--border{
+					border-color: $color_1;
+					color: $color_1;
+					font-weight: bold;	
+		}
+		& .Button--background{
+					border-color: $color_3;
+					background: $color_3;
+					color: $color_2;
+					font-weight: bold;	
+		}
+		& .Button--background.Button--border{
+					border-color: $color_3;
+					color: $color_2;
+					&:hover{
+						background: none;
+						color: $color_1;
+						border-color: $color_1;
+					}
+		}
+		& .navController{
+			&--border{
+				border-color: $color_8;
+				background: $color_1;
+				&:hover{
+					border-color: $color_1 !important;
+					box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.25);
+				}
+			}
+			&--all{
+				&.Button{
+					background: $color_2;
+					border-color: $color_2;
+				}
+			}
+		}
+	}
+	&--style3{ //<section> style section
+		color: $color_1;
+		background: $color_3;
+		& .Section-header{
+			&-title{
+				color: $color_2;
+			}
+			&-subtitle{
+				color: $color_2;
+			}
+		}
+		& .ReadMore{
+			border-color: $color_2;
+			&--border{
+				color: $color_2;
+				background: none;
+			}
+			&--background{
+				color: $color_3;
+				background: $color_2;
+			}
+			
+			&--icon{
+				color: $color_3;
+				background: $color_2;
+				border-color: $color_2;
+			}
+		}
+		& .Section-items{
+			&-item{
+				&-figure{
+					& .FigureIcon{}
+				}
+				&-title{
+					color: $color_2;
+				}
+				&-subtitle{
+					color: $color_1;
+				}
+				&-resume{
+					color: $color_1;
+				}
+				
+				&-caption{
+					background: rgba(0,0,0,0.5);
+					@media screen and (min-width: $break-sm){
+						text-align: left;
+					}
+					& .title{
+						color: $color_1;
+					}
+					& .readMore{
+						color: $color_1;
+						border-color: $color_1;
+						background: none;
+					}
+					&--light{
+						background: none;
+					}
+				}
+			}
+		}
+		& .Button--border{
+
+					border-color: $color_2;
+					color: $color_2;
+					font-weight: bold;
+			
+		}
+		& .navController{
+			&--border{
+				border-color: $color_8;
+				background: $color_1;
+				&:hover{
+					border-color: $color_1 !important;
+					box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.25);
+				}
+			}
+			&--all{
+				&.Button{
+					background: $color_2;
+					border-color: $color_2;
+				}
+			}
+		}
+	}
+
+	// ========================
+	// .Section-imageMain
+	// ========================
+	&-imageMain{
+				// .Section-imageMain--left
+				&--left{
+
+					& .Section-imageMain{
+						&-figure{
+							&--first{
+								margin-left: -20px;
+							}
+							&--second{
+								left: -31px;
+								transform: rotate(-45deg) !important;
+								&.u-isScrollFade--on{
+									transform: rotate(45deg) !important;
+								}
+							}
+							&--third{
+								left: -30px;
+								transform: rotate(45deg) !important;
+								&.u-isScrollFade--on{
+									transform: rotate(-45deg) !important;
+								}
+							}
+							@media screen and (min-width: $break-sm){
+								&--first{
+									margin-left: -200px;
+								}
+								&--second{
+									left: -310px;
+									transform: rotate(-45deg) !important;
+									&.u-isScrollFade--on{
+										transform: rotate(45deg) !important;
+									}
+								}
+								&--third{
+									left: -300px;
+									transform: rotate(45deg) !important;
+									&.u-isScrollFade--on{
+										transform: rotate(-45deg) !important;
+									}
+								}
+							}
+
+							@media screen and (min-width: $break-md){
+
+								&--first{
+									margin-left: -150px;
+								}
+								&--second{
+									left: -210px;
+								}
+								&--third{
+									left: -200px;
+								}
+							}
+						}
+					}
+				}
+				// .Section-ImageMain--right
+				&--right{
+
+					& .Section-imageMain{
+						&-figure{
+							&--first{
+								right: -20px;
+							}
+							&--second{
+								right: -31px;
+								transform: rotate(-45deg) !important;
+								&.u-isScrollFade--on{
+									transform: rotate(45deg) !important;
+								}
+							}
+							&--third{
+								right: -30px;
+								transform: rotate(45deg) !important;
+								&.u-isScrollFade--on{
+									transform: rotate(-45deg) !important;
+								}
+							}
+							@media screen and (min-width: $break-sm){
+								&--first{
+									right: -20px;
+								}
+								&--second{
+									right: -31px;
+									transform: rotate(-45deg) !important;
+									&.u-isScrollFade--on{
+										transform: rotate(45deg) !important;
+									}
+								}
+								&--third{
+									right: -300px;
+									transform: rotate(45deg) !important;
+									&.u-isScrollFade--on{
+										transform: rotate(-45deg) !important;
+									}
+								}
+							}
+
+							@media screen and (min-width: $break-md){
+
+								&--first{
+									right: -150px;
+								}
+								&--second{
+									right: -210px;
+								}
+								&--third{
+									right: -200px;
+								}
+							}
+						}
+					}
+				}
+				&-figure{
+
+						&--first{	
+						}
+						&--second{
+							top:0px;
+						}
+						&--third{
+							top: -80px;
+						}
+					
+				}
+			}
+
+
+	//==============
+	// CROSS STYLES
+	//=============
+
+	&--crossStyle{
+		&Color_1{
+			& .Section-header{
+			&-title{
+				color: $color_1;
+			}
+			&-subtitle{
+				color: $color_1;
+				font-weight: bold;
+				font-size: 24px;
+			}
+			& .Button{
+				color: $color_1;
+				border-color: $color_1;
+				&:hover{
+					border-color: $color_2 !important;
+					background: $color_2 !important;
+					color: $color_3 !important;
+				}
+			}
+		}
+		}
+	}
+
+	//==============
+	// SUBSEÇÃO
+	//=============
+
+	
+
+	// begins with .Section
+
+
+	// ===================
+	// CUSTOMIZER
+	// ===================
+	
+	//DESENVOLVA ATERAÇÕES VIA SASS AQUI
+
+	// ===================
+	// CUSTOMIZER - END
+	// ===================
+
+	
+	// continued with .Section
+
+
+	// =================
+	// FOOTER
+	// =================
+
+
+	// end class .Section
+	}

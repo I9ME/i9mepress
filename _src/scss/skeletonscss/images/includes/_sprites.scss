@@ -1,0 +1,343 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$-figure-icon-alvo-color2-name: 'FigureIcon--alvo--color2';
+$-figure-icon-alvo-color2-x: 0px;
+$-figure-icon-alvo-color2-y: 100px;
+$-figure-icon-alvo-color2-offset-x: 0px;
+$-figure-icon-alvo-color2-offset-y: -100px;
+$-figure-icon-alvo-color2-width: 100px;
+$-figure-icon-alvo-color2-height: 100px;
+$-figure-icon-alvo-color2-total-width: 475px;
+$-figure-icon-alvo-color2-total-height: 300px;
+$-figure-icon-alvo-color2-image: '../images/sprite.png';
+$-figure-icon-alvo-color2: (0px, 100px, 0px, -100px, 100px, 100px, 475px, 300px, '../images/sprite.png', 'FigureIcon--alvo--color2', );
+$-figure-icon-alvo-name: 'FigureIcon--alvo';
+$-figure-icon-alvo-x: 100px;
+$-figure-icon-alvo-y: 100px;
+$-figure-icon-alvo-offset-x: -100px;
+$-figure-icon-alvo-offset-y: -100px;
+$-figure-icon-alvo-width: 100px;
+$-figure-icon-alvo-height: 100px;
+$-figure-icon-alvo-total-width: 475px;
+$-figure-icon-alvo-total-height: 300px;
+$-figure-icon-alvo-image: '../images/sprite.png';
+$-figure-icon-alvo: (100px, 100px, -100px, -100px, 100px, 100px, 475px, 300px, '../images/sprite.png', 'FigureIcon--alvo', );
+$-figure-icon-analise-de-custos-name: 'FigureIcon--analise-de-custos';
+$-figure-icon-analise-de-custos-x: 186px;
+$-figure-icon-analise-de-custos-y: 200px;
+$-figure-icon-analise-de-custos-offset-x: -186px;
+$-figure-icon-analise-de-custos-offset-y: -200px;
+$-figure-icon-analise-de-custos-width: 57px;
+$-figure-icon-analise-de-custos-height: 57px;
+$-figure-icon-analise-de-custos-total-width: 475px;
+$-figure-icon-analise-de-custos-total-height: 300px;
+$-figure-icon-analise-de-custos-image: '../images/sprite.png';
+$-figure-icon-analise-de-custos: (186px, 200px, -186px, -200px, 57px, 57px, 475px, 300px, '../images/sprite.png', 'FigureIcon--analise-de-custos', );
+$-figure-icon-assessoria-cambial-name: 'FigureIcon--assessoria-cambial';
+$-figure-icon-assessoria-cambial-x: 374px;
+$-figure-icon-assessoria-cambial-y: 170px;
+$-figure-icon-assessoria-cambial-offset-x: -374px;
+$-figure-icon-assessoria-cambial-offset-y: -170px;
+$-figure-icon-assessoria-cambial-width: 64px;
+$-figure-icon-assessoria-cambial-height: 64px;
+$-figure-icon-assessoria-cambial-total-width: 475px;
+$-figure-icon-assessoria-cambial-total-height: 300px;
+$-figure-icon-assessoria-cambial-image: '../images/sprite.png';
+$-figure-icon-assessoria-cambial: (374px, 170px, -374px, -170px, 64px, 64px, 475px, 300px, '../images/sprite.png', 'FigureIcon--assessoria-cambial', );
+$-figure-icon-busca-color2-name: 'FigureIcon--busca--color2';
+$-figure-icon-busca-color2-x: 207px;
+$-figure-icon-busca-color2-y: 0px;
+$-figure-icon-busca-color2-offset-x: -207px;
+$-figure-icon-busca-color2-offset-y: 0px;
+$-figure-icon-busca-color2-width: 100px;
+$-figure-icon-busca-color2-height: 98px;
+$-figure-icon-busca-color2-total-width: 475px;
+$-figure-icon-busca-color2-total-height: 300px;
+$-figure-icon-busca-color2-image: '../images/sprite.png';
+$-figure-icon-busca-color2: (207px, 0px, -207px, 0px, 100px, 98px, 475px, 300px, '../images/sprite.png', 'FigureIcon--busca--color2', );
+$-figure-icon-busca-name: 'FigureIcon--busca';
+$-figure-icon-busca-x: 105px;
+$-figure-icon-busca-y: 0px;
+$-figure-icon-busca-offset-x: -105px;
+$-figure-icon-busca-offset-y: 0px;
+$-figure-icon-busca-width: 102px;
+$-figure-icon-busca-height: 100px;
+$-figure-icon-busca-total-width: 475px;
+$-figure-icon-busca-total-height: 300px;
+$-figure-icon-busca-image: '../images/sprite.png';
+$-figure-icon-busca: (105px, 0px, -105px, 0px, 102px, 100px, 475px, 300px, '../images/sprite.png', 'FigureIcon--busca', );
+$-figure-icon-caixa-color2-name: 'FigureIcon--caixa--color2';
+$-figure-icon-caixa-color2-x: 207px;
+$-figure-icon-caixa-color2-y: 98px;
+$-figure-icon-caixa-color2-offset-x: -207px;
+$-figure-icon-caixa-color2-offset-y: -98px;
+$-figure-icon-caixa-color2-width: 100px;
+$-figure-icon-caixa-color2-height: 95px;
+$-figure-icon-caixa-color2-total-width: 475px;
+$-figure-icon-caixa-color2-total-height: 300px;
+$-figure-icon-caixa-color2-image: '../images/sprite.png';
+$-figure-icon-caixa-color2: (207px, 98px, -207px, -98px, 100px, 95px, 475px, 300px, '../images/sprite.png', 'FigureIcon--caixa--color2', );
+$-figure-icon-caixa-name: 'FigureIcon--caixa';
+$-figure-icon-caixa-x: 0px;
+$-figure-icon-caixa-y: 0px;
+$-figure-icon-caixa-offset-x: 0px;
+$-figure-icon-caixa-offset-y: 0px;
+$-figure-icon-caixa-width: 105px;
+$-figure-icon-caixa-height: 100px;
+$-figure-icon-caixa-total-width: 475px;
+$-figure-icon-caixa-total-height: 300px;
+$-figure-icon-caixa-image: '../images/sprite.png';
+$-figure-icon-caixa: (0px, 0px, 0px, 0px, 105px, 100px, 475px, 300px, '../images/sprite.png', 'FigureIcon--caixa', );
+$-figure-icon-check-name: 'FigureIcon--check';
+$-figure-icon-check-x: 307px;
+$-figure-icon-check-y: 100px;
+$-figure-icon-check-offset-x: -307px;
+$-figure-icon-check-offset-y: -100px;
+$-figure-icon-check-width: 70px;
+$-figure-icon-check-height: 70px;
+$-figure-icon-check-total-width: 475px;
+$-figure-icon-check-total-height: 300px;
+$-figure-icon-check-image: '../images/sprite.png';
+$-figure-icon-check: (307px, 100px, -307px, -100px, 70px, 70px, 475px, 300px, '../images/sprite.png', 'FigureIcon--check', );
+$-figure-icon-documento-color2-name: 'FigureIcon--documento--color2';
+$-figure-icon-documento-color2-x: 0px;
+$-figure-icon-documento-color2-y: 200px;
+$-figure-icon-documento-color2-offset-x: 0px;
+$-figure-icon-documento-color2-offset-y: -200px;
+$-figure-icon-documento-color2-width: 93px;
+$-figure-icon-documento-color2-height: 100px;
+$-figure-icon-documento-color2-total-width: 475px;
+$-figure-icon-documento-color2-total-height: 300px;
+$-figure-icon-documento-color2-image: '../images/sprite.png';
+$-figure-icon-documento-color2: (0px, 200px, 0px, -200px, 93px, 100px, 475px, 300px, '../images/sprite.png', 'FigureIcon--documento--color2', );
+$-figure-icon-documento-name: 'FigureIcon--documento';
+$-figure-icon-documento-x: 93px;
+$-figure-icon-documento-y: 200px;
+$-figure-icon-documento-offset-x: -93px;
+$-figure-icon-documento-offset-y: -200px;
+$-figure-icon-documento-width: 93px;
+$-figure-icon-documento-height: 100px;
+$-figure-icon-documento-total-width: 475px;
+$-figure-icon-documento-total-height: 300px;
+$-figure-icon-documento-image: '../images/sprite.png';
+$-figure-icon-documento: (93px, 200px, -93px, -200px, 93px, 100px, 475px, 300px, '../images/sprite.png', 'FigureIcon--documento', );
+$-figure-icon-exportacao-name: 'FigureIcon--exportacao';
+$-figure-icon-exportacao-x: 307px;
+$-figure-icon-exportacao-y: 170px;
+$-figure-icon-exportacao-offset-x: -307px;
+$-figure-icon-exportacao-offset-y: -170px;
+$-figure-icon-exportacao-width: 67px;
+$-figure-icon-exportacao-height: 67px;
+$-figure-icon-exportacao-total-width: 475px;
+$-figure-icon-exportacao-total-height: 300px;
+$-figure-icon-exportacao-image: '../images/sprite.png';
+$-figure-icon-exportacao: (307px, 170px, -307px, -170px, 67px, 67px, 475px, 300px, '../images/sprite.png', 'FigureIcon--exportacao', );
+$-figure-icon-feiras-internacionais-name: 'FigureIcon--feiras-internacionais';
+$-figure-icon-feiras-internacionais-x: 367px;
+$-figure-icon-feiras-internacionais-y: 237px;
+$-figure-icon-feiras-internacionais-offset-x: -367px;
+$-figure-icon-feiras-internacionais-offset-y: -237px;
+$-figure-icon-feiras-internacionais-width: 58px;
+$-figure-icon-feiras-internacionais-height: 58px;
+$-figure-icon-feiras-internacionais-total-width: 475px;
+$-figure-icon-feiras-internacionais-total-height: 300px;
+$-figure-icon-feiras-internacionais-image: '../images/sprite.png';
+$-figure-icon-feiras-internacionais: (367px, 237px, -367px, -237px, 58px, 58px, 475px, 300px, '../images/sprite.png', 'FigureIcon--feiras-internacionais', );
+$-figure-icon-importacao-name: 'FigureIcon--importacao';
+$-figure-icon-importacao-x: 377px;
+$-figure-icon-importacao-y: 100px;
+$-figure-icon-importacao-offset-x: -377px;
+$-figure-icon-importacao-offset-y: -100px;
+$-figure-icon-importacao-width: 69px;
+$-figure-icon-importacao-height: 68px;
+$-figure-icon-importacao-total-width: 475px;
+$-figure-icon-importacao-total-height: 300px;
+$-figure-icon-importacao-image: '../images/sprite.png';
+$-figure-icon-importacao: (377px, 100px, -377px, -100px, 69px, 68px, 475px, 300px, '../images/sprite.png', 'FigureIcon--importacao', );
+$-figure-icon-inspecao-de-cargas-name: 'FigureIcon--inspecao-de-cargas';
+$-figure-icon-inspecao-de-cargas-x: 307px;
+$-figure-icon-inspecao-de-cargas-y: 237px;
+$-figure-icon-inspecao-de-cargas-offset-x: -307px;
+$-figure-icon-inspecao-de-cargas-offset-y: -237px;
+$-figure-icon-inspecao-de-cargas-width: 60px;
+$-figure-icon-inspecao-de-cargas-height: 60px;
+$-figure-icon-inspecao-de-cargas-total-width: 475px;
+$-figure-icon-inspecao-de-cargas-total-height: 300px;
+$-figure-icon-inspecao-de-cargas-image: '../images/sprite.png';
+$-figure-icon-inspecao-de-cargas: (307px, 237px, -307px, -237px, 60px, 60px, 475px, 300px, '../images/sprite.png', 'FigureIcon--inspecao-de-cargas', );
+$-figure-icon-linked-name: 'FigureIcon--linked';
+$-figure-icon-linked-x: 425px;
+$-figure-icon-linked-y: 237px;
+$-figure-icon-linked-offset-x: -425px;
+$-figure-icon-linked-offset-y: -237px;
+$-figure-icon-linked-width: 43px;
+$-figure-icon-linked-height: 43px;
+$-figure-icon-linked-total-width: 475px;
+$-figure-icon-linked-total-height: 300px;
+$-figure-icon-linked-image: '../images/sprite.png';
+$-figure-icon-linked: (425px, 237px, -425px, -237px, 43px, 43px, 475px, 300px, '../images/sprite.png', 'FigureIcon--linked', );
+$-figure-icon-logo-elohs-red-name: 'FigureIcon--logo-elohs--red';
+$-figure-icon-logo-elohs-red-x: 307px;
+$-figure-icon-logo-elohs-red-y: 0px;
+$-figure-icon-logo-elohs-red-offset-x: -307px;
+$-figure-icon-logo-elohs-red-offset-y: 0px;
+$-figure-icon-logo-elohs-red-width: 168px;
+$-figure-icon-logo-elohs-red-height: 50px;
+$-figure-icon-logo-elohs-red-total-width: 475px;
+$-figure-icon-logo-elohs-red-total-height: 300px;
+$-figure-icon-logo-elohs-red-image: '../images/sprite.png';
+$-figure-icon-logo-elohs-red: (307px, 0px, -307px, 0px, 168px, 50px, 475px, 300px, '../images/sprite.png', 'FigureIcon--logo-elohs--red', );
+$-figure-icon-logo-elohs-name: 'FigureIcon--logo-elohs';
+$-figure-icon-logo-elohs-x: 307px;
+$-figure-icon-logo-elohs-y: 50px;
+$-figure-icon-logo-elohs-offset-x: -307px;
+$-figure-icon-logo-elohs-offset-y: -50px;
+$-figure-icon-logo-elohs-width: 168px;
+$-figure-icon-logo-elohs-height: 50px;
+$-figure-icon-logo-elohs-total-width: 475px;
+$-figure-icon-logo-elohs-total-height: 300px;
+$-figure-icon-logo-elohs-image: '../images/sprite.png';
+$-figure-icon-logo-elohs: (307px, 50px, -307px, -50px, 168px, 50px, 475px, 300px, '../images/sprite.png', 'FigureIcon--logo-elohs', );
+$-figure-icon-mensagem-express-name: 'FigureIcon--mensagem-express';
+$-figure-icon-mensagem-express-x: 243px;
+$-figure-icon-mensagem-express-y: 200px;
+$-figure-icon-mensagem-express-offset-x: -243px;
+$-figure-icon-mensagem-express-offset-y: -200px;
+$-figure-icon-mensagem-express-width: 34px;
+$-figure-icon-mensagem-express-height: 20px;
+$-figure-icon-mensagem-express-total-width: 475px;
+$-figure-icon-mensagem-express-total-height: 300px;
+$-figure-icon-mensagem-express-image: '../images/sprite.png';
+$-figure-icon-mensagem-express: (243px, 200px, -243px, -200px, 34px, 20px, 475px, 300px, '../images/sprite.png', 'FigureIcon--mensagem-express', );
+$-figure-icon-mensagem-name: 'FigureIcon--mensagem';
+$-figure-icon-mensagem-x: 446px;
+$-figure-icon-mensagem-y: 136px;
+$-figure-icon-mensagem-offset-x: -446px;
+$-figure-icon-mensagem-offset-y: -136px;
+$-figure-icon-mensagem-width: 27px;
+$-figure-icon-mensagem-height: 27px;
+$-figure-icon-mensagem-total-width: 475px;
+$-figure-icon-mensagem-total-height: 300px;
+$-figure-icon-mensagem-image: '../images/sprite.png';
+$-figure-icon-mensagem: (446px, 136px, -446px, -136px, 27px, 27px, 475px, 300px, '../images/sprite.png', 'FigureIcon--mensagem', );
+$-figure-icon-seta-color2-name: 'FigureIcon--seta--color2';
+$-figure-icon-seta-color2-x: 446px;
+$-figure-icon-seta-color2-y: 100px;
+$-figure-icon-seta-color2-offset-x: -446px;
+$-figure-icon-seta-color2-offset-y: -100px;
+$-figure-icon-seta-color2-width: 21px;
+$-figure-icon-seta-color2-height: 36px;
+$-figure-icon-seta-color2-total-width: 475px;
+$-figure-icon-seta-color2-total-height: 300px;
+$-figure-icon-seta-color2-image: '../images/sprite.png';
+$-figure-icon-seta-color2: (446px, 100px, -446px, -100px, 21px, 36px, 475px, 300px, '../images/sprite.png', 'FigureIcon--seta--color2', );
+$-figure-icon-seta-down-name: 'FigureIcon--seta-down';
+$-figure-icon-seta-down-x: 243px;
+$-figure-icon-seta-down-y: 220px;
+$-figure-icon-seta-down-offset-x: -243px;
+$-figure-icon-seta-down-offset-y: -220px;
+$-figure-icon-seta-down-width: 19px;
+$-figure-icon-seta-down-height: 31px;
+$-figure-icon-seta-down-total-width: 475px;
+$-figure-icon-seta-down-total-height: 300px;
+$-figure-icon-seta-down-image: '../images/sprite.png';
+$-figure-icon-seta-down: (243px, 220px, -243px, -220px, 19px, 31px, 475px, 300px, '../images/sprite.png', 'FigureIcon--seta-down', );
+$-figure-icon-seta-name: 'FigureIcon--seta';
+$-figure-icon-seta-x: 438px;
+$-figure-icon-seta-y: 170px;
+$-figure-icon-seta-offset-x: -438px;
+$-figure-icon-seta-offset-y: -170px;
+$-figure-icon-seta-width: 21px;
+$-figure-icon-seta-height: 36px;
+$-figure-icon-seta-total-width: 475px;
+$-figure-icon-seta-total-height: 300px;
+$-figure-icon-seta-image: '../images/sprite.png';
+$-figure-icon-seta: (438px, 170px, -438px, -170px, 21px, 36px, 475px, 300px, '../images/sprite.png', 'FigureIcon--seta', );
+$-figure-icon-telefone-name: 'FigureIcon--telefone';
+$-figure-icon-telefone-x: 438px;
+$-figure-icon-telefone-y: 206px;
+$-figure-icon-telefone-offset-x: -438px;
+$-figure-icon-telefone-offset-y: -206px;
+$-figure-icon-telefone-width: 27px;
+$-figure-icon-telefone-height: 27px;
+$-figure-icon-telefone-total-width: 475px;
+$-figure-icon-telefone-total-height: 300px;
+$-figure-icon-telefone-image: '../images/sprite.png';
+$-figure-icon-telefone: (438px, 206px, -438px, -206px, 27px, 27px, 475px, 300px, '../images/sprite.png', 'FigureIcon--telefone', );
+$spritesheet-width: 475px;
+$spritesheet-height: 300px;
+$spritesheet-image: '../images/sprite.png';
+$spritesheet-sprites: ($-figure-icon-alvo-color2, $-figure-icon-alvo, $-figure-icon-analise-de-custos, $-figure-icon-assessoria-cambial, $-figure-icon-busca-color2, $-figure-icon-busca, $-figure-icon-caixa-color2, $-figure-icon-caixa, $-figure-icon-check, $-figure-icon-documento-color2, $-figure-icon-documento, $-figure-icon-exportacao, $-figure-icon-feiras-internacionais, $-figure-icon-importacao, $-figure-icon-inspecao-de-cargas, $-figure-icon-linked, $-figure-icon-logo-elohs-red, $-figure-icon-logo-elohs, $-figure-icon-mensagem-express, $-figure-icon-mensagem, $-figure-icon-seta-color2, $-figure-icon-seta-down, $-figure-icon-seta, $-figure-icon-telefone, );
+$spritesheet: (475px, 300px, '../images/sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
