@@ -221,14 +221,6 @@ echo'<svg style="position: absolute; width: 0; height: 0; overflow: hidden;" ver
 add_action( 'wp_footer', 'theme_footer_script' );
 
 
-//=====================
-//Sessão para a escolha do Idioma
-//=====================
-		
-	//Sessions PHP
-
-//get_template_part( 'inc/function', 'language' );
-
 
 function linkHome(){
 	if( is_home() || is_front_page() ) {
