@@ -714,7 +714,7 @@ function column_orderby ( $vars ) {
 
 //DIMINUI O TAMANHO DO EXCERPT EM NOTÍCIAS DA ELOHS
 
-add_filter('excerpt_length', 'custom_excerpt_length');
-function custom_excerpt_length($length) {
-return 30; //Nova quantidade de caracteres do excerpt
-}
+// add_filter('excerpt_length', 'custom_excerpt_length');
+// function custom_excerpt_length($length) {
+// return 30; //Nova quantidade de caracteres do excerpt
+// }

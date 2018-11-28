@@ -11,16 +11,6 @@
 	</i>
 </a>
 
-<?php
-
-/*$pt_br = array(
-	'import' => array('title' => 'IMPORTAÇÃO', 'resume' => 'Entenda porque a Elohs é a solução perfeita para comércio exterior com o resto do mundo!'),
-	'export' => array('title' => 'IMPORTAÇÃO', 'resume' => 'Entenda porque a Elohs é a solução perfeita para comércio exterior com o resto do mundo!'),
-	'inspect' => array('title' => 'IMPORTAÇÃO', 'resume' => 'Entenda porque a Elohs é a solução perfeita para comércio exterior com o resto do mundo!'),
- );*/
-?>
-
-
 <?php if(is_home()){ ?>
 <nav id="MainNavigation-container" class="Navigation Navigation--menu u-size16of24 Navigation--menu--main Navigation--menu--style2 is-animating u-isCollapsed u-contentHide u-contentHide--height u-zIndex20" role="navigation" aria-label="">
 	<ul class="Navigation-items Navigation-items--level1 u-alignCenter u-marginTop--inter is-animating u-displayFlex u-sizeFull u-flexDirectionColumn u-flexSwitchRow u-justifyContentSpaceBetween">

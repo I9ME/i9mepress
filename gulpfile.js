@@ -47,7 +47,7 @@ var sassProdOptions = {
 path = {
     dev     : './_src',
     prod    : './assets',
-    proxy   : 'http://localhost/abade'
+    proxy   : 'http://localhost/grupoamplus'
 }
 
 /*

@@ -673,37 +673,4 @@
 // CUSTOMIZER
 // ===================
 
-.Navigation{
-	&--language{
-		@media screen and (min-width: $break-md){
-			justify-content: center;
-		}
-		& .Navigation{
-			&-item{
-				&-title{
-					color: $color_2;
-					font-weight: bolder;
-					@media screen and (min-width: $break-md){
-						font-size: 13px !important;
-						color: $color_6;
-						&.u-languageChosen{
-							color: #890000;
-						}
-						&:hover{
-							color: $color_1;
-						}
-					}
-				}
-			}
-		}
-	}
-	&--menu{
-		& .Navigation{
-			&-items{
-				@media screen and (min-width: $break-md){
-					justify-content: space-around;
-				}
-			}
-		}
-	}
-}
+//DESENVOLVA ALTERAÇÕES AQUI
