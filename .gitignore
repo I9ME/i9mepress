@@ -62,7 +62,3 @@ typings/
 
 # jSON
 *.json
-
-# MUST be commented when pushed to master/deploy
-assets/css/main.min.css
-assets/css/main.css
