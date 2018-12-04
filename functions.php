@@ -710,3 +710,11 @@ function column_orderby ( $vars ) {
 // function custom_excerpt_length($length) {
 // return 30; //Nova quantidade de caracteres do excerpt
 // }
+
+//Console PHP - Desenvolvido por Paulo Arthur e Petrus Rennan
+
+function console_php($obj){
+	echo '<script type="text/javascript">
+		console.log('.json_encode($obj).');
+	</script>';	
+}
