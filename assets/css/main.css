@@ -49,7 +49,7 @@ s
  */
 :root {
   color: #555555;
-  font-family: "Acumin Pro";
+  font-family: "Exo 2", sans-serif;
   font-size: 15px;
   font-weight: normal;
 }
@@ -3919,36 +3919,6 @@ th.u-isShown {
   }
 }
 
-@media screen and (min-width: 960px) {
-  .Navigation--language {
-    justify-content: center;
-  }
-}
-
-.Navigation--language .Navigation-item-title {
-  color: #fb2b09;
-  font-weight: bolder;
-}
-
-@media screen and (min-width: 960px) {
-  .Navigation--language .Navigation-item-title {
-    font-size: 13px !important;
-    color: #e2c6aa;
-  }
-  .Navigation--language .Navigation-item-title.u-languageChosen {
-    color: #890000;
-  }
-  .Navigation--language .Navigation-item-title:hover {
-    color: #FFFFFF;
-  }
-}
-
-@media screen and (min-width: 960px) {
-  .Navigation--menu .Navigation-items {
-    justify-content: space-around;
-  }
-}
-
 /* @custom-media --lg-viewport (min-width: 960px);
 @custom-media --md-viewport (min-width: 768px);
 @custom-media --sm-viewport (min-width: 480px);
@@ -6127,7 +6097,7 @@ select {
   padding: 0 5px;
   min-height: 50px;
   font-size: 15px;
-  font-family: "Acumin Pro";
+  font-family: "Exo 2", sans-serif;
   outline: none !important;
 }
 
@@ -6135,11 +6105,11 @@ input[type="submit"] {
   cursor: pointer;
   font-size: 15px;
   font-weight: bold;
-  font-family: "Acumin Pro";
+  font-family: "Exo 2", sans-serif;
 }
 
 .Form {
-  font-family: "Acumin Pro";
+  font-family: "Exo 2", sans-serif;
 }
 
 .Form-border--0 {
