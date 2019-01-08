@@ -1543,6 +1543,78 @@ strong {
   }
 }
 
+.u-onlyIpad {
+  display: none !important;
+}
+
+@media screen and (min-width: 768px) {
+  .u-onlyIpad {
+    display: initial !important;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .u-onlyIpad {
+    display: none !important;
+  }
+}
+
+.u-onlyIpadFlex {
+  display: none !important;
+}
+
+@media screen and (min-width: 768px) {
+  .u-onlyIpadFlex {
+    display: flex !important;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .u-onlyIpadFlex {
+    display: none !important;
+  }
+}
+
+.u-DesktopAndIpad {
+  display: none !important;
+}
+
+@media screen and (min-width: 768px) {
+  .u-DesktopAndIpad {
+    display: initial !important;
+  }
+}
+
+.u-DesktopAndIpadFlex {
+  display: none !important;
+}
+
+@media screen and (min-width: 768px) {
+  .u-DesktopAndIpadFlex {
+    display: flex !important;
+  }
+}
+
+.u-MobileAndIpad {
+  display: initial;
+}
+
+@media screen and (min-width: 960px) {
+  .u-MobileAndIpad {
+    display: none !important;
+  }
+}
+
+.u-MobileAndIpadFlex {
+  display: flex;
+}
+
+@media screen and (min-width: 960px) {
+  .u-MobileAndIpadFlex {
+    display: none !important;
+  }
+}
+
 .Button {
   font-weight: bold;
   font-size: 16px;
