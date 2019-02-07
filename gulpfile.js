@@ -47,7 +47,7 @@ var sassProdOptions = {
 path = {
     dev     : './_src',
     prod    : './assets',
-    proxy   : 'http://localhost/salupp-institucional'
+    proxy   : 'http://localhost/barneys'
 }
 
 /*
@@ -160,20 +160,18 @@ gulp.task('images', function() {
         .pipe(gulp.dest( './assets/images'));
 });
 
+// GULP 4
 
 // Task 'watch' - Run with command 'gulp watch'
 gulp.task('watch', function() {
   gulp.watch('*.php').on('change', browserSync.reload);
-  gulp.watch(['./_src/images/sprites/*.png'], ['sprite']);
-  gulp.watch(scssFile, ['sassdev', 'sassprod', 'editorstyle' ]);
-  gulp.watch('./_src/fonts/', [ 'fonts' ]);
-  gulp.watch('./_src/js/*.js', [ 'scripts' ]);
-  gulp.watch( './_src/images/*.png', ['images']);
+  gulp.watch(['./_src/images/sprites/*.png'], gulp.parallel('sprite'));
+  gulp.watch(scssFile, gulp.parallel('sassdev', 'sassprod', 'editorstyle'));
+  gulp.watch('./_src/fonts/', gulp.parallel( 'fonts'));
+  gulp.watch('./_src/js/*.js', gulp.parallel( 'scripts'));
+  gulp.watch( './_src/images/*.png', gulp.parallel('images'));
 });
 
-
-
 // Default task - Run with command 'gulp'
-gulp.task('default', ['sinc', 'sprite', 'sassdev', 'sassprod', 'editorstyle', 'fonts', 'scripts', 'images',  'watch' ]);
-
+gulp.task('default', gulp.parallel('sinc', 'sprite', 'sassdev', 'sassprod', 'editorstyle', 'fonts', 'scripts', 'images', 'watch'));
 
