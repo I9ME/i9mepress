@@ -1,13 +1,13 @@
 .Site-header{
 	background: rgba(0,0,0,0);
 	position: absolute;
-	
-	padding-top: $v_spacing / 4;
-	padding-bottom: $v_spacing / 4;
 
 	&-branding{
 		max-width: 220px;
 		height: 88px;
+		font-size: 30px;
+		color: $color_1;
+		font-weight: 700;
 		&-img{
 			height: 88px;
 		}
@@ -27,13 +27,6 @@
 			}
 		}
 	}
-
-	@media screen and (min-width: $break-sm){
-
-		padding-top: $v_spacing / 2;
-		padding-bottom: $v_spacing / 2;
-		
-	}
 	
 
 
@@ -43,6 +36,11 @@
 	// CUSTOMIZER
 	// ===================
 
+	&-content{
+		@media screen and (min-width: $break-sm){
+			justify-content: flex-start !important;
+		}
+	}
 
 	// ===================
 	// CUSTOMIZER - END
