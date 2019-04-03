@@ -299,6 +299,11 @@ $mainSelector: '.Form';
 			left: 30px;
 		}
 	}
+	// CUSTOMIZER
+	&--intro-page{
+		background: $color_1;
+		margin-bottom: -430px;
+	}
 }
 
 .Form{
@@ -312,3 +317,4 @@ $mainSelector: '.Form';
 		}
 	}
 }
+
