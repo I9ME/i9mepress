@@ -560,7 +560,18 @@
 	
 	&--style2{ //<section> style section
 		color: $color_1;
-		background: $color_2;
+		background: $color_3;
+		& .Captions{
+			&-title{
+				font-size: $font_size_title_section_m;
+				@media screen and (min-width: $break-sm){
+					font-size: $font_size_title_section / 1.5;
+				}
+				@media screen and (min-width: $break-md){
+					font-size: $font_size_title_section;
+				}
+			}
+		}
 		& .Section-header{
 			&-title{
 				color: $color_1;
@@ -922,8 +933,20 @@
 	// ===================
 	// CUSTOMIZER
 	// ===================
-	
-	//DESENVOLVA ATERAÇÕES VIA SASS AQUI
+
+	&--intro{
+		min-height: 419px;
+		& .Captions{
+			@media screen and (min-width: $break-sm){
+				text-align: left !important;
+			}
+			&-title{
+				@media screen and (min-width: $break-md){
+					margin-bottom: -30px;
+				}	
+			}
+		}
+	}
 
 	// ===================
 	// CUSTOMIZER - END

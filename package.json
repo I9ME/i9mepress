@@ -1,5 +1,5 @@
 {
-  "name": "default-project",
+  "name": "templates-lp",
   "version": "1.0.0",
   "description": "**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**",
   "main": "gulpfile.js",
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/i9medev/default-project.git"
+    "url": "git+ssh://git@bitbucket.org/i9medev/templates-lp.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/i9medev/default-project#readme",
+  "homepage": "https://bitbucket.org/i9medev/templates-lp#readme",
   "devDependencies": {
     "browser-sync": "^2.26.3",
     "gulp": "^4.0.0",

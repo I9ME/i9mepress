@@ -10,15 +10,7 @@
 
 ?>
 
-	<?php if(is_home()){ ?>
-	<h1>
-		<a href="<?php echo get_home_url() ?>">
-			<!-- HEADER BRANDING LIMPO -->
-		</a>
-	</h1>
-	<?php }else{ ?>
-		<a href="<?php echo get_home_url() ?>">
-			<!-- HEADER BRANDING LIMPO -->
-		<a href="<?php echo get_home_url() ?>">
-	<?php } ?>
-</a>
+
+<a href="<?php echo get_home_url() ?>">
+	<span class="Site-header-branding"><?php echo get_bloginfo("name"); ?></span>
+<a href="<?php echo get_home_url() ?>">
