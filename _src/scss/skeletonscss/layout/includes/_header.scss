@@ -1,9 +1,4 @@
 .Site-header{
-	&-content{
-		padding-left: 5%;
-		padding-right: 5%;
-		max-width: 1500px;
-	}
 	background: rgba(0,0,0,0);
 	position: absolute;
 	
@@ -47,42 +42,6 @@
 	// ===================
 	// CUSTOMIZER
 	// ===================
-.Site-header{
-	&-feature{
-		& .Navigation{
-			&-items{
-				&-item{
-					&-link{
-						color: $color_6;
-						&:hover{
-							color:$color_1;
-						}
-						& svg{
-							font-size: 20px;
-						}
-					}
-				}
-			}
-		}
-	}
-}
-.Site-header-branding-figure{
-	&--white{
-		background: url("../images/logo-elohs.png");
-		background-repeat: no-repeat;
-	  	background-position-x: 10px;
-   		background-position-y: 16px;
-	}
-	&--red{
-		background: url("../images/logo-elohs--red.png");
-		background-repeat: no-repeat;
-	  	background-position-x: 10px;
-   		background-position-y: 16px;
-	}
-    width: 200px;
-    height: 100px;
-}
-
 
 
 	// ===================
