@@ -935,7 +935,7 @@
 	// ===================
 
 	&--intro{
-		min-height: 419px;
+		height: 419px;
 		& .Captions{
 			@media screen and (min-width: $break-sm){
 				text-align: left !important;

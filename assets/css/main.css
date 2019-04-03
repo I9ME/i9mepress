@@ -1065,7 +1065,7 @@ strong {
 }
 
 .Section--intro {
-  min-height: 419px;
+  height: 419px;
 }
 
 @media screen and (min-width: 768px) {
@@ -6458,6 +6458,11 @@ input[type="submit"] {
 
 .Form--rounded .Form-label {
   left: 30px;
+}
+
+.Form--intro-page {
+  background: #FFFFFF;
+  margin-bottom: -430px;
 }
 
 .Form-row {
