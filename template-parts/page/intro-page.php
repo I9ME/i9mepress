@@ -5,7 +5,7 @@ if(is_home()){
  ?>
  <section class="Section Section--style2 Section--intro u-displayFlex u-flexDirectionColumn u-flexJustifyContentCenter u-flexAlignItemsCenter u-paddingHorizontal backgroundImage">
 	<div class="u-maxSize--container u-alignCenterBox u-paddingVertical u-displayFlex u-flexDirectionColumn u-flexSwitchRow u-flexWrapWrap u-flexJustifyContentSpaceBetween u-flexAlignItemsCenter u-sizeFull">
-		<header class="Captions u-alignCenter u-size14of24">
+		<header class="Captions u-alignCenter u-size13of24">
 			<h1 class="Captions-title">The spectable before us was indeed sublime.</h1>
 		</header>
 
