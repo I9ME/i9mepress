@@ -445,14 +445,6 @@ body.u-isScrollOff{
 }
 .u-isScrollOn{
 
-
-  .Site{
-    &:after{
-      opacity: 1;
-      transition: all 0.25s;
-    }
-  }
-
   & .SiteMain{
     // padding-top: 74px;
   }
@@ -472,18 +464,6 @@ body.u-isScrollOff{
     }
   }
   & .Site-header{
-
-     background: $color_1;
-    -moz-box-shadow: 0px 5px 30px -5px rgba(0,0,0,0.20);
-    -webkit-box-shadow: 0px 5px 30px -5px rgba(0,0,0,0.20);
-    -o-box-shadow: 0px 5px 30px -5px rgba(0,0,0,0.20);
-    box-shadow: 0px 5px 30px -5px rgba(0,0,0,0.20);
-
-    /* padding-top: $v_spacing / 6;
-    padding-bottom: $v_spacing / 6; */
-
-    position: fixed;
-
     @media screen and (min-width: $break-md){
 
 
@@ -525,13 +505,6 @@ body.u-isScrollOff{
           }
         }
       }
-     
-
-      @media screen and (min-width: $break-sm){
-        position: fixed;
-        padding-top: $v_spacing / 4;
-        padding-bottom: $v_spacing / 4;
-      }
   }
   & .Branding--img{
     &:first-child{
@@ -540,18 +513,6 @@ body.u-isScrollOff{
     &:last-child{
       display: block !important;
     }
-  }
- 
-
-  & .Intro--blog-headerBar{
-    position: fixed;
-    padding-top: 70px !important;
-    padding-bottom: 0 !important;
-
-    -moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.25);
-    -webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.25);
-    -o-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.25);
-    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.25);
   }
   @media screen and (min-width: $break-md){
      & .Intro--blog-headerBar{
