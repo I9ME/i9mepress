@@ -286,7 +286,7 @@ strong {
 }
 
 .Section .Section-items-item-title {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .Section .Section-items-item-subtitle {
@@ -294,7 +294,7 @@ strong {
 }
 
 .Section .Section-items-item-resume {
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .Section .Section-items-item-text {
@@ -377,7 +377,7 @@ strong {
 }
 
 .Section .subSection-items-item-title {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .Section .Navigation--tabs {
@@ -1087,7 +1087,7 @@ strong {
 }
 
 .Section--features {
-  margin-top: 605px;
+  margin-top: 635px;
 }
 
 @media screen and (min-width: 768px) {
