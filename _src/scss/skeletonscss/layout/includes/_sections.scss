@@ -77,7 +77,7 @@
 					font-size: $font_size_subtitle_item;
 				}
 				&-resume{
-					font-size: $font_size_text;
+					font-size: $font_size_resume_item;
 				}
 				&-text{
 					font-size: $font_size_text;
@@ -642,18 +642,18 @@
 					font-weight: bold;	
 		}
 		& .Button--background{
-					border-color: $color_3;
-					background: $color_3;
-					color: $color_2;
+					border-color: $color_8;
+					background: $color_8;
+					color: $color_1;
 					font-weight: bold;	
 		}
 		& .Button--background.Button--border{
-					border-color: $color_3;
-					color: $color_2;
+					border-color: $color_8;
+					color: $color_1;
 					&:hover{
 						background: none;
-						color: $color_1;
-						border-color: $color_1;
+						color: $color_8;
+						border-color: $color_8;
 					}
 		}
 		& .navController{
@@ -935,7 +935,10 @@
 	// ===================
 
 	&--intro{
-		height: 419px;
+		height: 389px;
+		@media screen and (min-width: $break-sm){
+			padding-bottom: 0px !important;
+		}
 		& .Captions{
 			@media screen and (min-width: $break-sm){
 				text-align: left !important;
@@ -944,6 +947,27 @@
 				@media screen and (min-width: $break-md){
 					margin-bottom: -30px;
 				}	
+			}
+		}
+	}
+	&--features{
+		margin-top: 635px;
+		@media screen and (min-width: $break-sm){
+			min-height: 700px;
+			margin-top: 0px;
+		}
+		& .Section{
+			&-items{
+				&-item{
+					& .Image{
+						@media screen and (min-width: $break-sm){
+							margin-right: $v_spacing / 2;
+						}
+					}
+					&-title{
+						color: $color_11;
+					}
+				}
 			}
 		}
 	}

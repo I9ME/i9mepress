@@ -36,11 +36,6 @@
 	// CUSTOMIZER
 	// ===================
 
-	&-content{
-		@media screen and (min-width: $break-sm){
-			justify-content: flex-start !important;
-		}
-	}
 
 	// ===================
 	// CUSTOMIZER - END
@@ -48,12 +43,4 @@
 
 	
 
-}
-
-
-.Branding{
-	&--img{
-	
-	}
-	
 }

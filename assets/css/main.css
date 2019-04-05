@@ -35,7 +35,7 @@ s
 }
 
 .color_8 {
-  background: #60dd4d;
+  background: #32D9A4;
 }
 
 /**
@@ -286,7 +286,7 @@ strong {
 }
 
 .Section .Section-items-item-title {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .Section .Section-items-item-subtitle {
@@ -294,7 +294,7 @@ strong {
 }
 
 .Section .Section-items-item-resume {
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .Section .Section-items-item-text {
@@ -377,7 +377,7 @@ strong {
 }
 
 .Section .subSection-items-item-title {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .Section .Navigation--tabs {
@@ -664,7 +664,7 @@ strong {
 }
 
 .Section--style1 .navController--border {
-  border-color: #60dd4d;
+  border-color: #32D9A4;
   background: #FFFFFF;
   color: #fb2b09;
 }
@@ -805,25 +805,25 @@ strong {
 }
 
 .Section--style2 .Button--background {
-  border-color: #009cde;
-  background: #009cde;
-  color: #fb2b09;
+  border-color: #32D9A4;
+  background: #32D9A4;
+  color: #FFFFFF;
   font-weight: bold;
 }
 
 .Section--style2 .Button--background.Button--border {
-  border-color: #009cde;
-  color: #fb2b09;
+  border-color: #32D9A4;
+  color: #FFFFFF;
 }
 
 .Section--style2 .Button--background.Button--border:hover {
   background: none;
-  color: #FFFFFF;
-  border-color: #FFFFFF;
+  color: #32D9A4;
+  border-color: #32D9A4;
 }
 
 .Section--style2 .navController--border {
-  border-color: #60dd4d;
+  border-color: #32D9A4;
   background: #FFFFFF;
 }
 
@@ -913,7 +913,7 @@ strong {
 }
 
 .Section--style3 .navController--border {
-  border-color: #60dd4d;
+  border-color: #32D9A4;
   background: #FFFFFF;
 }
 
@@ -1065,7 +1065,13 @@ strong {
 }
 
 .Section--intro {
-  height: 419px;
+  height: 389px;
+}
+
+@media screen and (min-width: 768px) {
+  .Section--intro {
+    padding-bottom: 0px !important;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1078,6 +1084,27 @@ strong {
   .Section--intro .Captions-title {
     margin-bottom: -30px;
   }
+}
+
+.Section--features {
+  margin-top: 635px;
+}
+
+@media screen and (min-width: 768px) {
+  .Section--features {
+    min-height: 700px;
+    margin-top: 0px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .Section--features .Section-items-item .Image {
+    margin-right: 18.75px;
+  }
+}
+
+.Section--features .Section-items-item-title {
+  color: #000000;
 }
 
 .Site-header {
@@ -1109,12 +1136,6 @@ strong {
   font-size: 14px;
   color: #fb2b09;
   font-weight: bold;
-}
-
-@media screen and (min-width: 768px) {
-  .Site-header-content {
-    justify-content: flex-start !important;
-  }
 }
 
 .Site:after {
@@ -3104,11 +3125,6 @@ th.u-isShown {
   }
 }
 
-.u-isScrollOn .Site:after {
-  opacity: 1;
-  transition: all 0.25s;
-}
-
 .u-isScrollOn .NavigationButton .u-icon {
   color: #fb2b09;
 }
@@ -3117,17 +3133,6 @@ th.u-isShown {
   .u-isScrollOn .NavigationButton--login .Label {
     display: none !important;
   }
-}
-
-.u-isScrollOn .Site-header {
-  background: #FFFFFF;
-  -moz-box-shadow: 0px 5px 30px -5px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0px 5px 30px -5px rgba(0, 0, 0, 0.2);
-  -o-box-shadow: 0px 5px 30px -5px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 5px 30px -5px rgba(0, 0, 0, 0.2);
-  /* padding-top: $v_spacing / 6;
-    padding-bottom: $v_spacing / 6; */
-  position: fixed;
 }
 
 @media screen and (min-width: 960px) {
@@ -3153,30 +3158,12 @@ th.u-isShown {
   color: #FFFFFF !important;
 }
 
-@media screen and (min-width: 768px) {
-  .u-isScrollOn .Site-header {
-    position: fixed;
-    padding-top: 9.375px;
-    padding-bottom: 9.375px;
-  }
-}
-
 .u-isScrollOn .Branding--img:first-child {
   display: none;
 }
 
 .u-isScrollOn .Branding--img:last-child {
   display: block !important;
-}
-
-.u-isScrollOn .Intro--blog-headerBar {
-  position: fixed;
-  padding-top: 70px !important;
-  padding-bottom: 0 !important;
-  -moz-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.25);
-  -o-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
 @media screen and (min-width: 960px) {
@@ -3456,8 +3443,8 @@ th.u-isShown {
 }
 
 .Navigation--menu .Navigation--menu--contactPoints.Contacts {
-  border-top: 1px solid #60dd4d;
-  border-bottom: 1px solid #60dd4d;
+  border-top: 1px solid #32D9A4;
+  border-bottom: 1px solid #32D9A4;
   color: #fb2b09;
 }
 
@@ -3625,9 +3612,9 @@ th.u-isShown {
 
 .Navigation--menu--style2 .Navigation-items-item .NavigationLink.ButtonLink--nav:hover {
   color: #FFFFFF;
-  moz-background: linear-gradient(to bottom, #009cde 35%, #60dd4d);
-  -webkit-background: linear-gradient(to bottom, #009cde 35%, #60dd4d);
-  background: linear-gradient(to bottom, #009cde 35%, #60dd4d);
+  moz-background: linear-gradient(to bottom, #009cde 35%, #32D9A4);
+  -webkit-background: linear-gradient(to bottom, #009cde 35%, #32D9A4);
+  background: linear-gradient(to bottom, #009cde 35%, #32D9A4);
   -moz-box-shadow: 0px 8px 20px -5px rgba(0, 0, 0, 0.35);
   -webkit-box-shadow: 0px 8px 20px -5px rgba(0, 0, 0, 0.35);
   -o-box-shadow: 0px 8px 20px -5px rgba(0, 0, 0, 0.35);
@@ -6259,33 +6246,33 @@ input[type="submit"] {
 
 .Form--style1 .Form-input:not([type="submit"]) {
   border: 1px solid #999999;
-  text-indent: 27px;
-  color: #555555;
-  font-weight: bold;
+  text-indent: 9px;
+  color: #000000;
+  font-weight: normal;
 }
 
 .Form--style1 .Form-input:not([type="submit"])::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   color: #999999;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .Form--style1 .Form-input:not([type="submit"])::-moz-placeholder {
   /* Firefox 19+ */
   color: #999999;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .Form--style1 .Form-input:not([type="submit"]):-ms-input-placeholder {
   /* IE 10+ */
   color: #999999;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .Form--style1 .Form-input:not([type="submit"]):-moz-placeholder {
   /* Firefox 18- */
   color: #999999;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .Form--style1 .Form-input[type="text"],
@@ -6462,7 +6449,26 @@ input[type="submit"] {
 
 .Form--intro-page {
   background: #FFFFFF;
-  margin-bottom: -430px;
+  margin-bottom: -730px;
+}
+
+@media screen and (min-width: 768px) {
+  .Form--intro-page {
+    padding-top: 37.5px;
+    padding-bottom: 18.75px;
+    margin-top: 0px !important;
+    margin-bottom: -680px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .Form--intro-page .Form-line {
+    margin-bottom: 28.84615px;
+  }
+}
+
+.Form-input--textarea {
+  padding-left: 15px !important;
 }
 
 .Form-row {

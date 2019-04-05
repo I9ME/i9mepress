@@ -108,26 +108,26 @@ $mainSelector: '.Form';
 		}
 		& #{$mainSelector}-input:not([type="submit"]){
 			border: 1px solid $color_9;
-			text-indent: 27px;
+			text-indent: 9px;
 
-			color: $color_10;
-			 font-weight: bold;
+			color: $color_11;
+			font-weight: normal;
 
 			&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 			  color: $color_9;
-			  font-weight: bold;
+			  font-weight: normal;
 			}
 			&::-moz-placeholder { /* Firefox 19+ */
 			  color: $color_9;
-			  font-weight: bold;
+			  font-weight: normal;
 			}
 			&:-ms-input-placeholder { /* IE 10+ */
 			  color: $color_9;
-			  font-weight: bold;
+			  font-weight: normal;
 			}
 			&:-moz-placeholder { /* Firefox 18- */
 			  color: $color_9;
-			  font-weight: bold;
+			  font-weight: normal;
 			}
 			
 		}
@@ -302,11 +302,29 @@ $mainSelector: '.Form';
 	// CUSTOMIZER
 	&--intro-page{
 		background: $color_1;
-		margin-bottom: -430px;
+		margin-bottom: -730px;
+		@media screen and (min-width: $break-sm){
+			padding-top: $v_spacing;
+			padding-bottom: $v_spacing / 2;
+			margin-top: 0px !important;
+			margin-bottom: -680px;
+		}
+		& .Form{
+			&-line{
+				@media screen and (min-width: $break-sm){
+					margin-bottom: $v_spacing / 1.3;
+				}
+			}
+		}
 	}
 }
 
 .Form{
+	&-input{
+		&--textarea{
+			padding-left: 15px !important;
+		}
+	}
 	&-row{
 		border-radius: 5px;
 	}
