@@ -12,5 +12,5 @@
 
 
 <a href="<?php echo get_home_url() ?>">
-	<span class="Site-header-branding"><?php echo get_bloginfo("name"); ?></span>
+	<img src="<?php echo get_template_directory_uri(); ?>/assets/images/salupp-logo-white.png" alt="<?php echo get_bloginfo("name"); ?>" class="Site-header-branding u-displayBlock u-objectFitCover">
 </a>
