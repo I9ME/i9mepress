@@ -40,13 +40,13 @@ $sitename = get_bloginfo("name");
             </header>
             <ul class="Section-items Section-items--redesSociais u-displayFlex">
                 <li class="Section-items-item u-marginRight--inter--px">
-                    <a href="#">
-                        <svg class="u-icon u-borderRadius100 iconFacebook is-animating"><use xlink:href="#iconFacebook"></use></svg>
+                    <a class="Section-items-item-link u-borderRadius100 u-displayFlex u-flexAlignItemsCenter is-animating" href="#">
+                        <svg class="u-icon iconFacebook is-animating"><use xlink:href="#iconFacebook"></use></svg>
                     </a>
                 </li>
                 <li class="Section-items-item">
-                    <a href="#">
-                        <svg class="u-icon u-borderRadius100 iconInstagram is-animating"><use xlink:href="#iconInstagram"></use></svg>
+                    <a class="Section-items-item-link u-borderRadius100 u-displayFlex u-flexAlignItemsCenter is-animating" href="#">
+                        <svg class="u-icon iconInstagram is-animating"><use xlink:href="#iconInstagram"></use></svg>
                     </a>
                 </li>
             </ul>
