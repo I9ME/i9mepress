@@ -837,6 +837,10 @@ strong {
   border-color: #fb2b09;
 }
 
+.Section--style2 .u-icon {
+  fill: #FFFFFF;
+}
+
 .Section--style3 {
   color: #FFFFFF;
   background: #009cde;
@@ -1107,6 +1111,63 @@ strong {
   color: #000000;
 }
 
+@media screen and (min-width: 768px) {
+  .Section--footer .Section-content {
+    margin-right: 37.5px;
+    padding-bottom: 0px !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .Section--footer .Section-content--branding {
+    margin-right: 150px;
+  }
+}
+
+.Section--footer .Section-content--branding .Section-branding-title {
+  font-size: 30px;
+}
+
+.Section--footer .Section-header-title {
+  font-size: 22px;
+  font-weight: bolder;
+}
+
+.Section--footer .Section-items--redesSociais .u-icon {
+  background: #FFFFFF;
+  fill: #009cde;
+  padding: 5px;
+  height: 35px;
+  width: 55px;
+  border: 2px solid #FFFFFF;
+}
+
+.Section--footer .Section-items--redesSociais .u-icon:hover {
+  background: transparent;
+  fill: #FFFFFF;
+}
+
+@media screen and (min-width: 768px) {
+  .Section--footer .Section-items-item:first-child {
+    margin-right: 9.375px !important;
+  }
+}
+
+.Section--footer .Section-items-item-title {
+  color: #FFFFFF !important;
+  font-size: 15px;
+}
+
+.Section--footer .u-icon {
+  font-size: 18px;
+}
+
+@media screen and (min-width: 768px) {
+  .Section--footer .u-icon--mail {
+    font-size: 25px;
+  }
+}
+
 .Site-header {
   background: rgba(0, 0, 0, 0);
   position: absolute;
@@ -1136,6 +1197,11 @@ strong {
   font-size: 14px;
   color: #fb2b09;
   font-weight: bold;
+}
+
+.Site-header-branding {
+  height: initial;
+  width: initial;
 }
 
 .Site:after {
