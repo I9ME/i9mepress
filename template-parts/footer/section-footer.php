@@ -11,7 +11,7 @@ $sitename = get_bloginfo("name");
         </div>
         <div class="Section-content u-paddingBottom--inter">
             <header class="Section-header u-paddingBottom--inter--half">
-                <h3 class="Section-header-title">Onde estamos?</h3>
+                <h3 class="Section-header-title">Onde estamos</h3>
             </header>
             <div class="Section-content">
                 <p class="Section-content-resume">Av. Lorem Ipsum, 6483</p>
