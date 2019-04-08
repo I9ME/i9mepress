@@ -1107,6 +1107,10 @@ strong {
   color: #000000;
 }
 
+.Section--footer {
+  border-top: 1px solid #cdcdcd;
+}
+
 .Site-header {
   background: rgba(0, 0, 0, 0);
   position: absolute;
@@ -1207,6 +1211,11 @@ strong {
 
 .Breadcrumbs .u-icon {
   font-size: 13px;
+}
+
+.Site-footer {
+  background: #FFFFFF;
+  color: #000000;
 }
 
 .u-alignCenter {
