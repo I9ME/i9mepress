@@ -672,6 +672,9 @@
 				}
 			}
 		}
+		& .u-icon{
+			fill: $color_1;
+		}
 	}
 	&--style3{ //<section> style section
 		color: $color_1;
@@ -972,8 +975,69 @@
 		}
 	}
 	&--footer{
-		border-top: 1px solid $color_5;
+		& .Section{
+			&-content{
+				@media screen and (min-width: $break-sm){
+					margin-right: $v_spacing;
+					padding-bottom: 0px !important;
+				}
+				&--branding{
+					@media screen and (min-width: $break-sm){
+						margin-right: $v_spacing * 4;
+					}
+					& .Section{
+						&-branding{
+							&-title{
+								font-size: 30px;
+							}
+						}
+					}
+				}
+			}
+			&-header{
+				&-title{
+					font-size: 22px;
+					font-weight: bolder;
+				}
+			}
+			&-items{
+				&--redesSociais{
+					& .u-icon{
+						background: $color_1;
+						fill: $color_3;
+						padding: 5px;
+						height: 35px;
+						width: 55px;
+						border: 2px solid $color_1;
+						&:hover{
+							background: transparent;
+							fill: $color_1;
+						}
+					}
+				}
+				&-item{
+					&:first-child{
+						@media screen and (min-width: $break-sm) {
+							margin-right: $v_spacing / 4 !important;
+						}
+					}
+					&-title{
+						color: $color_1 !important;
+						font-size: 15px;
+					}
+				}
+			}
+		}
+		& .u-icon{
+			font-size: 18px;
+			&--mail{
+				@media screen and (min-width: $break-sm){
+					font-size: 25px;
+				}
+			}
+		}
 	}
+
 	// ===================
 	// CUSTOMIZER - END
 	// ===================
