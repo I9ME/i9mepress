@@ -307,12 +307,12 @@ $mainSelector: '.Form';
 			padding-top: $v_spacing;
 			padding-bottom: $v_spacing / 2;
 			margin-top: 0px !important;
-			margin-bottom: -680px;
+			margin-bottom: -530px;
 		}
 		& .Form{
 			&-line{
 				@media screen and (min-width: $break-sm){
-					margin-bottom: $v_spacing / 1.3;
+					// margin-bottom: $v_spacing / 1.3;
 				}
 			}
 		}
