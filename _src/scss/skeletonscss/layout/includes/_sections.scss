@@ -954,10 +954,15 @@
 		}
 	}
 	&--features{
-		margin-top: 635px;
+		margin-top: 645px;
 		@media screen and (min-width: $break-sm){
-			min-height: 700px;
+			min-height: 800px;
 			margin-top: 0px;
+		}
+		& .Content{
+			@media screen and (min-width: $break-sm){
+				text-align: left !important;
+			}
 		}
 		& .Section{
 			&-items{
