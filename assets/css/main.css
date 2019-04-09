@@ -1134,12 +1134,8 @@ strong {
 }
 
 .Section--footer .Section-items--redesSociais .u-icon {
-  background: #FFFFFF;
   fill: #009cde;
-  padding: 5px;
-  height: 35px;
-  width: 55px;
-  border: 2px solid #FFFFFF;
+  font-size: 25px;
 }
 
 .Section--footer .Section-items--redesSociais .u-icon:hover {
@@ -1151,6 +1147,22 @@ strong {
   .Section--footer .Section-items-item:first-child {
     margin-right: 9.375px !important;
   }
+}
+
+.Section--footer .Section-items-item-link {
+  background: #FFFFFF;
+  padding: 5px;
+  height: 35px;
+  width: 35px;
+  border: 2px solid #FFFFFF;
+}
+
+.Section--footer .Section-items-item-link:hover {
+  background: transparent;
+}
+
+.Section--footer .Section-items-item-link:hover .u-icon {
+  fill: #FFFFFF;
 }
 
 .Section--footer .Section-items-item-title {
