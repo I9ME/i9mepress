@@ -307,10 +307,27 @@ $mainSelector: '.Form';
 			padding-top: $v_spacing;
 			padding-bottom: $v_spacing / 2;
 			margin-top: 0px !important;
-			margin-bottom: -530px;
+			margin-bottom: -610px;
+		}
+		& ._form-label{
+			color: $color_11;
+			margin-bottom: $v_spacing / 4;
+		}
+		& ._form_error{
+			color: red;
+			text-align: center;
+			margin-bottom: $v_spacing / 2;
+			@media screen and (min-width: $break-sm){
+				margin-bottom: $v_spacing / 4;
+			}
 		}
 		& .Form{
 			&-line{
+				&--input{
+					@media screen and (min-width: $break-sm){
+						margin-top: $v_spacing / 4 !important;
+					}
+				}
 				@media screen and (min-width: $break-sm){
 					// margin-bottom: $v_spacing / 1.3;
 				}

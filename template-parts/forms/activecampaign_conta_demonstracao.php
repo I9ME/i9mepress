@@ -3,84 +3,108 @@
  #_form_19_ ._form-thank-you { position:relative; left:0; right:0; text-align:center; font-size:18px; }
  }
 </style>
-<form method="POST" action="https://i9me.activehosted.com/proc.php" id="_form_19_" class="_form _form_19 _inline-form Form Form--style1 Form--intro-page u-boxShadow u-borderRadius5 u-paddingHorizontal u-paddingVertical--inter--px u-marginTop--inter u-displayFlex u-flexJustifyContentCenter u-size10of24" novalidate>
-    <input type="hidden" name="u" value="19" />
-    <input type="hidden" name="f" value="19" />
-    <input type="hidden" name="s" />
-    <input type="hidden" name="c" value="0" />
-    <input type="hidden" name="m" value="0" />
-    <input type="hidden" name="act" value="sub" />
-    <input type="hidden" name="v" value="2" />
-    <div class="Form-fieldset _form-content u-sizeFull">
-        <!-- Campos ocultos -->
-        <div class="_form_element _field31 _full_width " >
-            <input type="hidden" name="field[31]" value="" />
-        </div>
-        <div class="_form_element _field32 _full_width " >
-            <input type="hidden" name="field[32]" value="" />
-        </div>
-        <div class="_form_element _field34 _full_width " >
-            <input type="hidden" name="field[34]" value="" />
-        </div>
-        <div class="_form_element _field35 _full_width " >
-            <input type="hidden" name="field[35]" value="" />
-        </div>
-        <div class="_form_element _field36 _full_width " >
-            <input type="hidden" name="field[36]" value="" />
-        </div>
-        <!-- Campos visíveis -->
-        <div class="Form-line _form_element _x00499843 u-marginBottom--inter--half">
-            <div class="Form-row _field-wrapper">
-                <input type="text" name="firstname" class="Form-input Form-input--text u-sizeFull" placeholder="Nome">
-            </div>
-        </div>
-        <div class="Form-line _form_element _x15873934 u-marginBottom--inter--half">
-            <div class="Form-row _field-wrapper">
-                <input type="text" name="lastname" class="Form-input Form-input--text u-sizeFull" placeholder="Sobrenome">
-            </div>
-        </div>
-        <div class="Form-line _form_element _x93598621 u-marginBottom--inter--half">
-            <div class="Form-row _field-wrapper">
-                <input type="text" name="email" placeholder="Digite seu e-mail" class="Form-input Form-input--text u-sizeFull" placeholder="E-mail" required>
-            </div>
-        </div>
-        <div class="Form-line _form_element _x51105173 u-marginBottom--inter--half">
-            <div class="Form-row _field-wrapper">
-                <input type="text" name="phone" class="Form-input Form-input--text u-sizeFull" placeholder="Telefone">
-            </div>
-        </div>
-        <div class="Form-line _form_element _field7 u-marginBottom--inter--half">
-            <div class="Form-row _field-wrapper">
-                <input type="text" name="field[7]" class="Form-input Form-input--text u-sizeFull" placeholder="Cidade / UF">
-            </div>
-        </div>
-        <div class="Form-line _form_element _field37 u-marginBottom--inter--half">
-            <div class="Form-row _field-wrapper">
-                <input type="text" name="field[37]" class="Form-input Form-input--text u-sizeFull" placeholder="Endereço">
-            </div>
-        </div>
-        <div class="Form-line _form_element _field12 u-marginBottom--inter--half">
-            <div class="Form-row _field-wrapper">
-                <textarea name="field[12]" class="Form-input Form-input--textarea u-sizeFull" placeholder="Conte-nos sobre suas necessidades" rows="5"></textarea>
-            </div>
-        </div>
-        <!-- reCaptia -->
-        <div class="_form_element _x50039313 u-paddingVertical u-marginHorizontal--inter--half u-displayFlex u-flexDirectionColumn u-flexAlignItemsCenter" >
-            <label class="_form-label">
-                Por favor, verifique seu pedido*
-            </label>
-            <div class="g-recaptcha" data-sitekey="6LcwIw8TAAAAACP1ysM08EhCgzd6q5JAOUR1a0Go">
-            </div>
-        </div>
-        <div class="Form-line Form-line--input u-marginTop--inter u-marginBottom--inter--half">
-            <div class="Form-row _button-wrapper">
-                <button id="_form_19_submit" type="submit" class="Button Button--mediumSize Button--background Button--border _submit is-animating u-sizeFull" style="cursor: pointer;">SOLICITAR PROPOSTA</button>
-            </div>
-        </div>
+<form method="POST" action="https://i9me.activehosted.com/proc.php" id="_form_19_" class="_form _form_19 _inline-form  _dark" novalidate>
+  <input type="hidden" name="u" value="19" />
+  <input type="hidden" name="f" value="19" />
+  <input type="hidden" name="s" />
+  <input type="hidden" name="c" value="0" />
+  <input type="hidden" name="m" value="0" />
+  <input type="hidden" name="act" value="sub" />
+  <input type="hidden" name="v" value="2" />
+  <div class="_form-content">
+   <!-- Campos ocultos -->
+    <div class="_form_element _field31 _full_width " >
+      <input type="hidden" name="field[31]" value="" />
     </div>
-    <!-- Result -->
-    <div class="_form-thank-you" style="display:none;"></div>
+    <div class="_form_element _field32 _full_width " >
+      <input type="hidden" name="field[32]" value="" />
+    </div>
+    <div class="_form_element _field34 _full_width " >
+      <input type="hidden" name="field[34]" value="" />
+    </div>
+    <div class="_form_element _field35 _full_width " >
+      <input type="hidden" name="field[35]" value="" />
+    </div>
+    <div class="_form_element _field36 _full_width " >
+      <input type="hidden" name="field[36]" value="" />
+    </div>
+    <!-- Campos visíveis -->
+    <div class="_form_element _x00499843 _full_width " >
+      <label class="_form-label">
+        Nome
+      </label>
+      <div class="_field-wrapper">
+        <input type="text" name="firstname" placeholder="Digite seu primeiro nome" />
+      </div>
+    </div>
+    <div class="_form_element _x15873934 _full_width " >
+      <label class="_form-label">
+        Sobrenome
+      </label>
+      <div class="_field-wrapper">
+        <input type="text" name="lastname" placeholder="Digite seu sobrenome" />
+      </div>
+    </div>
+    <div class="_form_element _x93598621 _full_width " >
+      <label class="_form-label">
+        E-mail*
+      </label>
+      <div class="_field-wrapper">
+        <input type="text" name="email" placeholder="Digite seu e-mail" required/>
+      </div>
+    </div>
+    <div class="_form_element _x51105173 _full_width " >
+      <label class="_form-label">
+        Telefone
+      </label>
+      <div class="_field-wrapper">
+        <input type="text" name="phone" placeholder="Digite seu telefone" />
+      </div>
+    </div>
+    <div class="_form_element _field7 _full_width " >
+      <label class="_form-label">
+        Cidade / UF
+      </label>
+      <div class="_field-wrapper">
+        <input type="text" name="field[7]" value="" placeholder="" />
+      </div>
+    </div>
+    <div class="_form_element _field37 _full_width " >
+      <label class="_form-label">
+        Endereco
+      </label>
+      <div class="_field-wrapper">
+        <input type="text" name="field[37]" value="" placeholder="" />
+      </div>
+    </div>
+    <div class="_form_element _field12 _full_width " >
+      <label class="_form-label">
+        Observações
+      </label>
+      <div class="_field-wrapper">
+        <textarea name="field[12]" placeholder=""  ></textarea>
+      </div>
+    </div>
+    <!-- reCaptia -->
+    <div class="_form_element _x50039313 _full_width " >
+      <label class="_form-label">
+        Por favor, verifique seu pedido*
+      </label>
+      <div class="g-recaptcha" data-sitekey="6LcwIw8TAAAAACP1ysM08EhCgzd6q5JAOUR1a0Go">
+      </div>
+    </div>
+    <!-- Button Submit -->
+    <div class="_button-wrapper _full_width">
+      <button id="_form_19_submit" class="_submit" type="submit">
+        Enviar
+      </button>
+    </div>
+    <div class="_clear-element">
+    </div>
+  </div> <!-- ._form-content -->
 
+  <!-- Result -->
+  <div class="_form-thank-you" style="display:none;"></div>
 
 </form><script type="text/javascript">
 window.cfields = {"31":"urltracking","32":"idcampaign","34":"source","35":"sourceurl","36":"sourceposition","7":"cidade_uf","37":"endereco","12":"observaes"};
