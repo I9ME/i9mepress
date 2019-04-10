@@ -1096,7 +1096,7 @@ strong {
 
 @media screen and (min-width: 768px) {
   .Section--features {
-    min-height: 800px;
+    min-height: 650px;
     margin-top: 0px;
   }
 }
@@ -1115,6 +1115,62 @@ strong {
 
 .Section--features .Section-items-item-title {
   color: #000000;
+}
+
+@media screen and (min-width: 960px) {
+  .Section--depoimentos .Section-items-item img {
+    width: initial !important;
+  }
+  .Section--depoimentos .Section-items-item:nth-child(even) {
+    margin-top: 50px;
+  }
+}
+
+.Section--depoimentos .Section-items-item-figure img {
+  border-radius: 100px;
+  height: 90px;
+  width: 90px !important;
+}
+
+.Section--depoimentos .Section-items-item-title {
+  color: #000000;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+
+@media screen and (min-width: 960px) {
+  .Section--depoimentos .Section-items-item-title {
+    padding-top: 18.75px !important;
+    padding-bottom: 18.75px !important;
+  }
+}
+
+.Section--depoimentos .owl-prev,
+.Section--depoimentos .owl-next {
+  position: absolute !important;
+  top: 45%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  border-radius: 100px;
+  background: #FFFFFF !important;
+  font-size: 70px !important;
+}
+
+.Section--depoimentos .owl-prev .icon,
+.Section--depoimentos .owl-next .icon {
+  height: 40px;
+  width: 40px;
+  fill: #555555;
+}
+
+.Section--depoimentos .owl-prev {
+  left: -40px;
+}
+
+.Section--depoimentos .owl-next {
+  right: -40px;
 }
 
 @media screen and (min-width: 768px) {
@@ -6837,6 +6893,19 @@ input[type="submit"] {
 
 #loading {
   display: none;
+}
+
+.owl-stage-outer {
+  overflow: visible !important;
+}
+
+.owl-item {
+  opacity: 0;
+  transition: opacity 250ms;
+}
+
+.owl-item.active {
+  opacity: 1;
 }
 
 /*--------------------------------------------------------------

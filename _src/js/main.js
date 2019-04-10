@@ -252,6 +252,30 @@ $('#default-carousel').owlCarousel({
     }
 })
 
+$('#depoimentos-carousel').owlCarousel({
+    loop:true,
+    margin:0,
+    dots: false,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            dots:true,
+            dotClass: "owl-dot owl-dot-case",
+            nav:false
+        },
+        600:{
+            items:2,
+            dots:true
+        },
+        1000:{
+            items:3,
+            dots:false,
+            nav:true
+        }
+    }
+});
+
 
 // /*=========================================================================================
 // // CLOSE FUNCTION
