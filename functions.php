@@ -113,6 +113,16 @@ echo'<svg style="position: absolute; width: 0; height: 0; overflow: hidden;" ver
 <path d="M16 7.781c-4.537 0-8.219 3.681-8.219 8.219s3.681 8.219 8.219 8.219 8.219-3.681 8.219-8.219c0-4.537-3.681-8.219-8.219-8.219zM16 21.331c-2.944 0-5.331-2.387-5.331-5.331s2.387-5.331 5.331-5.331c2.944 0 5.331 2.387 5.331 5.331s-2.387 5.331-5.331 5.331z"></path>
 <path d="M26.462 7.456c0 1.060-0.859 1.919-1.919 1.919s-1.919-0.859-1.919-1.919c0-1.060 0.859-1.919 1.919-1.919s1.919 0.859 1.919 1.919z"></path>
 </symbol>
+<symbol id="icon-circle-left" viewBox="0 0 16 16">
+<title>circle-left</title>
+<path d="M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zM8 1.5c3.59 0 6.5 2.91 6.5 6.5s-2.91 6.5-6.5 6.5-6.5-2.91-6.5-6.5 2.91-6.5 6.5-6.5z"></path>
+<path d="M10.457 4.957l-1.414-1.414-4.457 4.457 4.457 4.457 1.414-1.414-3.043-3.043z"></path>
+</symbol>
+<symbol id="icon-circle-right" viewBox="0 0 16 16">
+<title>circle-right</title>
+<path d="M8 0c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zM8 14.5c-3.59 0-6.5-2.91-6.5-6.5s2.91-6.5 6.5-6.5 6.5 2.91 6.5 6.5-2.91 6.5-6.5 6.5z"></path>
+<path d="M5.543 11.043l1.414 1.414 4.457-4.457-4.457-4.457-1.414 1.414 3.043 3.043z"></path>
+</symbol>
 </defs>
 </svg>';
 
@@ -121,8 +131,8 @@ echo'<svg style="position: absolute; width: 0; height: 0; overflow: hidden;" ver
  <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
  <script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery-3.2.1.min.js"></script>
- <!-- <script src="<?php // echo get_template_directory_uri(); ?>/assets/js/jquery.paroller.min.js"></script>
- <script src="<?php // echo get_template_directory_uri(); ?>/assets/js/owl.carousel.min.js"></script> -->
+ <script src="<?php // echo get_template_directory_uri(); ?>/assets/js/jquery.paroller.min.js"></script>
+ <script src="<?php echo get_template_directory_uri(); ?>/assets/js/owl.carousel.min.js"></script>
  
 <!-- Include JavaScript Mailchimp -->
 
@@ -202,6 +212,49 @@ class Custom_Post_Type_Image_Upload {
 	public function init() {
 
 		// DESENVOLVA CUSTOM POST TYPES AQUI
+		$labels_depoimentos = array(
+			"name" => __( "Depoimentos", "" ),
+			"singular_name" => __( "Depoimento", "" ),
+			"menu_name" => __( "Depoimentos", "" ),
+			"all_items" => __( "Todos os depoimentos", "" ),
+			"add_new" => __( "Adicionar novo depoimento", "" ),
+			"add_new_item" => __( "Adicionar novo depoimento", "" ),
+			"edit_item" => __( "Editar depoimento", "" ),
+			"new_item" => __( "Novo depoimento", "" ),
+			"view_item" => __( "Visualizar depoimento", "" ),
+			"view_items" => __( "Visualizar depoimentos", "" ),
+			"search_items" => __( "Pesquisar depoimento", "" ),
+			"not_found" => __( "Sem resultados", "" ),
+			"not_found_in_trash" => __( "Sem resultados", "" ),
+			"parent_item_colon" => __( "Relacionados", "" ),
+			"featured_image" => __( "Imagem destacada", "" ),
+			"set_featured_image" => __( "Editar imagem destacada", "" ),
+			"remove_featured_image" => __( "Remover imagem destacada", "" ),
+			"parent_item_colon" => __( "Relacionados", "" ),
+		);
+
+		$args_depoimentos = array(
+			"label" => __( "Depoimentos", "" ),
+			"labels" => $labels_depoimentos,
+			"description" => "",
+			"public" => true,
+			"publicly_queryable" => true,
+			"show_ui" => true,
+			"show_in_rest" => false,
+			"rest_base" => "",
+			"has_archive" => false,
+			"show_in_menu" => true,
+			"exclude_from_search" => false,
+			"capability_type" => "post",
+			"map_meta_cap" => true,
+			"hierarchical" => false,
+			"rewrite" => array("with_front" => false ),
+			"query_var" => true,
+			"menu_icon" => "dashicons-businessman",
+			"supports" => array( "title", "editor", "thumbnail"),
+		);
+
+		register_post_type( "depoimentos", $args_depoimentos );
 
 	}
 

@@ -2931,8 +2931,8 @@
 	Navigation.Defaults = {
 		nav: false,
 		navText: [
-			'<span aria-label="' + 'Previous' + '">&#x2039;</span>',
-			'<span aria-label="' + 'Next' + '">&#x203a;</span>'
+			'<div class="u-positionRelative"><div id="cases-carousel-prev" class="u-positionAbsolute u-sizeFull u-heightFull u-zIndex10" style="top: 0px;left:0px;"></div><svg class="icon icon-circle-left"><use xlink:href="#icon-circle-left"></use></svg></div>',
+			'<div class="u-positionRelative"><div id="cases-carousel-next" class="u-positionAbsolute u-sizeFull u-heightFull u-zIndex10" style="top: 0px;left:0px;"></div><svg class="icon icon-circle-left"><use xlink:href="#icon-circle-right"></use></svg></div>'
 		],
 		navSpeed: false,
 		navElement: 'button type="button" role="presentation"',
