@@ -217,16 +217,16 @@
 	display: none;
 }
 
-// OWL CAROUSEL CORRIGINDO SOMBRA CORTADA
+// // OWL CAROUSEL CORRIGINDO SOMBRA CORTADA
 
-.owl-stage-outer { 
-	overflow: visible !important;
-}
+// .owl-stage-outer { 
+// 	overflow: visible !important;
+// }
 
-.owl-item {
-	opacity: 0;
-	transition: opacity 250ms;
-}
-.owl-item.active {
-	opacity: 1;
-}
+// .owl-item {
+// 	opacity: 0;
+// 	transition: opacity 250ms;
+// }
+// .owl-item.active {
+// 	opacity: 1;
+// }

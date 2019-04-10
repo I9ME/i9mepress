@@ -275,6 +275,28 @@ $('#depoimentos-carousel').owlCarousel({
         }
     }
 });
+$('#videos-carousel').owlCarousel({
+    loop:true,
+    margin:0,
+    dots: false,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            dots:true,
+            dotClass: "owl-dot owl-dot-case",
+            nav:false
+        },
+        600:{
+            items:1,
+            dots:true
+        },
+        1000:{
+            items:1,
+            dots:true
+        }
+    }
+});
 
 
 // /*=========================================================================================

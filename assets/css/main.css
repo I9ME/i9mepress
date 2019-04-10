@@ -1173,6 +1173,104 @@ strong {
   right: -40px;
 }
 
+.Section--depoimentos .owl-stage-outer {
+  overflow: visible !important;
+}
+
+.Section--depoimentos .owl-item {
+  opacity: 0;
+  transition: opacity 250ms;
+}
+
+.Section--depoimentos .owl-item.active {
+  opacity: 1;
+}
+
+.Section--videos {
+  min-height: 300px;
+}
+
+@media screen and (min-width: 768px) {
+  .Section--videos {
+    min-height: 500px;
+  }
+}
+
+.Section--videos .Section-background {
+  top: 0px;
+  filter: grayscale(100%);
+}
+
+.Section--videos .Section-content {
+  padding-top: 30px;
+  background: #009cdea1;
+}
+
+.Section--videos .Section-items {
+  position: absolute !important;
+}
+
+.Section--videos .Section-items-item-title {
+  color: #FFFFFF;
+  font-size: 25px;
+  font-weight: normal;
+}
+
+.Section--videos .u-icon {
+  height: 80px;
+  width: 80px;
+}
+
+.Section--videos .owl-stage-outer, .Section--videos .owl-stage, .Section--videos .owl-item {
+  height: 100% !important;
+}
+
+.Section--videos .owl-stage-outer {
+  position: relative;
+}
+
+.Section--videos .owl-dots {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .Section--videos .owl-dots {
+    bottom: 60px;
+  }
+}
+
+.Section--videos .owl-prev,
+.Section--videos .owl-next {
+  position: absolute !important;
+  top: 45%;
+  z-index: 20;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  border-radius: 100px;
+  background: #FFFFFF !important;
+  font-size: 70px !important;
+}
+
+.Section--videos .owl-prev .icon,
+.Section--videos .owl-next .icon {
+  height: 40px;
+  width: 40px;
+  fill: #555555;
+}
+
+.Section--videos .owl-prev {
+  left: -40px;
+}
+
+.Section--videos .owl-next {
+  right: -40px;
+}
+
 @media screen and (min-width: 768px) {
   .Section--footer .Section-content {
     margin-right: 37.5px;
@@ -6893,19 +6991,6 @@ input[type="submit"] {
 
 #loading {
   display: none;
-}
-
-.owl-stage-outer {
-  overflow: visible !important;
-}
-
-.owl-item {
-  opacity: 0;
-  transition: opacity 250ms;
-}
-
-.owl-item.active {
-  opacity: 1;
 }
 
 /*--------------------------------------------------------------
