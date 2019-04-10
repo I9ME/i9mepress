@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Exo+2:200,300,400,700,800" rel="stylesheet"> 
 
     <!-- FONTE DO PROJETO -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800" rel="stylesheet">
 
     <?php wp_head(); ?>
 
