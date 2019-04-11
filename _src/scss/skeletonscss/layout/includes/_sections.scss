@@ -1058,7 +1058,6 @@
 				filter: grayscale(100%);
 			}
 			&-content{
-				padding-top: 30px;
 				background: #009cdea1;
 			}
 			&-items{
@@ -1066,10 +1065,10 @@
 				&-item{
 					&-title{
 						color: $color_1;
-						font-size: 25px;
-						// @media screen and (min-width: $break-sm){
-						// 	font-size: 40px;
-						// }
+						font-size: 35px;
+						@media screen and (min-width: $break-sm){
+							font-size: 45px;
+						}
 						font-weight: normal;
 					}
 				}
