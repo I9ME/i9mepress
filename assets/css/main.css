@@ -1202,7 +1202,6 @@ strong {
 }
 
 .Section--videos .Section-content {
-  padding-top: 30px;
   background: #009cdea1;
 }
 
@@ -1212,8 +1211,14 @@ strong {
 
 .Section--videos .Section-items-item-title {
   color: #FFFFFF;
-  font-size: 25px;
+  font-size: 35px;
   font-weight: normal;
+}
+
+@media screen and (min-width: 768px) {
+  .Section--videos .Section-items-item-title {
+    font-size: 45px;
+  }
 }
 
 .Section--videos .u-icon {

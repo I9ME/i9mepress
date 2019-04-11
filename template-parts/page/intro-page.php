@@ -1,12 +1,36 @@
 <?php 
 
-if(is_home()){
+// TÍTULO DINÂMICO
 
+$args = array(
+	"post_type" => "titulo_site",
+	"posts_per_page" => 1
+);
+
+$query = new WP_Query($args);
+// echo "<pre>";
+// print_r($query);die;
+
+if(is_home()){
  ?>
  <section class="Section Section--style2 Section--intro u-displayFlex u-flexDirectionColumn u-flexJustifyContentCenter u-flexAlignItemsCenter u-paddingHorizontal backgroundImage">
 	<div class="u-maxSize--container u-alignCenterBox u-paddingVertical u-displayFlex u-flexDirectionColumn u-flexSwitchRow u-flexWrapWrap u-flexJustifyContentSpaceBetween u-flexAlignItemsCenter u-sizeFull">
 		<header class="Captions u-alignCenter u-size13of24">
-			<h1 class="Captions-title">The spectable before us was indeed sublime.</h1>
+		<?php 
+			if ($query->have_posts()){
+				while ($query->have_posts()):$query->the_post(); 
+		?> 
+					<h1 class="Captions-title"><?php echo get_the_title(); ?></h1>
+		<?php 
+				endwhile; 
+		?>
+		<?php 
+			}else{ 
+		?>
+				<h1 class="Captions-title">Bem-vindo a nossa landing page.</h1>		
+		<?php
+			} 
+		?>
 		</header>
 
 		<?php get_template_part('template-parts/forms/form','intro-page'); ?>

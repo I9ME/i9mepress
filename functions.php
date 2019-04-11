@@ -215,7 +215,97 @@ class Custom_Post_Type_Image_Upload {
 	 */
 	public function init() {
 
-		// DESENVOLVA CUSTOM POST TYPES AQUI
+		// TÍTULO DO SITE
+		$labels_titulo_site = array(
+			"name" => __( "Título do site", "" ),
+			"singular_name" => __( "Título do site", "" ),
+			"menu_name" => __( "Título do site", "" ),
+			"all_items" => __( "Todos os títulos do site", "" ),
+			"add_new" => __( "Adicionar novo título pro site", "" ),
+			"add_new_item" => __( "Adicionar novo Título do site", "" ),
+			"edit_item" => __( "Editar Título do site", "" ),
+			"new_item" => __( "Novo Título do site", "" ),
+			"view_item" => __( "Visualizar Título do site", "" ),
+			"view_items" => __( "Visualizar Título do site", "" ),
+			"search_items" => __( "Pesquisar Título do site", "" ),
+			"not_found" => __( "Sem resultados", "" ),
+			"not_found_in_trash" => __( "Sem resultados", "" ),
+			"parent_item_colon" => __( "Relacionados", "" ),
+			"featured_image" => __( "Imagem destacada", "" ),
+			"set_featured_image" => __( "Editar imagem destacada", "" ),
+			"remove_featured_image" => __( "Remover imagem destacada", "" ),
+			"parent_item_colon" => __( "Relacionados", "" ),
+		);
+
+		$args_titulo_site = array(
+			"label" => __( "titulo_site", "" ),
+			"labels" => $labels_titulo_site,
+			"description" => "",
+			"public" => true,
+			"publicly_queryable" => true,
+			"show_ui" => true,
+			"show_in_rest" => false,
+			"rest_base" => "",
+			"has_archive" => false,
+			"show_in_menu" => true,
+			"exclude_from_search" => false,
+			"capability_type" => "post",
+			"map_meta_cap" => true,
+			"hierarchical" => false,
+			"rewrite" => array("with_front" => false ),
+			"query_var" => true,
+			"menu_icon" => "dashicons-welcome-add-page",
+			"supports" => "title",
+		);
+
+		register_post_type( "titulo_site", $args_titulo_site );
+
+		// Diferenciais
+		$labels_diferenciais = array(
+			"name" => __( "Diferenciais", "" ),
+			"singular_name" => __( "Diferenciais", "" ),
+			"menu_name" => __( "Diferenciais", "" ),
+			"all_items" => __( "Todos os diferenciais", "" ),
+			"add_new" => __( "Adicionar novo diferencial", "" ),
+			"add_new_item" => __( "Adicionar novo Diferencial", "" ),
+			"edit_item" => __( "Editar Diferenciais", "" ),
+			"new_item" => __( "Novo Diferenciais", "" ),
+			"view_item" => __( "Visualizar Diferenciais", "" ),
+			"view_items" => __( "Visualizar Diferenciais", "" ),
+			"search_items" => __( "Pesquisar Diferenciais", "" ),
+			"not_found" => __( "Sem resultados", "" ),
+			"not_found_in_trash" => __( "Sem resultados", "" ),
+			"parent_item_colon" => __( "Relacionados", "" ),
+			"featured_image" => __( "Imagem destacada", "" ),
+			"set_featured_image" => __( "Editar imagem destacada", "" ),
+			"remove_featured_image" => __( "Remover imagem destacada", "" ),
+			"parent_item_colon" => __( "Relacionados", "" ),
+		);
+
+		$args_diferenciais = array(
+			"label" => __( "diferenciais", "" ),
+			"labels" => $labels_diferenciais,
+			"description" => "",
+			"public" => true,
+			"publicly_queryable" => true,
+			"show_ui" => true,
+			"show_in_rest" => false,
+			"rest_base" => "",
+			"has_archive" => false,
+			"show_in_menu" => true,
+			"exclude_from_search" => false,
+			"capability_type" => "post",
+			"map_meta_cap" => true,
+			"hierarchical" => false,
+			"rewrite" => array("with_front" => false ),
+			"query_var" => true,
+			"menu_icon" => "dashicons-awards",
+			"supports" => array( "title", "editor", "thumbnail"),
+		);
+
+		register_post_type( "diferenciais", $args_diferenciais );
+
+		// DEPOIMENTOS
 		$labels_depoimentos = array(
 			"name" => __( "Depoimentos", "" ),
 			"singular_name" => __( "Depoimento", "" ),
@@ -254,7 +344,7 @@ class Custom_Post_Type_Image_Upload {
 			"hierarchical" => false,
 			"rewrite" => array("with_front" => false ),
 			"query_var" => true,
-			"menu_icon" => "dashicons-businessman",
+			"menu_icon" => "dashicons-format-quote",
 			"supports" => array( "title", "editor", "thumbnail"),
 		);
 
