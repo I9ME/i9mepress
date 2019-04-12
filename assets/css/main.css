@@ -1090,30 +1090,30 @@ strong {
   }
 }
 
-.Section--features {
+.Section--diferenciais {
   margin-top: 645px;
 }
 
 @media screen and (min-width: 768px) {
-  .Section--features {
+  .Section--diferenciais {
     min-height: 650px;
     margin-top: 0px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .Section--features .Content {
+  .Section--diferenciais .Content {
     text-align: left !important;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .Section--features .Section-items-item .Image {
+  .Section--diferenciais .Section-items-item .Image {
     margin-right: 18.75px;
   }
 }
 
-.Section--features .Section-items-item-title {
+.Section--diferenciais .Section-items-item-title {
   color: #000000;
 }
 
@@ -1296,6 +1296,20 @@ strong {
 
 .Section--videos .owl-next {
   right: -40px;
+}
+
+.Section--features {
+  background: #f5f5f5;
+}
+
+.Section--features .Section-items-item-title {
+  color: #000000;
+}
+
+@media screen and (min-width: 768px) {
+  .Section--features .Section-items-item-title {
+    padding-top: 9.375px;
+  }
 }
 
 @media screen and (min-width: 768px) {

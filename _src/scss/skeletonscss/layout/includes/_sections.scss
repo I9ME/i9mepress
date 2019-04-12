@@ -953,7 +953,7 @@
 			}
 		}
 	}
-	&--features{
+	&--diferenciais{
 		margin-top: 645px;
 		@media screen and (min-width: $break-sm){
 			min-height: 650px;
@@ -1136,6 +1136,21 @@
 		}
 		& .owl-next{
 			right: -40px;
+		}
+	}
+	&--features{
+		background: $color_13;
+		& .Section{
+			&-items{
+				&-item{
+					&-title{
+						color: $color_11;
+						@media screen and (min-width: $break-sm){
+							padding-top: $v_spacing / 4;
+						}
+					}
+				}
+			}
 		}
 	}
 	&--footer{

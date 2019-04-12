@@ -14,7 +14,7 @@ if ($query->have_posts()):
     <ul id="videos-carousel" class="Section-items u-sizeFull u-heightFull u-positionAbsolute u-zIndex0 owl-carousel">
     <?php while ($query->have_posts()): $query->the_post(); 
             
-            // CAPTURANDO THUMBNAIL DO POST
+            // CAPTURANDO URL DA THUMBNAIL
             $image_id = has_post_thumbnail() ? get_post_thumbnail_id() : "";
             $thumbnail = $image_id ? wp_get_attachment_image_src($image_id)[0] : "";
 
