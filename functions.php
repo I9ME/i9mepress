@@ -124,8 +124,8 @@ echo'<svg style="position: absolute; width: 0; height: 0; overflow: hidden;" ver
 <path d="M5.543 11.043l1.414 1.414 4.457-4.457-4.457-4.457-1.414 1.414 3.043 3.043z"></path>
 </symbol>
 <symbol id="iconPlay" viewBox="0 0 32 32">
-<title>play2</title>
-<path d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM16 29c-7.18 0-13-5.82-13-13s5.82-13 13-13 13 5.82 13 13-5.82 13-13 13zM12 9l12 7-12 7z"></path>
+<title>play3</title>
+<path d="M6 4l20 12-20 12z"></path>
 </symbol>
 </defs>
 </svg>';
@@ -304,6 +304,51 @@ class Custom_Post_Type_Image_Upload {
 		);
 
 		register_post_type( "diferenciais", $args_diferenciais );
+
+		// Vídeos
+		$labels_videos= array(
+			"name" => __( "Vídeos", "" ),
+			"singular_name" => __( "Vídeos", "" ),
+			"menu_name" => __( "Vídeos", "" ),
+			"all_items" => __( "Todos os vídeos", "" ),
+			"add_new" => __( "Adicionar novo vídeo", "" ),
+			"add_new_item" => __( "Adicionar novo vídeo", "" ),
+			"edit_item" => __( "Editar Vídeos", "" ),
+			"new_item" => __( "Novo Vídeos", "" ),
+			"view_item" => __( "Visualizar Vídeos", "" ),
+			"view_items" => __( "Visualizar Vídeos", "" ),
+			"search_items" => __( "Pesquisar Vídeos", "" ),
+			"not_found" => __( "Sem resultados", "" ),
+			"not_found_in_trash" => __( "Sem resultados", "" ),
+			"parent_item_colon" => __( "Relacionados", "" ),
+			"featured_image" => __( "Imagem destacada", "" ),
+			"set_featured_image" => __( "Editar imagem destacada", "" ),
+			"remove_featured_image" => __( "Remover imagem destacada", "" ),
+			"parent_item_colon" => __( "Relacionados", "" ),
+		);
+
+		$args_videos= array(
+			"label" => __( "videos", "" ),
+			"labels" => $labels_videos,
+			"description" => "",
+			"public" => true,
+			"publicly_queryable" => true,
+			"show_ui" => true,
+			"show_in_rest" => false,
+			"rest_base" => "",
+			"has_archive" => false,
+			"show_in_menu" => true,
+			"exclude_from_search" => false,
+			"capability_type" => "post",
+			"map_meta_cap" => true,
+			"hierarchical" => false,
+			"rewrite" => array("with_front" => false ),
+			"query_var" => true,
+			"menu_icon" => "dashicons-video-alt3",
+			"supports" => array( "title", "editor", "thumbnail"),
+		);
+
+		register_post_type( "videos", $args_videos);
 
 		// DEPOIMENTOS
 		$labels_depoimentos = array(

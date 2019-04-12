@@ -1058,25 +1058,41 @@
 				filter: grayscale(100%);
 			}
 			&-content{
-				background: #009cdea1;
+				background: linear-gradient(to right, $color_3, $color_4);
+				&--hasThumbnail{
+					background: #009cdea1;
+				}
 			}
 			&-items{
 				position: absolute !important;
 				&-item{
 					&-title{
 						color: $color_1;
-						font-size: 35px;
+						font-size: 25px;
 						@media screen and (min-width: $break-sm){
 							font-size: 45px;
 						}
 						font-weight: normal;
 					}
+					&-link{
+						& .u-icon{
+							border: 3px solid $color_1;
+							height: 70px;
+							width: 70px;
+							padding: 20px 20px 20px 23.5px;
+							@media screen and (min-width: $break-sm){
+								padding: 20px 20px 20px 23.5px;
+								height: 80px;
+								width: 80px;
+							}
+							&:hover{
+								background: $color_1;
+								fill: $color_3;
+							}
+						}
+					}
 				}
 			}
-		}
-		& .u-icon{
-			height: 80px;
-			width: 80px;
 		}
 		& .owl-stage-outer, .owl-stage, .owl-item{
 			height: 100% !important;

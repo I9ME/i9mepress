@@ -1202,6 +1202,10 @@ strong {
 }
 
 .Section--videos .Section-content {
+  background: linear-gradient(to right, #009cde, #47c2ea);
+}
+
+.Section--videos .Section-content--hasThumbnail {
   background: #009cdea1;
 }
 
@@ -1211,7 +1215,7 @@ strong {
 
 .Section--videos .Section-items-item-title {
   color: #FFFFFF;
-  font-size: 35px;
+  font-size: 25px;
   font-weight: normal;
 }
 
@@ -1221,9 +1225,24 @@ strong {
   }
 }
 
-.Section--videos .u-icon {
-  height: 80px;
-  width: 80px;
+.Section--videos .Section-items-item-link .u-icon {
+  border: 3px solid #FFFFFF;
+  height: 70px;
+  width: 70px;
+  padding: 20px 20px 20px 23.5px;
+}
+
+@media screen and (min-width: 768px) {
+  .Section--videos .Section-items-item-link .u-icon {
+    padding: 20px 20px 20px 23.5px;
+    height: 80px;
+    width: 80px;
+  }
+}
+
+.Section--videos .Section-items-item-link .u-icon:hover {
+  background: #FFFFFF;
+  fill: #009cde;
 }
 
 .Section--videos .owl-stage-outer, .Section--videos .owl-stage, .Section--videos .owl-item {
