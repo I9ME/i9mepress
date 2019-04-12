@@ -1136,14 +1136,17 @@ strong {
   color: #000000;
   font-weight: bolder;
   letter-spacing: 1px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
-@media screen and (min-width: 960px) {
-  .Section--depoimentos .Section-items-item-title {
-    padding-top: 18.75px !important;
-    padding-bottom: 18.75px !important;
-  }
+.Section--depoimentos .Section-items-item-subtitle {
+  color: #999999;
+  font-weight: normal;
+  font-size: 13px;
+}
+
+.Section--depoimentos .Section-items-item-resume {
+  font-size: 15px;
 }
 
 .Section--depoimentos .owl-prev,

@@ -17,12 +17,14 @@
             <?php
                 while( $query->have_posts() ) :
                     $query->the_post();
+                    $metabox = get_post_meta( $post->ID, '_urlswitch', true );
                     ?>
                     <li class="Section-items-item u-displayFlex u-flexDirectionColumn u-paddingVertical u-flexJustifyContentCenter u-flexAlignItemsCenter   u-alignCenter u-boxShadow u-marginHorizontal--inter u-marginVertical u-paddingHorizontal--inter">
                         <figure class="Section-items-item-figure u-borderRadius100">
                             <?php echo get_the_post_thumbnail( $page->ID, 'thumbnail' ); ?>
                         </figure>
-                        <h3 class="Section-items-item-title u-paddingHorizontal--inter"><?php echo get_the_title(); ?></h3>
+                        <h3 class="Section-items-item-title u-paddingTop--inter--half"><?php echo get_the_title(); ?></h3>
+                        <h4 class="Section-items-item-subtitle u-paddingBottom--inter--half"><?php echo $metabox;?></h4>
                         <p class="Section-items-item-resume">"<?php echo get_the_content(); ?>"</p>
                     </li>
                     <?php
