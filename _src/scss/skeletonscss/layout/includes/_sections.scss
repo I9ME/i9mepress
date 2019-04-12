@@ -1002,11 +1002,15 @@
 						color: $color_11;
 						font-weight: bolder;
 						letter-spacing: 1px;
-						font-size: 20px;
-						@media screen and (min-width: $break-md){
-							padding-top: $v_spacing / 2 !important;
-							padding-bottom: $v_spacing / 2 !important;
-						}
+						font-size: 18px;
+					}
+					&-subtitle{
+						color: $color_9;
+						font-weight: normal;
+						font-size: 13px;
+					}
+					&-resume{
+						font-size: 15px;
 					}
 				}
 			}
