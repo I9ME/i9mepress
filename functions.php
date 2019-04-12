@@ -276,9 +276,9 @@ class Custom_Post_Type_Image_Upload {
 			"not_found" => __( "Sem resultados", "" ),
 			"not_found_in_trash" => __( "Sem resultados", "" ),
 			"parent_item_colon" => __( "Relacionados", "" ),
-			"featured_image" => __( "Imagem destacada", "" ),
-			"set_featured_image" => __( "Editar imagem destacada", "" ),
-			"remove_featured_image" => __( "Remover imagem destacada", "" ),
+			"featured_image" => __( "Ícone do diferencial", "" ),
+			"set_featured_image" => __( "Atualizar ícone do diferencial", "" ),
+			"remove_featured_image" => __( "Remover ícone do diferencial", "" ),
 			"parent_item_colon" => __( "Relacionados", "" ),
 		);
 
@@ -394,6 +394,51 @@ class Custom_Post_Type_Image_Upload {
 		);
 
 		register_post_type( "depoimentos", $args_depoimentos );
+
+		// FEATURES
+		$labels_features = array(
+			"name" => __( "Features", "" ),
+			"singular_name" => __( "Feature", "" ),
+			"menu_name" => __( "Features", "" ),
+			"all_items" => __( "Todas as features", "" ),
+			"add_new" => __( "Adicionar nova feature", "" ),
+			"add_new_item" => __( "Adicionar nova feature", "" ),
+			"edit_item" => __( "Editar feature", "" ),
+			"new_item" => __( "Novo feature", "" ),
+			"view_item" => __( "Visualizar feature", "" ),
+			"view_items" => __( "Visualizar features", "" ),
+			"search_items" => __( "Pesquisar feature", "" ),
+			"not_found" => __( "Sem resultados", "" ),
+			"not_found_in_trash" => __( "Sem resultados", "" ),
+			"parent_item_colon" => __( "Relacionados", "" ),
+			"featured_image" => __( "Ícone da feature", "" ),
+			"set_featured_image" => __( "Atualizar ícone da feature", "" ),
+			"remove_featured_image" => __( "Remover ícone da feature", "" ),
+			"parent_item_colon" => __( "Relacionados", "" ),
+		);
+
+		$args_features = array(
+			"label" => __( "features", "" ),
+			"labels" => $labels_features,
+			"description" => "",
+			"public" => true,
+			"publicly_queryable" => true,
+			"show_ui" => true,
+			"show_in_rest" => false,
+			"rest_base" => "",
+			"has_archive" => false,
+			"show_in_menu" => true,
+			"exclude_from_search" => false,
+			"capability_type" => "post",
+			"map_meta_cap" => true,
+			"hierarchical" => false,
+			"rewrite" => array("with_front" => false ),
+			"query_var" => true,
+			"menu_icon" => "dashicons-admin-generic",
+			"supports" => array( "title", "editor", "thumbnail"),
+		);
+
+		register_post_type( "features", $args_features );
 
 	}
 
