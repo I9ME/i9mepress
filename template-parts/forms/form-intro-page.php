@@ -67,7 +67,7 @@
         <!-- reCaptia -->
         <div class="_form_element _x50039313 u-paddingVertical u-marginHorizontal--inter--half u-displayFlex u-flexDirectionColumn u-flexAlignItemsCenter" >
             <label class="_form-label">
-                Por favor, verifique seu pedido*
+                Por favor, clique para confirmar
             </label>
             <div class="g-recaptcha" data-sitekey="6LcwIw8TAAAAACP1ysM08EhCgzd6q5JAOUR1a0Go">
             </div>
@@ -82,7 +82,9 @@
     <div class="_form-thank-you" style="display:none;"></div>
 
 
-</form><script type="text/javascript">
+</form>
+
+<script type="text/javascript">
 window.cfields = {"31":"urltracking","32":"idcampaign","34":"source","35":"sourceurl","36":"sourceposition","7":"cidade_uf","37":"endereco","12":"observaes"};
 window._show_thank_you = function(id, message, trackcmp_url) {
   var form = document.getElementById('_form_' + id + '_'), thank_you = form.querySelector('._form-thank-you');
