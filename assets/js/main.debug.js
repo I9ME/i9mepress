@@ -317,7 +317,7 @@ function LightboxCall(iFrame, type) {
     var mail = jQuery('#InputEmail').val();
     jQuery('.Lightbox-window-content').load( iFrame+'&email='+mail);
   } else {
-    jQuery('.Lightbox-window-content').load( iFrame );
+    jQuery('.Lightbox-window-content').html( iFrame );
    }
 
   jQuery('body').css({'overflow-y':'hidden'});
