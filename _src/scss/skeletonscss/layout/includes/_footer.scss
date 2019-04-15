@@ -39,11 +39,6 @@
 					}
 				}
 				&-item{
-					&:first-child{
-						@media screen and (min-width: $break-sm) {
-							margin-right: $v_spacing / 4 !important;
-						}
-					}
 					&-link{
 						background: $color_1;
 						padding: 5px;
