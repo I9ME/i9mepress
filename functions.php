@@ -528,7 +528,7 @@ class Custom_Post_Type_Image_Upload {
 			"hierarchical" => false,
 			"rewrite" => array("with_front" => false ),
 			"query_var" => true,
-			"menu_icon" => "dashicons-location-alt",
+			"menu_icon" => "dashicons-phone",
 			"supports" => array("title", "editor"),
 		);
 
