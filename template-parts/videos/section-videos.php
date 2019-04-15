@@ -32,7 +32,7 @@ if ($query->have_posts()):
                         <a class="Section-items-item-link u-marginBottom--inter--half" href="javascript:LightboxCall(<?php echo esc_html( $iFrame )?>, 'video');">
                             <svg class="u-icon iconPlay u-borderRadius100 is-animating u-displayFlex u-flexJustifyContentCenter u-flexAlignItemsCenter"><use xlink:href="#iconPlay"></use></svg>
                         </a>
-                        <h2 class="Section-items-item-title u-alignCenter"><?php echo get_the_title(); ?></h2>  
+                        <h2 class="Section-header-title u-alignCenter"><?php echo get_the_title(); ?></h2>  
                     </div>
                 </li>
             <?php endif; ?> <!-- empty videocode -->

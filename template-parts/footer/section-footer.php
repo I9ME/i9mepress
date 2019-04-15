@@ -30,7 +30,7 @@ $sitename = get_bloginfo("name");
                 </li>
                 <li class="Section-items-item u-displayFlex">
                     <svg class="u-icon u-icon--mail iconEnvelope u-marginRight"><use xlink:href="#iconEnvelope"></use></svg>
-                    <h4 class="Section-items-item-title">contato@template.com.br</h4>
+                    <h4 class="Section-items-item-title">contato@salupp.com.br</h4>
                 </li>
             </ul>
         </div>

@@ -1,3 +1,15 @@
+<?php
+
+$args = array(
+	"post_type" => "titulo_site",
+	"posts_per_page" => 1
+);
+
+$query = new WP_Query($args);
+$get_content = $query->posts[0]->post_content;
+$content = $get_content ? $get_content : "Cadastre-se gratuitamente." ;
+
+?>
 <style>
  
  #_form_19_ ._form-thank-you { position:relative; left:0; right:0; text-align:center; font-size:18px; }
@@ -12,6 +24,9 @@
     <input type="hidden" name="act" value="sub" />
     <input type="hidden" name="v" value="2" />
     <div class="Form-fieldset _form-content u-sizeFull">
+        <div class="Form-line u-sizeFull">
+          <h2 class="Section-header-subtitle u-alignCenter u-paddingBottom--inter"><?php echo $content; ?></h2>
+        </div>
         <!-- Campos ocultos -->
         <div class="_form_element _field31 _full_width " >
             <input type="hidden" name="field[31]" value="" />

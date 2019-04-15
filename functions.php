@@ -255,7 +255,7 @@ class Custom_Post_Type_Image_Upload {
 			"rewrite" => array("with_front" => false ),
 			"query_var" => true,
 			"menu_icon" => "dashicons-welcome-add-page",
-			"supports" => "title",
+			"supports" => array( "title", "editor"),
 		);
 
 		register_post_type( "titulo_site", $args_titulo_site );
