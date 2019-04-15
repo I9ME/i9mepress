@@ -1343,76 +1343,6 @@ strong {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .Section--footer .Section-content {
-    padding-bottom: 0px !important;
-  }
-}
-
-.Section--footer .Section-content:last-child {
-  margin-bottom: 0px;
-}
-
-.Section--footer .Section-content--branding .Section-branding-title {
-  font-size: 30px;
-}
-
-.Section--footer .Section-content-resume {
-  width: 70%;
-}
-
-.Section--footer .Section-header-title {
-  font-size: 22px;
-  font-weight: bolder;
-}
-
-.Section--footer .Section-items--redesSociais .u-icon {
-  fill: #009cde;
-  font-size: 25px;
-}
-
-.Section--footer .Section-items--redesSociais .u-icon:hover {
-  background: transparent;
-  fill: #FFFFFF;
-}
-
-@media screen and (min-width: 768px) {
-  .Section--footer .Section-items-item:first-child {
-    margin-right: 9.375px !important;
-  }
-}
-
-.Section--footer .Section-items-item-link {
-  background: #FFFFFF;
-  padding: 5px;
-  height: 35px;
-  width: 35px;
-  border: 2px solid #FFFFFF;
-}
-
-.Section--footer .Section-items-item-link:hover {
-  background: transparent;
-}
-
-.Section--footer .Section-items-item-link:hover .u-icon {
-  fill: #FFFFFF;
-}
-
-.Section--footer .Section-items-item-title {
-  color: #FFFFFF !important;
-  font-size: 15px;
-}
-
-.Section--footer .u-icon {
-  font-size: 18px;
-}
-
-@media screen and (min-width: 768px) {
-  .Section--footer .u-icon--mail {
-    font-size: 25px;
-  }
-}
-
 .Site-header {
   background: rgba(0, 0, 0, 0);
   position: absolute;
@@ -1551,12 +1481,6 @@ strong {
 .Site-footer .Section--footer .Section-items--redesSociais .u-icon:hover {
   background: transparent;
   fill: #FFFFFF;
-}
-
-@media screen and (min-width: 768px) {
-  .Site-footer .Section--footer .Section-items-item:first-child {
-    margin-right: 9.375px !important;
-  }
 }
 
 .Site-footer .Section--footer .Section-items-item-link {

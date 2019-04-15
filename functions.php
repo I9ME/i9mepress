@@ -131,6 +131,27 @@ echo'<svg style="position: absolute; width: 0; height: 0; overflow: hidden;" ver
 <title>location2</title>
 <path d="M16 0c-5.523 0-10 4.477-10 10 0 10 10 22 10 22s10-12 10-22c0-5.523-4.477-10-10-10zM16 16.125c-3.383 0-6.125-2.742-6.125-6.125s2.742-6.125 6.125-6.125 6.125 2.742 6.125 6.125-2.742 6.125-6.125 6.125zM12.125 10c0-2.14 1.735-3.875 3.875-3.875s3.875 1.735 3.875 3.875c0 2.14-1.735 3.875-3.875 3.875s-3.875-1.735-3.875-3.875z"></path>
 </symbol>
+<symbol id="iconYoutube" viewBox="0 0 32 32">
+<title>youtube</title>
+<path d="M31.681 9.6c0 0-0.313-2.206-1.275-3.175-1.219-1.275-2.581-1.281-3.206-1.356-4.475-0.325-11.194-0.325-11.194-0.325h-0.012c0 0-6.719 0-11.194 0.325-0.625 0.075-1.987 0.081-3.206 1.356-0.963 0.969-1.269 3.175-1.269 3.175s-0.319 2.588-0.319 5.181v2.425c0 2.587 0.319 5.181 0.319 5.181s0.313 2.206 1.269 3.175c1.219 1.275 2.819 1.231 3.531 1.369 2.563 0.244 10.881 0.319 10.881 0.319s6.725-0.012 11.2-0.331c0.625-0.075 1.988-0.081 3.206-1.356 0.962-0.969 1.275-3.175 1.275-3.175s0.319-2.587 0.319-5.181v-2.425c-0.006-2.588-0.325-5.181-0.325-5.181zM12.694 20.15v-8.994l8.644 4.513-8.644 4.481z"></path>
+</symbol>
+<symbol id="iconLinkedin" viewBox="0 0 32 32">
+<title>linkedin</title>
+<path d="M29 0h-26c-1.65 0-3 1.35-3 3v26c0 1.65 1.35 3 3 3h26c1.65 0 3-1.35 3-3v-26c0-1.65-1.35-3-3-3zM12 26h-4v-14h4v14zM10 10c-1.106 0-2-0.894-2-2s0.894-2 2-2c1.106 0 2 0.894 2 2s-0.894 2-2 2zM26 26h-4v-8c0-1.106-0.894-2-2-2s-2 0.894-2 2v8h-4v-14h4v2.481c0.825-1.131 2.087-2.481 3.5-2.481 2.488 0 4.5 2.238 4.5 5v9z"></path>
+</symbol>
+<symbol id="iconTwitter" viewBox="0 0 32 32">
+<title>twitter</title>
+<path d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z"></path>
+</symbol>
+<symbol id="iconTripadvisor" viewBox="0 0 36 28">
+<title>tripadvisor</title>
+<path d="M10.172 15.578c0 0.812-0.656 1.469-1.453 1.469-0.812 0-1.469-0.656-1.469-1.469 0-0.797 0.656-1.453 1.469-1.453 0.797 0 1.453 0.656 1.453 1.453zM28.203 15.563c0 0.812-0.656 1.469-1.469 1.469s-1.469-0.656-1.469-1.469 0.656-1.453 1.469-1.453 1.469 0.641 1.469 1.453zM11.953 15.578c0-1.656-1.359-3.016-3.016-3.016-1.672 0-3.016 1.359-3.016 3.016 0 1.672 1.344 3.016 3.016 3.016 1.656 0 3.016-1.344 3.016-3.016zM29.969 15.563c0-1.656-1.344-3.016-3.016-3.016-1.656 0-3.016 1.359-3.016 3.016 0 1.672 1.359 3.016 3.016 3.016 1.672 0 3.016-1.344 3.016-3.016zM13.281 15.578c0 2.406-1.937 4.359-4.344 4.359s-4.359-1.953-4.359-4.359c0-2.391 1.953-4.344 4.359-4.344s4.344 1.953 4.344 4.344zM31.313 15.563c0 2.406-1.953 4.344-4.359 4.344-2.391 0-4.344-1.937-4.344-4.344s1.953-4.344 4.344-4.344c2.406 0 4.359 1.937 4.359 4.344zM16.25 15.609c0-3.984-3.234-7.219-7.219-7.219-3.969 0-7.203 3.234-7.203 7.219s3.234 7.219 7.203 7.219c3.984 0 7.219-3.234 7.219-7.219zM26.688 6.656c-2.578-1.125-5.484-1.734-8.687-1.734s-6.391 0.609-8.953 1.719c4.953 0.016 8.953 4.016 8.953 8.969 0-4.859 3.859-8.813 8.687-8.953zM34.172 15.609c0-3.984-3.219-7.219-7.203-7.219s-7.219 3.234-7.219 7.219 3.234 7.219 7.219 7.219 7.203-3.234 7.203-7.219zM30.016 6.766h5.984c-0.938 1.094-1.625 2.562-1.797 3.578 1.078 1.484 1.719 3.297 1.719 5.266 0 4.953-4.016 8.953-8.953 8.953-2.812 0-5.313-1.281-6.953-3.297 0 0-0.734 0.875-2.016 2.797-0.219-0.453-1.328-2.031-2-2.812-1.641 2.031-4.156 3.313-6.969 3.313-4.937 0-8.953-4-8.953-8.953 0-1.969 0.641-3.781 1.719-5.266-0.172-1.016-0.859-2.484-1.797-3.578h5.703c3.063-2.047 7.516-3.328 12.297-3.328s8.953 1.281 12.016 3.328z"></path>
+</symbol>
+<symbol id="iconLink" viewBox="0 0 32 32">
+<title>link</title>
+<path d="M13.757 19.868c-0.416 0-0.832-0.159-1.149-0.476-2.973-2.973-2.973-7.81 0-10.783l6-6c1.44-1.44 3.355-2.233 5.392-2.233s3.951 0.793 5.392 2.233c2.973 2.973 2.973 7.81 0 10.783l-2.743 2.743c-0.635 0.635-1.663 0.635-2.298 0s-0.635-1.663 0-2.298l2.743-2.743c1.706-1.706 1.706-4.481 0-6.187-0.826-0.826-1.925-1.281-3.094-1.281s-2.267 0.455-3.094 1.281l-6 6c-1.706 1.706-1.706 4.481 0 6.187 0.635 0.635 0.635 1.663 0 2.298-0.317 0.317-0.733 0.476-1.149 0.476z"></path>
+<path d="M8 31.625c-2.037 0-3.952-0.793-5.392-2.233-2.973-2.973-2.973-7.81 0-10.783l2.743-2.743c0.635-0.635 1.664-0.635 2.298 0s0.635 1.663 0 2.298l-2.743 2.743c-1.706 1.706-1.706 4.481 0 6.187 0.826 0.826 1.925 1.281 3.094 1.281s2.267-0.455 3.094-1.281l6-6c1.706-1.706 1.706-4.481 0-6.187-0.635-0.635-0.635-1.663 0-2.298s1.663-0.635 2.298 0c2.973 2.973 2.973 7.81 0 10.783l-6 6c-1.44 1.44-3.355 2.233-5.392 2.233z"></path>
+</symbol>
 </defs>
 </svg>';
 
@@ -534,6 +555,51 @@ class Custom_Post_Type_Image_Upload {
 
 		register_post_type( "contatos", $args_contatos );
 
+		// Redes Sociais e Links
+		$labels_redes_sociais = array(
+			"name" => __( "Redes Sociais", "" ),
+			"singular_name" => __( "Rede Social", "" ),
+			"menu_name" => __( "Redes Sociais", "" ),
+			"all_items" => __( "Todas as Redes Sociais", "" ),
+			"add_new" => __( "Adicionar nova Rede Social", "" ),
+			"add_new_item" => __( "Adicionar nova Rede Social", "" ),
+			"edit_item" => __( "Editar Rede Social", "" ),
+			"new_item" => __( "Novo Rede Social", "" ),
+			"view_item" => __( "Visualizar Rede Social", "" ),
+			"view_items" => __( "Visualizar Rede Social", "" ),
+			"search_items" => __( "Pesquisar Rede Social", "" ),
+			"not_found" => __( "Sem resultados", "" ),
+			"not_found_in_trash" => __( "Sem resultados", "" ),
+			"parent_item_colon" => __( "Relacionados", "" ),
+			"featured_image" => __( "Ícone da feature", "" ),
+			"set_featured_image" => __( "Editar imagem destacada", "" ),
+			"remove_featured_image" => __( "Remover imagem destacada", "" ),
+			"parent_item_colon" => __( "Relacionados", "" ),
+		);
+
+		$args_redes_sociais = array(
+			"label" => __( "redes_sociais", "" ),
+			"labels" => $labels_redes_sociais,
+			"description" => "",
+			"public" => true,
+			"publicly_queryable" => true,
+			"show_ui" => true,
+			"show_in_rest" => false,
+			"rest_base" => "",
+			"has_archive" => false,
+			"show_in_menu" => true,
+			"exclude_from_search" => false,
+			"capability_type" => "post",
+			"map_meta_cap" => true,
+			"hierarchical" => false,
+			"rewrite" => array("with_front" => false ),
+			"query_var" => true,
+			"menu_icon" => "dashicons-networking",
+			"supports" => array("title", "editor"),
+		);
+
+		register_post_type( "redes_sociais", $args_redes_sociais );
+
 	}
 
 //==========================================
@@ -900,7 +966,7 @@ function tipo_contato_html($post)
     $tipo_contato = get_post_meta($post->ID, '_tipo_contato_meta_key', true);
     ?>
     <select name="tipo_contato_field" id="tipo_contato_field" class="postbox">
-		<option value="default">Escolha...</option>
+		<option value="default_contato">Escolha...</option>
 		<option value="telefone"<?php selected($tipo_contato, 'telefone'); ?>>Telefone</option>
 		<option value="email" <?php selected($tipo_contato, 'email'); ?>>E-mail</option>
     </select>
@@ -921,14 +987,57 @@ function tipo_contato_savedata($post_id)
 }
 add_action('save_post', 'tipo_contato_savedata');
 
-// <option value="">Escolha...</option>
-// <option value="something" selected($tipo_contato, 'facebook');>Facebook</option>
-// <option value="else" selected($tipo_contato, 'instagram');>Instagram</option>
-// <option value="else" selected($tipo_contato, 'youtube');>Youtube</option>
-// <option value="else" selected($tipo_contato, 'linkedin');>Linkedin</option>
-// <option value="else" selected($tipo_contato, 'twitter');>Twitter</option>
-// <option value="else" selected($tipo_contato, 'tripadvisor');>Tripadvisor</option>
-// <option value="else" selected($tipo_contato, 'ifood');>Ifood</option>
+
+//==========================
+// METABOX TIPOS DE REDES SOCIAIS
+//==========================
+
+//Adicionando Metabox
+function tipo_rede_social_metabox()
+{
+    $screens = ["redes_sociais"];
+    foreach ($screens as $screen) {
+        add_meta_box(
+            'tipo_rede_social_id',           // Unique ID
+            'Tipo de Rede Social',  // Box title
+            'tipo_rede_social_html',  // Content callback, must be of type callable
+            $screen                   // Post type
+        );
+    }
+}
+add_action('add_meta_boxes', 'tipo_rede_social_metabox');
+
+//Exibindo tela no dashboard
+function tipo_rede_social_html($post)
+{
+    $tipo_rede_social = get_post_meta($post->ID, '_tipo_rede_social_meta_key', true);
+    ?>
+    <select name="tipo_rede_social_field" id="tipo_rede_social_field" class="postbox">
+		<option value="default_rede_social">Escolha...</option>
+		<option value="facebook" <?php selected($tipo_rede_social, 'facebook'); ?>>Facebook</option>
+		<option value="instagram" <?php selected($tipo_rede_social, 'instagram'); ?>>Instagram</option>
+		<option value="youtube" <?php selected($tipo_rede_social, 'youtube'); ?>>Youtube</option>
+		<option value="linkedin" <?php selected($tipo_rede_social, 'linkedin'); ?>>Linkedin</option>
+		<option value="twitter" <?php selected($tipo_rede_social, 'twitter'); ?>>Twitter</option>
+		<option value="tripadvisor" <?php selected($tipo_rede_social, 'tripadvisor'); ?>>Tripadvisor</option>
+		<option value="ifood" <?php selected($tipo_rede_social, 'ifood'); ?>>Ifood</option>
+    </select>
+    <?php
+}
+
+//SALVANDO TIPO DE CONTATO
+function tipo_rede_social_savedata($post_id)
+{
+    if (array_key_exists('tipo_rede_social_field', $_POST)) {
+        update_post_meta(
+            $post_id,
+            '_tipo_rede_social_meta_key',
+            $_POST['tipo_rede_social_field']
+        );
+	}
+
+}
+add_action('save_post', 'tipo_rede_social_savedata');
 
 
 
@@ -1009,11 +1118,50 @@ function console_php($obj){
 //Define SVG - Desenvolvido por Petrus Rennan
 
 function define_svg ($content_type) {
+	
+	//CONTATOS
+
 	if ($content_type == "email"){
+
 		return '<svg class="u-icon u-icon--mail iconEnvelope u-marginRight"><use xlink:href="#iconEnvelope"></use></svg>';
+
 	}else if ($content_type == "telefone"){
+
 		return '<svg class="u-icon iconPhone u-marginRight"><use xlink:href="#iconPhone"></use></svg>';
+
+	//REDES SOCIAIS
+
+	}else if ($content_type == "default_rede_social"){
+
+		return '<svg class="u-icon iconLink is-animating"><use xlink:href="#iconLink"></use></svg>';
+
+	}else if ($content_type == "facebook"){
+
+		return '<svg class="u-icon iconFacebook is-animating"><use xlink:href="#iconFacebook"></use></svg>';
+
+	}else if ($content_type == "instagram"){
+
+		return '<svg class="u-icon iconInstagram is-animating"><use xlink:href="#iconInstagram"></use></svg>';
+
+	}else if ($content_type == "youtube"){
+
+		return '<svg class="u-icon iconYoutube is-animating"><use xlink:href="#iconYoutube"></use></svg>';
+
+	}else if ($content_type == "linkedin"){
+
+		return '<svg class="u-icon iconLinkedin is-animating"><use xlink:href="#iconLinkedin"></use></svg>';
+
+	}else if ($content_type == "twitter"){
+
+		return '<svg class="u-icon iconTwitter is-animating"><use xlink:href="#iconTwitter"></use></svg>';
+
+	}else if ($content_type == "tripadvisor"){
+
+		return '<svg class="u-icon iconTripadvisor is-animating"><use xlink:href="#iconTripadvisor"></use></svg>';
+
 	}else{
+
 		return false;
+
 	}
 }
