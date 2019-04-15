@@ -447,7 +447,7 @@ class Custom_Post_Type_Image_Upload {
 		// ENDEREÇOS
 		$labels_enderecos = array(
 			"name" => __( "Endereços", "" ),
-			"singular_name" => __( "Feature", "" ),
+			"singular_name" => __( "Endereço", "" ),
 			"menu_name" => __( "Endereços", "" ),
 			"all_items" => __( "Todos os endereços", "" ),
 			"add_new" => __( "Adicionar novo endereço", "" ),
@@ -488,6 +488,51 @@ class Custom_Post_Type_Image_Upload {
 		);
 
 		register_post_type( "enderecos", $args_enderecos );
+
+		// Contatos
+		$labels_contatos = array(
+			"name" => __( "Contatos", "" ),
+			"singular_name" => __( "Contato", "" ),
+			"menu_name" => __( "Contatos", "" ),
+			"all_items" => __( "Todos os Contatos", "" ),
+			"add_new" => __( "Adicionar novo Contato", "" ),
+			"add_new_item" => __( "Adicionar novo Contato", "" ),
+			"edit_item" => __( "Editar Contato", "" ),
+			"new_item" => __( "Novo Contato", "" ),
+			"view_item" => __( "Visualizar Contato", "" ),
+			"view_items" => __( "Visualizar Contato", "" ),
+			"search_items" => __( "Pesquisar Contato", "" ),
+			"not_found" => __( "Sem resultados", "" ),
+			"not_found_in_trash" => __( "Sem resultados", "" ),
+			"parent_item_colon" => __( "Relacionados", "" ),
+			"featured_image" => __( "Ícone da feature", "" ),
+			"set_featured_image" => __( "Editar imagem destacada", "" ),
+			"remove_featured_image" => __( "Remover imagem destacada", "" ),
+			"parent_item_colon" => __( "Relacionados", "" ),
+		);
+
+		$args_contatos = array(
+			"label" => __( "contatos", "" ),
+			"labels" => $labels_contatos,
+			"description" => "",
+			"public" => true,
+			"publicly_queryable" => true,
+			"show_ui" => true,
+			"show_in_rest" => false,
+			"rest_base" => "",
+			"has_archive" => false,
+			"show_in_menu" => true,
+			"exclude_from_search" => false,
+			"capability_type" => "post",
+			"map_meta_cap" => true,
+			"hierarchical" => false,
+			"rewrite" => array("with_front" => false ),
+			"query_var" => true,
+			"menu_icon" => "dashicons-location-alt",
+			"supports" => array("title", "editor"),
+		);
+
+		register_post_type( "contatos", $args_contatos );
 
 	}
 
@@ -830,7 +875,60 @@ function conteudo_save_custom_metabox_data( $post_id ) {
 add_action( 'save_post', 'conteudo_save_custom_metabox_data' );
 
 
+//==========================
+// METABOX TIPOS DE CONTATO
+//==========================
 
+//Adicionando Metabox
+function tipo_contato_metabox()
+{
+    $screens = ["contatos"];
+    foreach ($screens as $screen) {
+        add_meta_box(
+            'tipo_contato_id',           // Unique ID
+            'Tipo de contato',  // Box title
+            'tipo_contato_html',  // Content callback, must be of type callable
+            $screen                   // Post type
+        );
+    }
+}
+add_action('add_meta_boxes', 'tipo_contato_metabox');
+
+//Exibindo tela no dashboard
+function tipo_contato_html($post)
+{
+    $tipo_contato = get_post_meta($post->ID, '_tipo_contato_meta_key', true);
+    ?>
+    <select name="tipo_contato_field" id="tipo_contato_field" class="postbox">
+		<option value="default">Escolha...</option>
+		<option value="telefone"<?php selected($tipo_contato, 'telefone'); ?>>Telefone</option>
+		<option value="email" <?php selected($tipo_contato, 'email'); ?>>E-mail</option>
+    </select>
+    <?php
+}
+
+//SALVANDO TIPO DE CONTATO
+function tipo_contato_savedata($post_id)
+{
+    if (array_key_exists('tipo_contato_field', $_POST)) {
+        update_post_meta(
+            $post_id,
+            '_tipo_contato_meta_key',
+            $_POST['tipo_contato_field']
+        );
+	}
+
+}
+add_action('save_post', 'tipo_contato_savedata');
+
+// <option value="">Escolha...</option>
+// <option value="something" selected($tipo_contato, 'facebook');>Facebook</option>
+// <option value="else" selected($tipo_contato, 'instagram');>Instagram</option>
+// <option value="else" selected($tipo_contato, 'youtube');>Youtube</option>
+// <option value="else" selected($tipo_contato, 'linkedin');>Linkedin</option>
+// <option value="else" selected($tipo_contato, 'twitter');>Twitter</option>
+// <option value="else" selected($tipo_contato, 'tripadvisor');>Tripadvisor</option>
+// <option value="else" selected($tipo_contato, 'ifood');>Ifood</option>
 
 
 
@@ -906,4 +1004,16 @@ function console_php($obj){
 	echo '<script type="text/javascript">
 		console.log('.json_encode($obj).');
 	</script>';	
+}
+
+//Define SVG - Desenvolvido por Petrus Rennan
+
+function define_svg ($content_type) {
+	if ($content_type == "email"){
+		return '<svg class="u-icon u-icon--mail iconEnvelope u-marginRight"><use xlink:href="#iconEnvelope"></use></svg>';
+	}else if ($content_type == "telefone"){
+		return '<svg class="u-icon iconPhone u-marginRight"><use xlink:href="#iconPhone"></use></svg>';
+	}else{
+		return false;
+	}
 }
