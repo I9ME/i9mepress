@@ -10,6 +10,29 @@ $args = array(
 
 $address = new WP_Query($args);
 
+//CONTATOS
+$args = array(
+	"post_type" => "contatos",
+	"posts_per_page" => 4
+);
+
+$contatos = new WP_Query($args);
+
+//QUANTAS SEÇÕES DO FOOTER ESTÃO ATIVAS? - Sabendo dessa informação, posso adaptar a estilização do footer.
+function counter_section_footer ($address, $contatos) {
+    $counter = 0;
+    if ($address->have_posts()) {
+        $counter += 1;
+    }
+    if ($contatos->have_posts()) {
+        $counter += 1;
+    }
+    // if ($social->have_posts()) {
+    //     $counter += 1;
+    // }
+    return $counter;
+}
+
 ?>
 
 <section class="Section Section--style2 Section--footer u-paddingHorizontal">
@@ -32,21 +55,24 @@ $address = new WP_Query($args);
                 <?php endwhile; ?>
             </div>
         <?php endif; ?>
+        <?php if ($contatos->have_posts()): ?>
         <div class="Section-content u-size6of24 u-paddingBottom--inter">
             <header class="Section-header u-paddingBottom--inter--half">
                 <h3 class="Section-header-title">Contato</h3>
             </header>
+            
             <ul class="Section-items">
-                <li class="Section-items-item u-displayFlex u-paddingBottom--inter--half">
-                    <svg class="u-icon iconPhone u-marginRight"><use xlink:href="#iconPhone"></use></svg>
-                    <h4 class="Section-items-item-title">(85) 9 9876 5432</h4>
-                </li>
-                <li class="Section-items-item u-displayFlex">
-                    <svg class="u-icon u-icon--mail iconEnvelope u-marginRight"><use xlink:href="#iconEnvelope"></use></svg>
-                    <h4 class="Section-items-item-title">contato@salupp.com.br</h4>
-                </li>
+                <?php while ($contatos->have_posts()):$contatos->the_post();
+                    $tipo_contato = get_post_meta($post->ID, '_tipo_contato_meta_key', true);
+                ?>
+                    <li class="Section-items-item u-marginBottom--inter--half u-displayFlex u-flexAlignItemsCenter">
+                        <?php echo define_svg($tipo_contato); ?>
+                        <h4 class="Section-items-item-title"><?php echo get_the_content(); ?></h4>
+                    </li>
+                <?php endwhile; ?>
             </ul>
         </div>
+        <?php endif; ?>
         <div class="Section-content u-size6of24">
             <header class="Section-header u-paddingBottom--inter--half">
                 <h3 class="Section-header-title">Siga-nos</h3>
