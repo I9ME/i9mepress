@@ -233,13 +233,13 @@ strong {
 }
 
 .Section-header-title {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: normal;
 }
 
 @media screen and (min-width: 768px) {
   .Section-header-title {
-    font-size: 49px;
+    font-size: 42px;
   }
 }
 
@@ -259,16 +259,15 @@ strong {
 }
 
 .Section-header-subtitle {
-  font-size: 18px;
+  font-size: 20px;
   margin: 0px;
   padding: 0px;
-  font-weight: normal;
-  margin-top: 10px;
-  font-size: 18px;
+  font-weight: bolder;
+  font-size: 20px;
 }
 
 .Section-content-subtitle {
-  font-size: 18px;
+  font-size: 20px;
   color: #000000;
 }
 
@@ -294,7 +293,7 @@ strong {
 }
 
 .Section .Section-items-item-resume {
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .Section .Section-items-item-text {
@@ -398,7 +397,7 @@ strong {
 
 .Section .Navigation--tabs-items-item .Navigation-link {
   color: #f9f9f9;
-  font-size: 18px;
+  font-size: 20px;
   width: 40px;
   height: 40px;
   background: #cdcdcd;
@@ -442,7 +441,7 @@ strong {
   }
   .Section .Navigation--tabs-items-item .Navigation-link {
     color: #f9f9f9;
-    font-size: 18px;
+    font-size: 20px;
     width: 40px;
     height: 40px;
     background: #cdcdcd;
@@ -617,6 +616,13 @@ strong {
   color: #fb2b09;
 }
 
+@media screen and (min-width: 768px) {
+  .Section--style1 .Section-items-item-title,
+  .Section--style1 .Section-items-item-title a {
+    padding-bottom: 6.25px;
+  }
+}
+
 .Section--style1 .Section-items-item-subtitle {
   color: #fb2b09;
 }
@@ -715,7 +721,7 @@ strong {
 }
 
 .Section--style2 .Captions-title {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 @media screen and (min-width: 768px) {
@@ -739,7 +745,7 @@ strong {
 }
 
 .Section--style2 .Section-header-subtitle {
-  color: #FFFFFF;
+  color: #000000;
 }
 
 .Section--style2 .ReadMore {
@@ -1090,6 +1096,12 @@ strong {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .Section--intro .Section-header-subtitle {
+    padding-bottom: 18.75px;
+  }
+}
+
 .Section--diferenciais {
   margin-top: 645px;
 }
@@ -1136,7 +1148,7 @@ strong {
   color: #000000;
   font-weight: bolder;
   letter-spacing: 1px;
-  font-size: 18px;
+  padding-bottom: 0px !important;
 }
 
 .Section--depoimentos .Section-items-item-subtitle {
@@ -1218,14 +1230,7 @@ strong {
 
 .Section--videos .Section-items-item-title {
   color: #FFFFFF;
-  font-size: 25px;
   font-weight: normal;
-}
-
-@media screen and (min-width: 768px) {
-  .Section--videos .Section-items-item-title {
-    font-size: 45px;
-  }
 }
 
 .Section--videos .Section-items-item-link .u-icon {
@@ -3874,7 +3879,7 @@ th.u-isShown {
 .Navigation--menu--style2 .Navigation-items-item .NavigationLink {
   color: #fb2b09;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .Navigation--menu--style2 .Navigation-items-item .NavigationLink.ButtonLink--nav {

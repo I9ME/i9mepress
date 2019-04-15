@@ -41,8 +41,7 @@
 			font-size: $font_size_subtitle_section;
 			margin: 0px;
 			padding: 0px;
-			font-weight: normal;
-			margin-top: 10px;	
+			font-weight: bolder;	
 			font-size: $font_size_subtitle_section;
 
 		}
@@ -465,6 +464,9 @@
 				&-title,
 				&-title a{
 					color: $color_2;
+					@media screen and (min-width: $break-sm){
+						padding-bottom: $v_spacing / 6;
+					}
 				}
 				&-subtitle{
 					color: $color_2;
@@ -565,10 +567,10 @@
 			&-title{
 				font-size: $font_size_title_section_m;
 				@media screen and (min-width: $break-sm){
-					font-size: $font_size_title_section / 1.5;
+					font-size: $font_size_title_site / 1.5;
 				}
 				@media screen and (min-width: $break-md){
-					font-size: $font_size_title_section;
+					font-size: $font_size_title_site;
 				}
 			}
 		}
@@ -582,7 +584,7 @@
 				}
 			}
 			&-subtitle{
-				color: $color_1;
+				color: $color_11;
 			}
 		}
 		& .ReadMore{
@@ -952,6 +954,15 @@
 				}	
 			}
 		}
+		& .Section{
+			&-header{
+				&-subtitle{
+					@media screen and (min-width: $break-sm){
+						padding-bottom: 18.75px;
+					}
+				}
+			}
+		}
 	}
 	&--diferenciais{
 		margin-top: 645px;
@@ -1002,7 +1013,7 @@
 						color: $color_11;
 						font-weight: bolder;
 						letter-spacing: 1px;
-						font-size: 18px;
+						padding-bottom: 0px !important; 
 					}
 					&-subtitle{
 						color: $color_9;
@@ -1072,10 +1083,6 @@
 				&-item{
 					&-title{
 						color: $color_1;
-						font-size: 25px;
-						@media screen and (min-width: $break-sm){
-							font-size: 45px;
-						}
 						font-weight: normal;
 					}
 					&-link{

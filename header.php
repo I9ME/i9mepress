@@ -16,7 +16,7 @@
 
  get_template_part('template-parts/header/header','tags');
 
-  ?>
+?>
 
 <body <?php body_class(); ?>>
 
