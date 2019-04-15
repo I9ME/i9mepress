@@ -19,7 +19,7 @@ if( $query->have_posts() ):
                 $image_id = has_post_thumbnail() ? get_post_thumbnail_id() : "";
                 $thumbnail = $image_id ? wp_get_attachment_image_src($image_id)[0] : "";
             ?>
-                <li class="Section-items-item u-displayFlex u-flexAlignItemsCenter u-flexDirectionColumn u-flexSwitchRow u-marginBottom--inter">
+                <li class="Section-items-item u-displayFlex u-flexAlignItemsCenter u-flexDirectionColumn u-flexSwitchRow u-marginBottom">
                     <div class="Image">
                         <img src="<?php echo $image_id ? $thumbnail : get_template_directory_uri() . "/assets/images/featuretemplate.png" ; ?>" alt="<?php echo get_the_title(); ?>">
                     </div>

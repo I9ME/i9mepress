@@ -978,6 +978,12 @@
 		& .Section{
 			&-items{
 				&-item{
+					@media screen and (min-width: $break-sm){
+						margin-bottom: 37.5px;
+					}
+					&:last-child{
+						margin-bottom: 0px;
+					}
 					& .Image{
 						@media screen and (min-width: $break-sm){
 							margin-right: $v_spacing / 2;
@@ -1148,8 +1154,19 @@
 	&--features{
 		background: $color_13;
 		& .Section{
+			&-header{
+				@media screen and (min-width: $break-sm){
+					padding-bottom: 37.5px;
+				}
+			}
 			&-items{
 				&-item{
+					&:last-child{
+						margin-bottom: 0px;
+					}
+					@media screen and (min-width: $break-sm){
+						margin-bottom: 0px;
+					}
 					&-title{
 						color: $color_11;
 						@media screen and (min-width: $break-sm){
