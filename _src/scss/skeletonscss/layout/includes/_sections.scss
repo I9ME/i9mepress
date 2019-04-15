@@ -1181,13 +1181,12 @@
 		& .Section{
 			&-content{
 				@media screen and (min-width: $break-sm){
-					margin-right: $v_spacing;
 					padding-bottom: 0px !important;
 				}
+				&:last-child{
+					margin-bottom: 0px;
+				}
 				&--branding{
-					@media screen and (min-width: $break-sm){
-						margin-right: $v_spacing * 4;
-					}
 					& .Section{
 						&-branding{
 							&-title{
@@ -1195,6 +1194,9 @@
 							}
 						}
 					}
+				}
+				&-resume{
+					width: 70%;
 				}
 			}
 			&-header{
