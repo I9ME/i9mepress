@@ -127,6 +127,10 @@ echo'<svg style="position: absolute; width: 0; height: 0; overflow: hidden;" ver
 <title>play3</title>
 <path d="M6 4l20 12-20 12z"></path>
 </symbol>
+<symbol id="iconLocation" viewBox="0 0 32 32">
+<title>location2</title>
+<path d="M16 0c-5.523 0-10 4.477-10 10 0 10 10 22 10 22s10-12 10-22c0-5.523-4.477-10-10-10zM16 16.125c-3.383 0-6.125-2.742-6.125-6.125s2.742-6.125 6.125-6.125 6.125 2.742 6.125 6.125-2.742 6.125-6.125 6.125zM12.125 10c0-2.14 1.735-3.875 3.875-3.875s3.875 1.735 3.875 3.875c0 2.14-1.735 3.875-3.875 3.875s-3.875-1.735-3.875-3.875z"></path>
+</symbol>
 </defs>
 </svg>';
 
@@ -439,6 +443,51 @@ class Custom_Post_Type_Image_Upload {
 		);
 
 		register_post_type( "features", $args_features );
+
+		// ENDEREÇOS
+		$labels_enderecos = array(
+			"name" => __( "Endereços", "" ),
+			"singular_name" => __( "Feature", "" ),
+			"menu_name" => __( "Endereços", "" ),
+			"all_items" => __( "Todos os endereços", "" ),
+			"add_new" => __( "Adicionar novo endereço", "" ),
+			"add_new_item" => __( "Adicionar novo endereço", "" ),
+			"edit_item" => __( "Editar endereço", "" ),
+			"new_item" => __( "Novo endereço", "" ),
+			"view_item" => __( "Visualizar endereço", "" ),
+			"view_items" => __( "Visualizar endereço", "" ),
+			"search_items" => __( "Pesquisar endereço", "" ),
+			"not_found" => __( "Sem resultados", "" ),
+			"not_found_in_trash" => __( "Sem resultados", "" ),
+			"parent_item_colon" => __( "Relacionados", "" ),
+			"featured_image" => __( "Ícone da feature", "" ),
+			"set_featured_image" => __( "Editar imagem destacada", "" ),
+			"remove_featured_image" => __( "Remover imagem destacada", "" ),
+			"parent_item_colon" => __( "Relacionados", "" ),
+		);
+
+		$args_enderecos = array(
+			"label" => __( "enderecos", "" ),
+			"labels" => $labels_enderecos,
+			"description" => "",
+			"public" => true,
+			"publicly_queryable" => true,
+			"show_ui" => true,
+			"show_in_rest" => false,
+			"rest_base" => "",
+			"has_archive" => false,
+			"show_in_menu" => true,
+			"exclude_from_search" => false,
+			"capability_type" => "post",
+			"map_meta_cap" => true,
+			"hierarchical" => false,
+			"rewrite" => array("with_front" => false ),
+			"query_var" => true,
+			"menu_icon" => "dashicons-location-alt",
+			"supports" => array("title", "editor"),
+		);
+
+		register_post_type( "enderecos", $args_enderecos );
 
 	}
 
