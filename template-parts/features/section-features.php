@@ -19,7 +19,7 @@
 ?>
 <section class="Section Section--style1 Section--features u-paddingHorizontal u-paddingVertical">
     <div class="u-maxSize--container u-alignCenterBox">
-        <header class="Section-header u-alignCenter u-paddingBottom--inter">
+        <header class="Section-header u-alignCenter u-paddingBottom">
             <h2 class="Section-header-title">Features</h2>
         </header>
         <ul class="Section-item u-sizeFull u-displayFlex u-flexJustifyContentCenter u-flexWrapWrap">
@@ -28,7 +28,7 @@
                     $image_id = has_post_thumbnail() ? get_post_thumbnail_id() : "";
                     $thumbnail = $image_id ? wp_get_attachment_image_src($image_id)[0] : "";
             ?>
-                <li class="Section-items-item <?php echo $sizeFeature; ?> u-displayFlex u-alignCenter u-flexDirectionColumn u-flexAlignItemsCenter u-paddingVertical--inter--half--px u-marginBottom--inter--half">
+                <li class="Section-items-item <?php echo $sizeFeature; ?> u-displayFlex u-alignCenter u-flexDirectionColumn u-flexAlignItemsCenter u-paddingVertical--inter--half--px u-marginBottom--inter">
                     <div class="Image">
                         <img src="<?php echo $image_id ? $thumbnail : get_template_directory_uri() . "/assets/images/featuretemplate.png" ; ?>" alt="<?php echo get_the_title(); ?>">
                     </div>
