@@ -27,19 +27,19 @@ $argsNetwork = array(
 $network = new WP_Query($argsNetwork);
 
 //QUANTAS SEÇÕES DO FOOTER ESTÃO ATIVAS? - Sabendo dessa informação, posso adaptar a estilização do footer.
-function counter_section_footer ($address, $contatos) {
-    $counter = 0;
-    if ($address->have_posts()) {
-        $counter += 1;
-    }
-    if ($contatos->have_posts()) {
-        $counter += 1;
-    }
-    // if ($social->have_posts()) {
-    //     $counter += 1;
-    // }
-    return $counter;
-}
+// function counter_section_footer ($address, $contatos, $social) {
+//     $counter = 0;
+//     if ($address->have_posts()) {
+//         $counter += 1;
+//     }
+//     if ($contatos->have_posts()) {
+//         $counter += 1;
+//     }
+//     if ($social->have_posts()) {
+//         $counter += 1;
+//     }
+//     return $counter;
+// }
 
 ?>
 
