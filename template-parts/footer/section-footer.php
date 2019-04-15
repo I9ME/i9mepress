@@ -19,19 +19,19 @@ $address = new WP_Query($args);
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/salupp-logo-white.png" alt="<?php echo get_bloginfo("name"); ?>" class="Site-header-branding u-displayBlock u-objectFitCover">
             </a>
         </div>
+        <?php if ($address->have_posts()): ?>
             <div class="Section-content u-size6of24 u-paddingBottom--inter">
                 <header class="Section-header u-paddingBottom--inter--half">
                     <h3 class="Section-header-title">Onde Estamos</h3>
                 </header>
-                <?php if ($address->have_posts()): ?>
-                    <?php while ($address->have_posts()):$address->the_post(); ?>
-                        <div class="Section-content u-marginBottom--inter--half u-displayFlex">
-                            <svg class="u-icon iconLocation u-marginRight"><use xlink:href="#iconLocation"></use></svg>
-                            <p class="Section-content-resume"><?php echo get_the_content(); ?></p>
-                        </div>
-                    <?php endwhile; ?>
-                <?php endif; ?>
+                <?php while ($address->have_posts()):$address->the_post(); ?>
+                    <div class="Section-content u-marginBottom--inter--half u-displayFlex">
+                        <svg class="u-icon iconLocation u-marginRight"><use xlink:href="#iconLocation"></use></svg>
+                        <p class="Section-content-resume"><?php echo get_the_content(); ?></p>
+                    </div>
+                <?php endwhile; ?>
             </div>
+        <?php endif; ?>
         <div class="Section-content u-size6of24 u-paddingBottom--inter">
             <header class="Section-header u-paddingBottom--inter--half">
                 <h3 class="Section-header-title">Contato</h3>
@@ -49,7 +49,7 @@ $address = new WP_Query($args);
         </div>
         <div class="Section-content u-size6of24">
             <header class="Section-header u-paddingBottom--inter--half">
-                <h3 class="Section-header-title">Redes Sociais</h3>
+                <h3 class="Section-header-title">Siga-nos</h3>
             </header>
             <ul class="Section-items Section-items--redesSociais u-displayFlex">
                 <li class="Section-items-item u-marginRight--inter--px">
