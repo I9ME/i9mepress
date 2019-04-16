@@ -425,7 +425,7 @@ class Custom_Post_Type_Image_Upload {
 			"name" => __( "Serviços", "" ),
 			"singular_name" => __( "Serviço", "" ),
 			"menu_name" => __( "Serviços", "" ),
-			"all_items" => __( "Todas os serviços", "" ),
+			"all_items" => __( "Todos os serviços", "" ),
 			"add_new" => __( "Adicionar novo serviço", "" ),
 			"add_new_item" => __( "Adicionar novo serviço", "" ),
 			"edit_item" => __( "Editar serviço", "" ),
