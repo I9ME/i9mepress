@@ -1,6 +1,6 @@
 <?php
     $args = array(
-    'post_type'   => 'features',
+    'post_type'   => 'servicos',
     'post_status' => 'publish',
     'posts_per_page' => 5,
     );
@@ -20,7 +20,7 @@
 <section class="Section Section--style1 Section--features u-paddingHorizontal u-paddingVertical">
     <div class="u-maxSize--container u-alignCenterBox">
         <header class="Section-header u-alignCenter u-paddingBottom">
-            <h2 class="Section-header-title">Features</h2>
+            <h2 class="Section-header-title">Serviços</h2>
         </header>
         <ul class="Section-item u-sizeFull u-displayFlex u-flexJustifyContentCenter u-flexWrapWrap">
             <?php while ($query->have_posts()):$query->the_post(); 
