@@ -421,30 +421,30 @@ class Custom_Post_Type_Image_Upload {
 		register_post_type( "depoimentos", $args_depoimentos );
 
 		// FEATURES
-		$labels_features = array(
-			"name" => __( "Features", "" ),
-			"singular_name" => __( "Feature", "" ),
-			"menu_name" => __( "Features", "" ),
-			"all_items" => __( "Todas as features", "" ),
-			"add_new" => __( "Adicionar nova feature", "" ),
-			"add_new_item" => __( "Adicionar nova feature", "" ),
-			"edit_item" => __( "Editar feature", "" ),
-			"new_item" => __( "Novo feature", "" ),
-			"view_item" => __( "Visualizar feature", "" ),
-			"view_items" => __( "Visualizar features", "" ),
-			"search_items" => __( "Pesquisar feature", "" ),
+		$labels_servicos = array(
+			"name" => __( "Serviços", "" ),
+			"singular_name" => __( "Serviço", "" ),
+			"menu_name" => __( "Serviços", "" ),
+			"all_items" => __( "Todas os serviços", "" ),
+			"add_new" => __( "Adicionar novo serviço", "" ),
+			"add_new_item" => __( "Adicionar novo serviço", "" ),
+			"edit_item" => __( "Editar serviço", "" ),
+			"new_item" => __( "Novo serviço", "" ),
+			"view_item" => __( "Visualizar serviço", "" ),
+			"view_items" => __( "Visualizar serviços", "" ),
+			"search_items" => __( "Pesquisar serviço", "" ),
 			"not_found" => __( "Sem resultados", "" ),
 			"not_found_in_trash" => __( "Sem resultados", "" ),
 			"parent_item_colon" => __( "Relacionados", "" ),
-			"featured_image" => __( "Ícone da feature", "" ),
-			"set_featured_image" => __( "Atualizar ícone da feature", "" ),
-			"remove_featured_image" => __( "Remover ícone da feature", "" ),
+			"featured_image" => __( "Ícone do serviço", "" ),
+			"set_featured_image" => __( "Atualizar ícone do serviço", "" ),
+			"remove_featured_image" => __( "Remover ícone do serviço", "" ),
 			"parent_item_colon" => __( "Relacionados", "" ),
 		);
 
-		$args_features = array(
-			"label" => __( "features", "" ),
-			"labels" => $labels_features,
+		$args_servicos = array(
+			"label" => __( "servicos", "" ),
+			"labels" => $labels_servicos,
 			"description" => "",
 			"public" => true,
 			"publicly_queryable" => true,
@@ -463,7 +463,7 @@ class Custom_Post_Type_Image_Upload {
 			"supports" => array( "title", "editor", "thumbnail"),
 		);
 
-		register_post_type( "features", $args_features );
+		register_post_type( "servicos", $args_servicos );
 
 		// ENDEREÇOS
 		$labels_enderecos = array(
