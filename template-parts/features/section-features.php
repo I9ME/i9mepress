@@ -2,7 +2,7 @@
     $args = array(
     'post_type'   => 'servicos',
     'post_status' => 'publish',
-    'posts_per_page' => 5,
+    'posts_per_page' => 8,
     );
     
     $query = new WP_Query( $args );
