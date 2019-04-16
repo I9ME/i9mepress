@@ -1153,6 +1153,9 @@
 	}
 	&--features{
 		background: $color_13;
+		@media screen and (min-width: $break-md){
+			padding-bottom: 37.5px !important;
+		}
 		& .Section{
 			&-header{
 				@media screen and (min-width: $break-sm){
@@ -1162,10 +1165,9 @@
 			&-items{
 				&-item{
 					&:last-child{
-						margin-bottom: 0px;
-					}
-					@media screen and (min-width: $break-sm){
-						margin-bottom: 0px;
+						@media screen and (max-width: $break-sm){
+							margin-bottom: 0px;
+						}
 					}
 					&-title{
 						color: $color_11;
