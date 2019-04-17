@@ -1170,8 +1170,10 @@ function define_svg ($content_type) {
 
 function customizer ($customize) {
 
+	//ARRAY QUE EDITA AS CUSTOMIZAÇÕES DE FORMA MAIS SIMPLES
 	$ctmz_tree = array(
-		"inicio_do_site" => array(
+		//Início do site
+		array(
 			"section" => "inicio_do_site",
 			"titulo" => "Início do site",
 			"descricao" => "Personalize o estilo do início de sua LP.",
@@ -1211,34 +1213,50 @@ function customizer ($customize) {
 		),
 	);
 
-	$customize->add_section(
-		"inicio_do_site",
-		array(
-			"title" => "Início do site",
-			"description" => "Personalize o estilo do início de sua LP.",
-			"priority" => 30,
-		)
-	);
+	// DINAMIZANDO A CRIAÇÃO DAS SEÇÕES DE CUSTOMIZAÇÃO
 
-	//TÍTULO DA SEÇÃO
-	$customize->add_setting(
-		"section_title",
-		array(
-			"default" => "",
-			"transport" => "refresh",
-		)
-	);
+	foreach ($ctmz_tree as $tree){
+		$customize->add_section(
+			$tree["section"],
+			array(
+				"title" => $tree["titulo"],
+				"description" => $tree["descricao"],
+				"priority" => $tree["prioridade"],
+			)
+		);
 
-	$customize->add_control(new WP_Customize_Control(
-		$customize,
-		"section_title",
-		array(
-			"label" => "Título da seção",
-			"section" => "inicio_do_site",
-			"settings" => "section_title",
-			"type" => "text"
-		)
-	));
+		foreach($tree["controls"] as $control ){
+			$customize->add_setting(
+				$control["setting"],
+				array(
+					"default" => "",
+					"transport" => "refresh",
+				)
+			);
+			if ($control["tipo_de_controle"] !== "paleta_de_cores"){
+				$customize->add_control(new WP_Customize_Control(
+					$customize,
+					$control["setting"],
+					array(
+						"label" => $control["label"],
+						"section" => $tree["section"],
+						"description" => $control["descricao"],
+						"settings" => $control["setting"],
+						"type" => $control["tipo_de_controle"],
+					)
+				));
+			}else{
+				$customize->add_control(new WP_Customize_Color_Control(
+					$customize,
+					$control["setting"],
+					array(
+						"label" => $control["label"],
+						"section" => $tree["section"],
+					)
+				));
+			}
+		}
+	}
 
 }
 
