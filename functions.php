@@ -1166,7 +1166,7 @@ function define_svg ($content_type) {
 	}
 }
 
-//CUSTOMIZER DO TEMA
+// AUTOMATIZAÇÃO DE CUSTOMIZER DO TEMA - Petrus Nogueira
 
 function customizer ($customize) {
 
@@ -1182,30 +1182,44 @@ function customizer ($customize) {
 				array(
 					"label" => "Titulo da seção",
 					"descricao" => false,
+					"default" => "Bem vindo a nossa Landing Page",
 					"tipo_de_controle" => "text",
 					"setting" => "section_title",
 				),
 				array(
 					"label" => "Titulo do formulário",
 					"descricao" => false,
+					"default" => "Cadastre-se, é de graça",
 					"tipo_de_controle" => "text",
 					"setting" => "form_title",
 				),
 				array(
-					"label" => "Background da seção",
+					"label" => "Cor de fundo",
 					"descricao" => false,
+					"default" => "none",
 					"tipo_de_controle" => "paleta_de_cores",
 					"setting" => "section_background",
 				),
+				//BACKGROUND IMAGEM, PROBLEMAS DE IMPLEMENTAÇÃO, URL CONFUSA
+				// array(
+				// 	"label" => "Imagem de fundo",
+				// 	"descricao" => "(Caso adicionada, ela irá sobrescrever a cor de fundo.)",
+				// 	"default" => "",
+				// 	"tipo_de_controle" => "media_content",
+				// 	"mime_type" => "image",
+				// 	"setting" => "background_image",
+				// ),
 				array(
 					"label" => "Cor do título (seção)",
 					"descricao" => false,
+					"default" => "none",
 					"tipo_de_controle" => "paleta_de_cores",
 					"setting" => "section_color_title",
 				),
 				array(
 					"label" => "Cor do título (formulário)",
 					"descricao" => false,
+					"default" => "none",
 					"tipo_de_controle" => "paleta_de_cores",
 					"setting" => "form_color_title",
 				),
@@ -1229,11 +1243,31 @@ function customizer ($customize) {
 			$customize->add_setting(
 				$control["setting"],
 				array(
-					"default" => "",
+					"default" => $control["default"],
 					"transport" => "refresh",
 				)
 			);
-			if ($control["tipo_de_controle"] !== "paleta_de_cores"){
+			if ($control["tipo_de_controle"] == "paleta_de_cores"){
+				$customize->add_control(new WP_Customize_Color_Control(
+					$customize,
+					$control["setting"],
+					array(
+						"label" => $control["label"],
+						"section" => $tree["section"],
+					)
+				));
+			}else if ($control["tipo_de_controle"] == "media_content"){
+				$customize->add_control(new WP_Customize_Media_Control(
+					$customize,
+					$control["setting"],
+					array(
+						"label" => $control["label"],
+						"description"=>$control["descricao"],
+						"section" => $tree["section"],
+						"mime_type" => $control["mime_type"]	
+					)
+				));
+			}else{
 				$customize->add_control(new WP_Customize_Control(
 					$customize,
 					$control["setting"],
@@ -1243,15 +1277,6 @@ function customizer ($customize) {
 						"description" => $control["descricao"],
 						"settings" => $control["setting"],
 						"type" => $control["tipo_de_controle"],
-					)
-				));
-			}else{
-				$customize->add_control(new WP_Customize_Color_Control(
-					$customize,
-					$control["setting"],
-					array(
-						"label" => $control["label"],
-						"section" => $tree["section"],
 					)
 				));
 			}
