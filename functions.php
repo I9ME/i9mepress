@@ -1170,6 +1170,47 @@ function define_svg ($content_type) {
 
 function customizer ($customize) {
 
+	$ctmz_tree = array(
+		"inicio_do_site" => array(
+			"section" => "inicio_do_site",
+			"titulo" => "Início do site",
+			"descricao" => "Personalize o estilo do início de sua LP.",
+			"prioridade" => 30,
+			"controls" => array(
+				array(
+					"label" => "Titulo da seção",
+					"descricao" => false,
+					"tipo_de_controle" => "text",
+					"setting" => "section_title",
+				),
+				array(
+					"label" => "Titulo do formulário",
+					"descricao" => false,
+					"tipo_de_controle" => "text",
+					"setting" => "form_title",
+				),
+				array(
+					"label" => "Background da seção",
+					"descricao" => false,
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "section_background",
+				),
+				array(
+					"label" => "Cor do título (seção)",
+					"descricao" => false,
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "section_color_title",
+				),
+				array(
+					"label" => "Cor do título (formulário)",
+					"descricao" => false,
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "form_color_title",
+				),
+			)
+		),
+	);
+
 	$customize->add_section(
 		"inicio_do_site",
 		array(
@@ -1179,6 +1220,7 @@ function customizer ($customize) {
 		)
 	);
 
+	//TÍTULO DA SEÇÃO
 	$customize->add_setting(
 		"section_title",
 		array(
