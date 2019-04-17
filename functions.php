@@ -1165,3 +1165,100 @@ function define_svg ($content_type) {
 
 	}
 }
+
+//CUSTOMIZER DO TEMA
+
+function customizer ($customize) {
+
+	//ARRAY QUE EDITA AS CUSTOMIZAÇÕES DE FORMA MAIS SIMPLES
+	$ctmz_tree = array(
+		//Início do site
+		array(
+			"section" => "inicio_do_site",
+			"titulo" => "Início do site",
+			"descricao" => "Personalize o estilo do início de sua LP.",
+			"prioridade" => 30,
+			"controls" => array(
+				array(
+					"label" => "Titulo da seção",
+					"descricao" => false,
+					"tipo_de_controle" => "text",
+					"setting" => "section_title",
+				),
+				array(
+					"label" => "Titulo do formulário",
+					"descricao" => false,
+					"tipo_de_controle" => "text",
+					"setting" => "form_title",
+				),
+				array(
+					"label" => "Background da seção",
+					"descricao" => false,
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "section_background",
+				),
+				array(
+					"label" => "Cor do título (seção)",
+					"descricao" => false,
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "section_color_title",
+				),
+				array(
+					"label" => "Cor do título (formulário)",
+					"descricao" => false,
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "form_color_title",
+				),
+			)
+		),
+	);
+
+	// DINAMIZANDO A CRIAÇÃO DAS SEÇÕES DE CUSTOMIZAÇÃO
+
+	foreach ($ctmz_tree as $tree){
+		$customize->add_section(
+			$tree["section"],
+			array(
+				"title" => $tree["titulo"],
+				"description" => $tree["descricao"],
+				"priority" => $tree["prioridade"],
+			)
+		);
+
+		foreach($tree["controls"] as $control ){
+			$customize->add_setting(
+				$control["setting"],
+				array(
+					"default" => "",
+					"transport" => "refresh",
+				)
+			);
+			if ($control["tipo_de_controle"] !== "paleta_de_cores"){
+				$customize->add_control(new WP_Customize_Control(
+					$customize,
+					$control["setting"],
+					array(
+						"label" => $control["label"],
+						"section" => $tree["section"],
+						"description" => $control["descricao"],
+						"settings" => $control["setting"],
+						"type" => $control["tipo_de_controle"],
+					)
+				));
+			}else{
+				$customize->add_control(new WP_Customize_Color_Control(
+					$customize,
+					$control["setting"],
+					array(
+						"label" => $control["label"],
+						"section" => $tree["section"],
+					)
+				));
+			}
+		}
+	}
+
+}
+
+//HOOK CUSTOMIZER
+add_action("customize_register", "customizer");

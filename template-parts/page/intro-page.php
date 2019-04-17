@@ -1,36 +1,25 @@
 <?php 
 
-// TÍTULO DINÂMICO
+//=====================
+//CUSTOMIZER WORDPRESS
+//=====================
 
-$args = array(
-	"post_type" => "titulo_site",
-	"posts_per_page" => 1
-);
+//Título da seção
+$section_title_get = get_theme_mod("section_title");
+$section_color_title_get = get_theme_mod("section_color_title");
+$section_title = $section_title_get ? $section_title_get : "Bem vindo a nossa Landing Page";
+$section_color_title = $section_color_title_get ? $section_color_title_get : "none";
 
-$query = new WP_Query($args);
-// echo "<pre>";
-// print_r($query);die;
+// Background da seção
+$section_background = get_theme_mod("section_background", "none");
+
 
 if(is_home()){
  ?>
- <section class="Section Section--style2 Section--intro u-displayFlex u-flexDirectionColumn u-flexJustifyContentCenter u-flexAlignItemsCenter u-paddingHorizontal backgroundImage">
+ <section class="Section Section--style2 Section--intro u-displayFlex u-flexDirectionColumn u-flexJustifyContentCenter u-flexAlignItemsCenter u-paddingHorizontal backgroundImage" style="background-color:<?php echo $section_background; ?>;">
 	<div class="u-maxSize--container u-alignCenterBox u-paddingVertical u-displayFlex u-flexDirectionColumn u-flexSwitchRow u-flexWrapWrap u-flexJustifyContentSpaceBetween u-flexAlignItemsCenter u-sizeFull">
 		<header class="Captions u-alignCenter u-size13of24">
-		<?php 
-			if ($query->have_posts()){
-				while ($query->have_posts()):$query->the_post(); 
-		?> 
-					<h1 class="Captions-title"><?php echo get_the_title(); ?></h1>
-		<?php 
-				endwhile; 
-		?>
-		<?php 
-			}else{ 
-		?>
-				<h1 class="Captions-title">Bem-vindo a nossa landing page.</h1>		
-		<?php
-			} 
-		?>
+			<h1 class="Captions-title" style="color:<?php echo $section_color_title; ?>;"><?php echo $section_title; ?></h1>	
 		</header>
 
 		<?php get_template_part('template-parts/forms/form','intro-page'); ?>
