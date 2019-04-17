@@ -1166,53 +1166,39 @@ function define_svg ($content_type) {
 	}
 }
 
-/**
- * Função para registrar as opções do customizer
- */
-function funcao_do_customizer( $wp_customize ) {
-    /**
-     * Define a sessão
-     * Para este exemplo nossa sessão terá o ID "campos_de_texto", título "Textos" e
-     * descrição "Altere os textos do seu tema."
-     */
-    $wp_customize->add_section(
-        'campos_de_texto',
-        array(
-            'title'       => 'Textos',
-            'description' => 'Altere os textos do seu tema.',
-            'priority'    => 30,
-        )
-    );
+//CUSTOMIZER DO TEMA
 
-    /**
-     * Adiciona uma nova setting
-     * O interessante aqui é que você pode definir um valor padrão e o modo como 
-     * o transport será realizado.
-     */
-    $wp_customize->add_setting(
-        'campo1', // campo
-        array(
-            'default'   => '', // Valor padrão 
-            'transport' => 'refresh', // Transport
-        )
-    );
+function customizer ($customize) {
 
+	$customize->add_section(
+		"inicio_do_site",
+		array(
+			"title" => "Início do site",
+			"description" => "Personalize o estilo do início de sua LP.",
+			"priority" => 30,
+		)
+	);
 
-    /**
-     * Adiciona um control
-     * Aqui você trata do campo que será exibido.
-     */
-    $wp_customize->add_control(new WP_Customize_Control(
-        $wp_customize,
-        "campo1", // campo
-        array(
-            "label"    => "Label do campo 1", // Rótulo do campo
-            "section"  => "campos_de_texto", // Sessão que o campo será exibido
-            "settings" => "campo1", // A settings do campo
-            "type"     => "text", // Tipo do campo
-        )
-    ));
+	$customize->add_setting(
+		"section_title",
+		array(
+			"default" => "",
+			"transport" => "refresh",
+		)
+	);
+
+	$customize->add_control(new WP_Customize_Control(
+		$customize,
+		"section_title",
+		array(
+			"label" => "Título da seção",
+			"section" => "inicio_do_site",
+			"settings" => "section_title",
+			"type" => "text"
+		)
+	));
+
 }
 
-// Utiliza o gancho para adicionar nossa função
-add_action( 'customize_register', 'funcao_do_customizer' );
+//HOOK CUSTOMIZER
+add_action("customize_register", "customizer");
