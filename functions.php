@@ -1345,6 +1345,22 @@ function customizer ($customize) {
 				),
 			),
 		),
+		//Footer
+		array(
+			"section" => "footer",
+			"titulo" => "Rodapé do site",
+			"descricao" => "Personalize o rodapé da sua LP.",
+			"prioridade" => 30,
+			"controls" => array(
+				array(
+					"label" => "Título da seção de localização",
+					"descricao" => false,
+					"default" => "Onde estamos",
+					"tipo_de_controle" => "text",
+					"setting" => "footer_title",
+				),
+			),
+		)
 	);
 
 	// DINAMIZANDO A CRIAÇÃO DAS SEÇÕES DE CUSTOMIZAÇÃO
