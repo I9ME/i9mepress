@@ -1225,6 +1225,68 @@ function customizer ($customize) {
 				),
 			)
 		),
+		//Serviços
+		array(
+			"section" => "servicos",
+			"titulo" => "Itens (produtos, serviços, etc)",
+			"descricao" => "Personalize a seção de serviços da sua LP.",
+			"prioridade" => 30,
+			"controls" => array(
+				array(
+					"label" => "Titulo da seção",
+					"descricao" => false,
+					"default" => "Serviços",
+					"tipo_de_controle" => "text",
+					"setting" => "servicos_title",
+				),
+				array(
+					"label" => "Layout dos itens",
+					"descricao" => false,
+					"default" => "",
+					"tipo_de_controle" => "select",
+					"setting" => "servicos_layout",
+					"choices" => array (
+						"light" => "Simples",
+						"shadow" => "Bloco com sombra",
+					),
+				),
+				array(
+					"label" => "Cor de fundo (seção)",
+					"descricao" => false,
+					"default" => "none",
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "servicos_background",
+				),
+				array(
+					"label" => "Cor do título (seção)",
+					"descricao" => false,
+					"default" => "none",
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "servicos_color_title",
+				),
+				array(
+					"label" => "Cor de fundo (item)",
+					"descricao" => "(apenas para layout de blocos com sombra.)",
+					"default" => "none",
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "item_background",
+				),
+				array(
+					"label" => "Cor do título (item)",
+					"descricao" => false,
+					"default" => "none",
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "item_color_title",
+				),
+				array(
+					"label" => "Cor do parágrafo (item)",
+					"descricao" => false,
+					"default" => "none",
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "item_color_resume",
+				),
+			)
+		)
 	);
 
 	// DINAMIZANDO A CRIAÇÃO DAS SEÇÕES DE CUSTOMIZAÇÃO
@@ -1239,6 +1301,7 @@ function customizer ($customize) {
 			)
 		);
 
+		//ADICIONANDO CONTROLES
 		foreach($tree["controls"] as $control ){
 			$customize->add_setting(
 				$control["setting"],
@@ -1254,6 +1317,7 @@ function customizer ($customize) {
 					array(
 						"label" => $control["label"],
 						"section" => $tree["section"],
+						"description" => $control["descricao"],
 					)
 				));
 			}else if ($control["tipo_de_controle"] == "media_content"){
@@ -1265,6 +1329,19 @@ function customizer ($customize) {
 						"description"=>$control["descricao"],
 						"section" => $tree["section"],
 						"mime_type" => $control["mime_type"]	
+					)
+				));
+			}else if ($control["tipo_de_controle"] == "select") {
+				$customize->add_control(new WP_Customize_Control(
+					$customize,
+					$control["setting"],
+					array(
+						"label" => $control["label"],
+						"section" => $tree["section"],
+						"description" => $control["descricao"],
+						"settings" => $control["setting"],
+						"type" => $control["tipo_de_controle"],
+						"choices"  => $control["choices"]
 					)
 				));
 			}else{
