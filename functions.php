@@ -1345,6 +1345,43 @@ function customizer ($customize) {
 				),
 			),
 		),
+		//Footer
+		array(
+			"section" => "footer",
+			"titulo" => "Rodapé do site",
+			"descricao" => "Personalize o rodapé da sua LP.",
+			"prioridade" => 30,
+			"controls" => array(
+				array(
+					"label" => "Título da seção de localização",
+					"descricao" => false,
+					"default" => "Onde estamos",
+					"tipo_de_controle" => "text",
+					"setting" => "footer_location_title",
+				),
+				array(
+					"label" => "Título da seção de contatos",
+					"descricao" => false,
+					"default" => "Contatos",
+					"tipo_de_controle" => "text",
+					"setting" => "footer_contact_title",
+				),
+				array(
+					"label" => "Título da seção de redes sociais",
+					"descricao" => false,
+					"default" => "Siga-nos",
+					"tipo_de_controle" => "text",
+					"setting" => "footer_redes_title",
+				),
+				array(
+					"label" => "Mostrar logotipo no rodapé",
+					"descricao" => false,
+					"default" => "",
+					"tipo_de_controle" => "checkbox",
+					"setting" => "footer_redes_title",
+				),
+			),
+		)
 	);
 
 	// DINAMIZANDO A CRIAÇÃO DAS SEÇÕES DE CUSTOMIZAÇÃO
