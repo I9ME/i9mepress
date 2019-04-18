@@ -1242,7 +1242,7 @@ function customizer ($customize) {
 				array(
 					"label" => "Layout dos itens",
 					"descricao" => false,
-					"default" => "",
+					"default" => "light",
 					"tipo_de_controle" => "select",
 					"setting" => "servicos_layout",
 					"choices" => array (
