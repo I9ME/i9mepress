@@ -1035,6 +1035,7 @@
 		& .owl-prev,
 		& .owl-next{
 			position: absolute !important;
+			background: transparent !important;
 			top: 45%;
 			display: flex;
 			align-items: flex-start;
@@ -1045,8 +1046,10 @@
 				width: 40px;
 				fill: $color_10;
 			}
-			background: $color_1 !important;
 			font-size: 70px !important;
+			&:focus{
+				outline: 0;
+			}
 		}
 		& .owl-prev{
 			left: -40px;

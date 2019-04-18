@@ -1175,12 +1175,12 @@ strong {
 .Section--depoimentos .owl-prev,
 .Section--depoimentos .owl-next {
   position: absolute !important;
+  background: transparent !important;
   top: 45%;
   display: flex;
   align-items: flex-start;
   justify-content: center;
   border-radius: 100px;
-  background: #FFFFFF !important;
   font-size: 70px !important;
 }
 
@@ -1189,6 +1189,11 @@ strong {
   height: 40px;
   width: 40px;
   fill: #555555;
+}
+
+.Section--depoimentos .owl-prev:focus,
+.Section--depoimentos .owl-next:focus {
+  outline: 0;
 }
 
 .Section--depoimentos .owl-prev {

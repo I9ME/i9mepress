@@ -1286,7 +1286,65 @@ function customizer ($customize) {
 					"setting" => "item_color_resume",
 				),
 			)
-		)
+		),
+		//Depoimentos
+		array(
+			"section" => "depoimentos",
+			"titulo" => "Depoimentos",
+			"descricao" => "Personalize a seção de depoimentos da sua LP.",
+			"prioridade" => 30,
+			"controls" => array(
+				array(
+					"label" => "Titulo da seção",
+					"descricao" => false,
+					"default" => "Depoimentos",
+					"tipo_de_controle" => "text",
+					"setting" => "depoimentos_title",
+				),
+				array(
+					"label" => "Cor do título (seção)",
+					"descricao" => false,
+					"default" => "none",
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "depoimentos_color_title",
+				),
+				array(
+					"label" => "Cor de fundo (seção)",
+					"descricao" => false,
+					"default" => "none",
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "depoimentos_background",
+				),
+				array(
+					"label" => "Cor de fundo (depoimento)",
+					"descricao" => false,
+					"default" => "none",
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "depoimentos_item_background",
+				),
+				array(
+					"label" => "Cor do título (depoimento)",
+					"descricao" => false,
+					"default" => "none",
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "depoimentos_item_color_title",
+				),
+				array(
+					"label" => "Cor do cargo (depoimento)",
+					"descricao" => false,
+					"default" => "none",
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "depoimentos_item_color_cargo",
+				),
+				array(
+					"label" => "Cor do parágrafo (depoimento)",
+					"descricao" => false,
+					"default" => "none",
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "depoimentos_item_color_resume",
+				),
+			),
+		),
 	);
 
 	// DINAMIZANDO A CRIAÇÃO DAS SEÇÕES DE CUSTOMIZAÇÃO
