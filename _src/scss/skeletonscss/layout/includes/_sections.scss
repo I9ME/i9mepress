@@ -1158,21 +1158,27 @@
 		}
 		& .Section{
 			&-header{
-				@media screen and (min-width: $break-sm){
-					padding-bottom: 37.5px;
+				&--light{
+					@media screen and (min-width: $break-sm){
+						padding-bottom: 37.5px;
+					}
 				}
 			}
 			&-items{
 				&-item{
-					&:last-child{
-						@media screen and (max-width: $break-sm){
-							margin-bottom: 0px;
-						}
-					}
 					&-title{
 						color: $color_11;
-						@media screen and (min-width: $break-sm){
-							padding-top: $v_spacing / 4;
+					}
+					&--light{
+						&:last-child{
+							@media screen and (max-width: $break-sm){
+								margin-bottom: 0px;
+							}
+						}
+						&-title{
+							@media screen and (min-width: $break-sm){
+								padding-top: $v_spacing / 4;
+							}
 						}
 					}
 				}

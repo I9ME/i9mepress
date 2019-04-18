@@ -1325,14 +1325,8 @@ strong {
 }
 
 @media screen and (min-width: 768px) {
-  .Section--features .Section-header {
+  .Section--features .Section-header--light {
     padding-bottom: 37.5px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .Section--features .Section-items-item:last-child {
-    margin-bottom: 0px;
   }
 }
 
@@ -1340,8 +1334,14 @@ strong {
   color: #000000;
 }
 
+@media screen and (max-width: 768px) {
+  .Section--features .Section-items-item--light:last-child {
+    margin-bottom: 0px;
+  }
+}
+
 @media screen and (min-width: 768px) {
-  .Section--features .Section-items-item-title {
+  .Section--features .Section-items-item--light-title {
     padding-top: 9.375px;
   }
 }
