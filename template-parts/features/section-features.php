@@ -8,7 +8,7 @@
     $section_title_get = get_theme_mod("servicos_title");
     $section_color_title_get = get_theme_mod("servicos_color_title");
     $section_title = $section_title_get ? $section_title_get : "Serviços";
-    $section_color_title = $section_color_title_get ? $section_color_title_get : "none";
+    $section_color_title = $section_color_title_get ? $section_color_title_get : "";
     
     //Layout da seção
     $section_layout_get = get_theme_mod("servicos_layout");
@@ -17,7 +17,7 @@
         $section_layout_items = "Section-content-items--light u-paddingVertical--inter--half--px u-marginBottom--inter";
         
         //Layouts simples não precisam de background
-        $item_background = "none";
+        $item_background = "";
 
     }else if ($section_layout_get == "shadow"){
         
@@ -26,7 +26,7 @@
         
         // Background item
         $item_background_get = get_theme_mod("item_background");
-        $item_background = $item_background_get ? $item_background_get : "none";
+        $item_background = $item_background_get ? $item_background_get : "";
     
     }else{
         $section_layout_title = false;
@@ -36,15 +36,15 @@
 
     // Background seção
     $section_background_get = get_theme_mod("servicos_background");
-    $section_background = $section_background_get ? $section_background_get : "none";
+    $section_background = $section_background_get ? $section_background_get : "";
 
     //Título do item
     $item_color_title_get = get_theme_mod("item_color_title");
-    $item_color_title = $item_color_title_get ? $item_color_title_get : "none";
+    $item_color_title = $item_color_title_get ? $item_color_title_get : "";
 
     //Parágrafo do item
     $item_color_resume_get = get_theme_mod("item_color_resume");
-    $item_color_resume = $item_color_resume_get ? $item_color_resume_get : "none";
+    $item_color_resume = $item_color_resume_get ? $item_color_resume_get : "";
 
 
 

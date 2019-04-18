@@ -1247,7 +1247,7 @@ function customizer ($customize) {
 					"setting" => "servicos_layout",
 					"choices" => array (
 						"light" => "Simples",
-						"shadow" => "Bloco com sombra",
+						"shadow" => "Cards",
 					),
 				),
 				array(
