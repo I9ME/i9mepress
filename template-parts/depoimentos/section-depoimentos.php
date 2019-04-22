@@ -23,6 +23,10 @@
     //Parágrafo do item
     $item_color_resume = get_theme_mod("depoimentos_item_color_resume");
 
+    //=====================
+    // END OF CUSTOMIZER
+    //=====================
+
     $args = array(
         'post_type'   => 'depoimentos',
         'post_status' => 'publish',

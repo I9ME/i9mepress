@@ -1121,8 +1121,8 @@ strong {
 }
 
 @media screen and (min-width: 768px) {
-  .Section--diferenciais .Section-items-item {
-    margin-bottom: 37.5px;
+  .Section--diferenciais .Section-items-item .Image {
+    margin-right: 18.75px;
   }
 }
 
@@ -1130,14 +1130,20 @@ strong {
   margin-bottom: 0px;
 }
 
+.Section--diferenciais .Section-items-item-title {
+  color: #000000;
+}
+
 @media screen and (min-width: 768px) {
-  .Section--diferenciais .Section-items-item .Image {
-    margin-right: 18.75px;
+  .Section--diferenciais .Section-items-item {
+    margin-bottom: 37.5px;
   }
 }
 
-.Section--diferenciais .Section-items-item-title {
-  color: #000000;
+@media screen and (min-width: 768px) {
+  .Section--diferenciais .Section-items-item--shadow {
+    padding: 18.75px 18.75px;
+  }
 }
 
 @media screen and (min-width: 960px) {
