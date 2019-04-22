@@ -5,30 +5,23 @@
     //=====================
 
     //Título da seção
-    $section_title_get = get_theme_mod("depoimentos_title");
-    $section_color_title_get = get_theme_mod("depoimentos_color_title");
-    $section_title = $section_title_get ? $section_title_get : "Depoimentos";
-    $section_color_title = $section_color_title_get ? $section_color_title_get : "";
+    $section_title = get_theme_mod("depoimentos_title");
+    $section_color_title = get_theme_mod("depoimentos_color_title");
 
     // Background seção
-    $section_background_get = get_theme_mod("depoimentos_background");
-    $section_background = $section_background_get ? $section_background_get : "";
+    $section_background = get_theme_mod("depoimentos_background");
 
     // Background depoimentos
-    $item_background_get = get_theme_mod("depoimentos_item_background");
-    $item_background = $item_background_get ? $item_background_get : "";
+    $item_background = get_theme_mod("depoimentos_item_background");
 
     //Título do item
-    $item_color_title_get = get_theme_mod("depoimentos_item_color_title");
-    $item_color_title = $item_color_title_get ? $item_color_title_get : "";
+    $item_color_title = get_theme_mod("depoimentos_item_color_title");
 
     //Título do cargo
-    $item_color_cargo_get = get_theme_mod("depoimentos_item_color_cargo");
-    $item_color_cargo = $item_color_cargo_get ? $item_color_cargo_get : "";
+    $item_color_cargo = get_theme_mod("depoimentos_item_color_cargo");
 
     //Parágrafo do item
-    $item_color_resume_get = get_theme_mod("depoimentos_item_color_resume");
-    $item_color_resume = $item_color_resume_get ? $item_color_resume_get : "";
+    $item_color_resume = get_theme_mod("depoimentos_item_color_resume");
 
     $args = array(
         'post_type'   => 'depoimentos',
