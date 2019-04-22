@@ -1293,6 +1293,86 @@ function customizer ($customize) {
 				),
 			),
 		),
+		//Vídeos
+		array(
+			"section" => "videos",
+			"titulo" => "Vídeos (Em desenvolvimento)",
+			"descricao" => "~Ainda em desenvolvimento. :)",
+			"prioridade" => 30,
+			"controls" => array(
+				array(
+					"label" => "Cor da máscara (onde há imagem de fundo)",
+					"descricao" => false,
+					"default" => "",
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "videos_mask",
+				),
+				array(
+					"label" => "Cor primária do gradiente (onde não há imagem de fundo)",
+					"descricao" => false,
+					"default" => "",
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "videos_primary_gradient",
+				),
+				array(
+					"label" => "Cor secundária do gradiente (onde não há imagem de fundo)",
+					"descricao" => false,
+					"default" => "",
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "videos_secondary_gradient",
+				),
+				array(
+					"label" => "Cor primária do player",
+					"descricao" => false,
+					"default" => "",
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "videos_primary_gradient",
+				),
+				array(
+					"label" => "Cor secundária do player",
+					"descricao" => false,
+					"default" => "",
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "videos_secondary_gradient",
+				),
+				array(
+					"label" => "Cor do título",
+					"descricao" => false,
+					"default" => "",
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "videos_color_title",
+				),
+				array(
+					"label" => "Cor primária dos navegadores (inativo)",
+					"descricao" => false,
+					"default" => "",
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "videos_primary_color_inactive_dots",
+				),
+				array(
+					"label" => "Cor secundária dos navegadores (inativo)",
+					"descricao" => false,
+					"default" => "",
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "videos_secondary_color_inactive_dots",
+				),
+				array(
+					"label" => "Cor primária dos navegadores (ativo)",
+					"descricao" => false,
+					"default" => "",
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "videos_primary_color_active_dots",
+				),
+				array(
+					"label" => "Cor secundária dos navegadores (ativo)",
+					"descricao" => false,
+					"default" => "",
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "videos_secondary_color_active_dots",
+				),
+				
+			),
+		),
 		//Serviços
 		array(
 			"section" => "servicos",
