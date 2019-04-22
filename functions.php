@@ -1133,6 +1133,14 @@ function define_svg ($content_type, $icon_color = "") {
 		$icon_type = "iconPhone u-marginRight";
 		$use_link = "#iconPhone";
 
+	
+	//ENDEREÇOS
+
+	}else if ($content_type == "location"){
+
+		$icon_type = "iconLocation u-marginRight";
+		$use_link = "#iconLocation";
+
 	//REDES SOCIAIS
 
 	}else if ($content_type == "default_rede_social"){
@@ -1162,15 +1170,13 @@ function define_svg ($content_type, $icon_color = "") {
 
 	}else if ($content_type == "twitter"){
 
-		return '<svg class="u-icon iconTwitter is-animating"><use xlink:href="#iconTwitter"></use></svg>';
-		$icon_type = "u-icon--mail iconEnvelope";
-		$use_link = "#iconLink";
+		$icon_type = "iconTwitter is-animating";
+		$use_link = "#iconTwitter";
 
 	}else if ($content_type == "tripadvisor"){
 
-		return '<svg class="u-icon iconTripadvisor is-animating"><use xlink:href="#iconTripadvisor"></use></svg>';
-		$icon_type = "u-icon--mail iconEnvelope";
-		$use_link = "#iconLink";
+		$icon_type = "iconTripadvisor is-animating";
+		$use_link = "#iconTripadvisor";
 
 	}else{
 
@@ -1290,14 +1296,14 @@ function customizer ($customize) {
 					"descricao" => false,
 					"default" => "",
 					"tipo_de_controle" => "paleta_de_cores",
-					"setting" => "item_color_title",
+					"setting" => "servicos_item_color_title",
 				),
 				array(
 					"label" => "Cor do parágrafo (item)",
 					"descricao" => false,
 					"default" => "",
 					"tipo_de_controle" => "paleta_de_cores",
-					"setting" => "item_color_resume",
+					"setting" => "servicos_item_color_resume",
 				),
 			)
 		),
@@ -1374,6 +1380,13 @@ function customizer ($customize) {
 					"setting" => "footer_background",
 				),
 				array(
+					"label" => "Cor dos ícones",
+					"descricao" => false,
+					"default" => "",
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "footer_color_icon",
+				),
+				array(
 					"label" => "Mostrar logotipo no rodapé",
 					"descricao" => false,
 					"default" => true,
@@ -1442,6 +1455,20 @@ function customizer ($customize) {
 					"default" => "",
 					"tipo_de_controle" => "paleta_de_cores",
 					"setting" => "footer_redes_color_title",
+				),
+				array(
+					"label" => "Cor primária de rede social",
+					"descricao" => "(Você deve escolher a cor secundária para as mudanças serem feitas)",
+					"default" => "",
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "footer_redes_primary_color",
+				),
+				array(
+					"label" => "Cor secundária de rede social",
+					"descricao" => false,
+					"default" => "",
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "footer_redes_secondary_color",
 				),
 			),
 		)
