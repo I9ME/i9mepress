@@ -1245,6 +1245,54 @@ function customizer ($customize) {
 				),
 			)
 		),
+		//Diferenciais
+		array(
+			"section" => "diferenciais",
+			"titulo" => "Diferenciais",
+			"descricao" => "Personalize os diferenciais da sua LP.",
+			"prioridade" => 30,
+			"controls" => array(
+				array(
+					"label" => "Cor de fundo (seção)",
+					"descricao" => false,
+					"default" => "",
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "diferenciais_background",
+				),
+				array(
+					"label" => "Layout dos diferenciais",
+					"descricao" => false,
+					"default" => "",
+					"tipo_de_controle" => "select",
+					"setting" => "diferenciais_layout",
+					"choices" => array (
+						"light" => "Simples",
+						"shadow" => "Bloco com sombra",
+					),
+				),
+				array(
+					"label" => "Cor de fundo (diferencial)",
+					"descricao" => "(Apenas para layout de bloco com sombra)",
+					"default" => "",
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "diferenciais_item_background",
+				),
+				array(
+					"label" => "Cor do título (diferencial)",
+					"descricao" => false,
+					"default" => "",
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "diferenciais_item_color_title",
+				),
+				array(
+					"label" => "Cor do parágrafo (diferencial)",
+					"descricao" => false,
+					"default" => "",
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "diferenciais_item_color_resume",
+				),
+			),
+		),
 		//Serviços
 		array(
 			"section" => "servicos",

@@ -978,19 +978,24 @@
 		& .Section{
 			&-items{
 				&-item{
-					@media screen and (min-width: $break-sm){
-						margin-bottom: 37.5px;
-					}
-					&:last-child{
-						margin-bottom: 0px;
-					}
 					& .Image{
 						@media screen and (min-width: $break-sm){
 							margin-right: $v_spacing / 2;
 						}
 					}
+					&:last-child{
+						margin-bottom: 0px;
+					}
 					&-title{
 						color: $color_11;
+					}
+					@media screen and (min-width: $break-sm){
+						margin-bottom: 37.5px;
+					}
+					&--shadow{
+						@media screen and (min-width: $break-sm) {
+							padding: $v_spacing / 2 $v_spacing / 2;
+						}
 					}
 				}
 			}

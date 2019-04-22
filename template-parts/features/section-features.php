@@ -33,17 +33,17 @@
     }
 
     // Background seção
-    $section_background_get = get_theme_mod("servicos_background");
-    $section_background = $section_background_get ? $section_background_get : "";
+    $section_background = get_theme_mod("servicos_background");
 
     //Título do item
     $item_color_title = get_theme_mod("servicos_item_color_title");
 
     //Parágrafo do item
-    $item_color_resume_get = get_theme_mod("servicos_item_color_resume");
-    $item_color_resume = $item_color_resume_get ? $item_color_resume_get : "";
+    $item_color_resume = get_theme_mod("servicos_item_color_resume");
 
-
+    //=====================
+    // END OF CUSTOMIZER
+    //=====================
 
     $args = array(
     'post_type'   => 'servicos',

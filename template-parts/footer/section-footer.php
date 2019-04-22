@@ -2,33 +2,6 @@
 
 $sitename = get_bloginfo("name");
 
-//=====================
-//CUSTOM POST TYPES
-//=====================
-
-// LOCATION
-$argsAddress = array(
-	"post_type" => "enderecos",
-	"posts_per_page" => 3
-);
-
-$address = new WP_Query($argsAddress);
-
-//CONTATOS
-$argsContatos = array(
-	"post_type" => "contatos",
-	"posts_per_page" => 4
-);
-
-$contatos = new WP_Query($argsContatos);
-
-//REDES SOCIAIS
-$argsNetwork = array(
-	"post_type" => "redes_sociais",
-	"posts_per_page" => 6
-);
-
-$network = new WP_Query($argsNetwork);
 
 //=====================
 //CUSTOMIZER WORDPRESS
@@ -79,8 +52,7 @@ $secondary_color = get_theme_mod("footer_redes_secondary_color");
 //     return $counter;
 // }
 
-?>
-<?php if ($primary_color && $secondary_color): ?>
+if ($primary_color && $secondary_color){ ?>
     <style>
 
         /* APLICAÇÃO CUSTOMIZER PARA ÍCONE DE REDES SOCIAIS, SOLUÇÃO PROVISÓRIA */
@@ -100,7 +72,41 @@ $secondary_color = get_theme_mod("footer_redes_secondary_color");
         }
 
     </style>
-<?php endif; ?>
+<?php }
+
+//=====================
+// END OF CUSTOMIZER
+//=====================
+
+//=====================
+// CUSTOM POST TYPES
+//=====================
+
+// LOCATION
+$argsAddress = array(
+	"post_type" => "enderecos",
+	"posts_per_page" => 3
+);
+
+$address = new WP_Query($argsAddress);
+
+//CONTATOS
+$argsContatos = array(
+	"post_type" => "contatos",
+	"posts_per_page" => 4
+);
+
+$contatos = new WP_Query($argsContatos);
+
+//REDES SOCIAIS
+$argsNetwork = array(
+	"post_type" => "redes_sociais",
+	"posts_per_page" => 6
+);
+
+$network = new WP_Query($argsNetwork);
+
+?>
 
 <section class="Section Section--style2 Section--footer u-paddingHorizontal" style="background:<?php echo $section_background; ?>;">
     <div class="u-maxSize--container u-alignCenterBox u-displayFlex u-flexDirectionColumn u-flexSwitchRow u-flexWrapWrap u-flexJustifyContentSpaceBetween u-paddingVertical">

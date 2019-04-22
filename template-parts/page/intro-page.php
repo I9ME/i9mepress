@@ -5,13 +5,14 @@
 //=====================
 
 //Título da seção
-$section_title_get = get_theme_mod("section_title");
-$section_color_title_get = get_theme_mod("section_color_title");
-$section_title = $section_title_get ? $section_title_get : "Bem vindo a nossa Landing Page";
-$section_color_title = $section_color_title_get ? $section_color_title_get : "none";
-
+$section_title = get_theme_mod("section_title");
+$section_color_title = get_theme_mod("section_color_title");
 // Background da seção
 $section_background = get_theme_mod("section_background", "none");
+
+//=====================
+// END OF CUSTOMIZER
+//=====================
 
 
 if(is_home()){
