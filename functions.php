@@ -1494,6 +1494,13 @@ function customizer ($customize) {
 					"tipo_de_controle" => "paleta_de_cores",
 					"setting" => "depoimentos_item_color_resume",
 				),
+				array(
+					"label" => "Cor das setas",
+					"descricao" => false,
+					"default" => "",
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "depoimentos_setas_color",
+				),
 			),
 		),
 		//Footer
