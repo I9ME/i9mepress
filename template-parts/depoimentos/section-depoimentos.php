@@ -23,6 +23,9 @@
     //Parágrafo do item
     $item_color_resume = get_theme_mod("depoimentos_item_color_resume");
 
+    //Parágrafo do item
+    $setas_color = get_theme_mod("depoimentos_setas_color");
+
     //=====================
     // END OF CUSTOMIZER
     //=====================
@@ -36,6 +39,14 @@
     $query = new WP_Query( $args );
     if( $query->have_posts() ) :
 ?>
+<?php if ($setas_color) : ?>
+    <style>
+        .Section--depoimentos .owl-nav .owl-prev .icon, .Section--depoimentos .owl-nav .owl-next .icon{
+            fill: <?php echo $setas_color; ?>;
+        }
+    </style>
+<?php endif; ?>
+
 <section class="Section Section--style1 Section--depoimentos u-paddingHorizontal" style="background:<?php echo $section_background; ?>;">
     <div class="u-maxSize--container u-alignCenterBox u-paddingVertical">
         <div id="depoimentos" class="Section-header">
