@@ -6780,6 +6780,13 @@ input[type="submit"] {
   }
 }
 
+.Form--intro-page .wpcf7-response-output {
+  color: #000000;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
 .Form--intro-page ._form-label {
   color: #000000;
   margin-bottom: 9.375px;

@@ -309,6 +309,12 @@ $mainSelector: '.Form';
 			margin-top: 0px !important;
 			margin-bottom: -610px;
 		}
+		& .wpcf7-response-output{
+			color: $color_11;
+			margin-top: 0px;
+			margin-left: 0px;
+			margin-right: 0px;
+		}
 		& ._form-label{
 			color: $color_11;
 			margin-bottom: $v_spacing / 4;
