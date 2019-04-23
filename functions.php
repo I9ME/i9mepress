@@ -1109,7 +1109,7 @@ function column_orderby ( $vars ) {
     return $vars;
 }
 
-//Console PHP - Desenvolvido por Paulo Arthur e Petrus Rennan
+//Console PHP - Desenvolvido por Paulo Arthur e SamuraiPetrus
 
 function console_php($obj){
 	echo '<script type="text/javascript">
@@ -1117,7 +1117,7 @@ function console_php($obj){
 	</script>';	
 }
 
-//Define SVG - Desenvolvido por Petrus Rennan
+//Define SVG - Desenvolvido por SamuraiPetrus
 
 function define_svg ($content_type, $icon_color = "") {
 	
@@ -1186,7 +1186,25 @@ function define_svg ($content_type, $icon_color = "") {
 	return '<svg class="u-icon '. $icon_type .'" style="fill:'. $icon_color .';"><use xlink:href="'. $use_link .'"></use></svg>';
 }
 
-// AUTOMATIZAÇÃO DE CUSTOMIZER DO TEMA - Petrus Nogueira
+// LOGOMARCA DINÂMICA - SamuraiPetrus
+
+function custom_logo_add () {
+	add_theme_support( 'custom-logo' );
+}
+
+add_action("after_setup_theme", "custom_logo_add");
+
+function site_branding() {
+	
+	if ( function_exists( 'the_custom_logo' ) ) {
+		the_custom_logo();
+	}
+
+}
+
+
+
+// AUTOMATIZAÇÃO DE CUSTOMIZER DO TEMA - SamuraiPetrus
 
 function customizer ($customize) {
 
