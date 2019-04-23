@@ -6771,12 +6771,16 @@ input[type="submit"] {
   margin-bottom: -730px;
 }
 
+.Form--intro-page .Form-input--textarea {
+  height: 100px !important;
+}
+
 @media screen and (min-width: 768px) {
   .Form--intro-page {
     padding-top: 37.5px;
     padding-bottom: 18.75px;
     margin-top: 0px !important;
-    margin-bottom: -640px;
+    margin-bottom: -530px;
   }
 }
 

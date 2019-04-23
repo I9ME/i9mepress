@@ -301,13 +301,18 @@ $mainSelector: '.Form';
 	}
 	// CUSTOMIZER
 	&--intro-page{
+		& .Form-input{
+			&--textarea{
+				height: 100px !important;
+			}
+		}
 		background: $color_1;
 		margin-bottom: -730px;
 		@media screen and (min-width: $break-sm){
 			padding-top: $v_spacing;
 			padding-bottom: $v_spacing / 2;
 			margin-top: 0px !important;
-			margin-bottom: -640px;
+			margin-bottom: -530px;
 		}
 		& .wpcf7-response-output{
 			color: $color_11;

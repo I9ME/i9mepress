@@ -17,5 +17,5 @@ $form_color_title = $form_color_title_get ? $form_color_title_get : "none";
 	<div class="Form-line u-sizeFull">
 		<h2 class="Section-header-subtitle u-alignCenter u-paddingBottom--inter" style="color: <?php echo $form_color_title; ?>;"><?php echo $form_title; ?></h2>
 	</div>
-	<?php echo do_shortcode('[contact-form-7 id="187" title="Formulário Captação de Leads" html_class=""]'); ?>
+	<?php echo do_shortcode('[contact-form-7 id="187" title="Formulário Captação de Leads"]'); ?>
 </div>
