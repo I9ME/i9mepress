@@ -1296,8 +1296,8 @@ function customizer ($customize) {
 		//Vídeos
 		array(
 			"section" => "videos",
-			"titulo" => "Vídeos (Em desenvolvimento)",
-			"descricao" => "~Ainda em desenvolvimento. :)",
+			"titulo" => "Vídeos",
+			"descricao" => "Personalize a seção de vídeos da sua LP.",
 			"prioridade" => 30,
 			"controls" => array(
 				array(
@@ -1309,7 +1309,7 @@ function customizer ($customize) {
 				),
 				array(
 					"label" => "Cor primária do gradiente (onde não há imagem de fundo)",
-					"descricao" => false,
+					"descricao" => "(Você deve escolher a cor secundária para aplicar esse efeito)",
 					"default" => "",
 					"tipo_de_controle" => "paleta_de_cores",
 					"setting" => "videos_primary_gradient",
@@ -1323,17 +1323,17 @@ function customizer ($customize) {
 				),
 				array(
 					"label" => "Cor primária do player",
-					"descricao" => false,
+					"descricao" => "(Você deve escolher a cor secundária para aplicar esse efeito)",
 					"default" => "",
 					"tipo_de_controle" => "paleta_de_cores",
-					"setting" => "videos_primary_gradient",
+					"setting" => "player_primary_color",
 				),
 				array(
 					"label" => "Cor secundária do player",
 					"descricao" => false,
 					"default" => "",
 					"tipo_de_controle" => "paleta_de_cores",
-					"setting" => "videos_secondary_gradient",
+					"setting" => "player_secondary_color",
 				),
 				array(
 					"label" => "Cor do título",
@@ -1343,34 +1343,19 @@ function customizer ($customize) {
 					"setting" => "videos_color_title",
 				),
 				array(
-					"label" => "Cor primária dos navegadores (inativo)",
-					"descricao" => false,
+					"label" => "Cor primária dos navegadores",
+					"descricao" => "(Você deve escolher a cor secundária para aplicar esse efeito)",
 					"default" => "",
 					"tipo_de_controle" => "paleta_de_cores",
-					"setting" => "videos_primary_color_inactive_dots",
+					"setting" => "videos_primary_color_dots",
 				),
 				array(
-					"label" => "Cor secundária dos navegadores (inativo)",
+					"label" => "Cor secundária dos navegadores",
 					"descricao" => false,
 					"default" => "",
 					"tipo_de_controle" => "paleta_de_cores",
-					"setting" => "videos_secondary_color_inactive_dots",
+					"setting" => "videos_secondary_color_dots",
 				),
-				array(
-					"label" => "Cor primária dos navegadores (ativo)",
-					"descricao" => false,
-					"default" => "",
-					"tipo_de_controle" => "paleta_de_cores",
-					"setting" => "videos_primary_color_active_dots",
-				),
-				array(
-					"label" => "Cor secundária dos navegadores (ativo)",
-					"descricao" => false,
-					"default" => "",
-					"tipo_de_controle" => "paleta_de_cores",
-					"setting" => "videos_secondary_color_active_dots",
-				),
-				
 			),
 		),
 		//Serviços
