@@ -113,7 +113,7 @@ $network = new WP_Query($argsNetwork);
         <?php if ($show_branding == true): ?>
             <div class="Section-content u-size6of24 Section-content--branding u-paddingBottom--inter">
                 <a class="<?php echo (is_home() || is_front_page()) ? "u-isScrollDown" : "" ; ?>" href="<?php echo (is_home() || is_front_page()) ? "#page" : get_home_url() ; ?>">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/salupp-logo-white.png" alt="<?php echo get_bloginfo("name"); ?>" class="Site-header-branding u-displayBlock u-objectFitCover">
+                    <?php site_branding(); ?>
                 </a>
             </div>
         <?php endif; ?>
