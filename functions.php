@@ -1041,6 +1041,40 @@ function tipo_rede_social_savedata($post_id)
 }
 add_action('save_post', 'tipo_rede_social_savedata');
 
+//==========================
+// METABOX GOOGLE MAPS
+//==========================
+
+function google_maps_metabox(){
+	$screens = ["enderecos"];
+	foreach ($screens as $screen){
+		add_meta_box(
+			"google_maps_meta",
+			"Link para o Google Maps",
+			"google_maps_meta_html",
+			$screen
+		);
+	}
+}
+
+add_action('add_meta_boxes', 'google_maps_metabox');
+
+function google_maps_meta_html($post){
+	$value = get_post_meta($post->ID, '_google_maps_meta_key', true);
+	echo '<input type="text" name="linktomaps" value="'. $value .'" class="u-sizeFull" style="width: 100%;">';
+}
+
+function save_google_maps_meta($post_id){
+	if (array_key_exists("linktomaps", $_POST)) {
+		update_post_meta(
+			$post_id,
+			'_google_maps_meta_key',
+			$_POST['linktomaps']
+		);	
+	}
+}
+
+add_action('save_post', 'save_google_maps_meta');
 
 
 //======================

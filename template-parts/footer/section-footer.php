@@ -122,10 +122,12 @@ $network = new WP_Query($argsNetwork);
                 <header class="Section-header u-paddingBottom--inter--half">
                     <h3 class="Section-header-title" style="color:<?php echo $location_color_title; ?>;"><?php echo $location_title; ?></h3>
                 </header>
-                <?php while ($address->have_posts()):$address->the_post(); ?>
+                <?php while ($address->have_posts()):$address->the_post(); 
+                $link_to_maps = get_post_meta($post->ID, '_google_maps_meta_key', true);
+                ?>
                     <div class="Section-content u-marginBottom--inter--half u-displayFlex u-flexAlignItemsCenter">
                         <?php echo define_svg("location", $footer_color_icon); ?>
-                        <p class="Section-content-resume" style="color:<?php echo $location_color_resume; ?>;"><?php echo get_the_content(); ?></p>
+                        <a href="<?php echo $link_to_maps; ?>" class="Section-content-resume" style="color:<?php echo $location_color_resume; ?>;" target="_blank"><?php echo get_the_content(); ?></a>
                     </div>
                 <?php endwhile; ?>
             </div>
