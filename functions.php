@@ -1259,13 +1259,6 @@ function customizer ($customize) {
 					"setting" => "section_title",
 				),
 				array(
-					"label" => "Titulo do formulário",
-					"descricao" => false,
-					"default" => "Cadastre-se, é de graça",
-					"tipo_de_controle" => "text",
-					"setting" => "form_title",
-				),
-				array(
 					"label" => "Cor de fundo",
 					"descricao" => false,
 					"default" => "",
@@ -1288,6 +1281,22 @@ function customizer ($customize) {
 					"tipo_de_controle" => "paleta_de_cores",
 					"setting" => "section_color_title",
 				),
+			)
+		),
+		//Formulário para Captação de Leads
+		array(
+			"section" => "formulario_leads",
+			"titulo" => "Formulário de Leads",
+			"descricao" => "Personalize o formulário para captação de leads da sua LP.",
+			"prioridade" => 30,
+			"controls" => array(
+				array(
+					"label" => "Titulo do formulário",
+					"descricao" => false,
+					"default" => "Cadastre-se, é de graça",
+					"tipo_de_controle" => "text",
+					"setting" => "form_title",
+				),
 				array(
 					"label" => "Cor do título (formulário)",
 					"descricao" => false,
@@ -1295,7 +1304,37 @@ function customizer ($customize) {
 					"tipo_de_controle" => "paleta_de_cores",
 					"setting" => "form_color_title",
 				),
-			)
+				array(
+					"label" => "Cor de fundo",
+					"descricao" => false,
+					"default" => "",
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "form_background",
+				),
+			),
+		),
+		//Botões do site
+		array(
+			"section" => "botoes",
+			"titulo" => "Botões do site",
+			"descricao" => "Personalize o estilo do início de sua LP.",
+			"prioridade" => 30,
+			"controls" => array(
+				array(
+					"label" => "Cor primária",
+					"descricao" => false,
+					"default" => "",
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "button_primary_color",
+				),
+				array(
+					"label" => "Cor secundária",
+					"descricao" => false,
+					"default" => "",
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "button_secondary_color",
+				),
+			),
 		),
 		//Diferenciais
 		array(
