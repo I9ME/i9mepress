@@ -1076,12 +1076,13 @@ strong {
 }
 
 .Section--intro {
-  height: 389px;
+  height: 260px;
 }
 
 @media screen and (min-width: 768px) {
   .Section--intro {
     padding-bottom: 0px !important;
+    height: 389px;
   }
 }
 
@@ -1104,12 +1105,11 @@ strong {
 }
 
 .Section--diferenciais {
-  margin-top: 645px;
+  margin-top: 485px;
 }
 
 @media screen and (min-width: 768px) {
   .Section--diferenciais {
-    min-height: 650px;
     margin-top: 0px;
   }
 }
@@ -6768,7 +6768,7 @@ input[type="submit"] {
 
 .Form--intro-page {
   background: #FFFFFF;
-  margin-bottom: -730px;
+  margin-bottom: -600px;
 }
 
 .Form--intro-page .Form-input--textarea {

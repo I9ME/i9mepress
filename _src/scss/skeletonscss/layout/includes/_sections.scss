@@ -940,9 +940,10 @@
 	// ===================
 
 	&--intro{
-		height: 389px;
+		height: 260px;
 		@media screen and (min-width: $break-sm){
 			padding-bottom: 0px !important;
+			height: 389px;
 		}
 		& .Captions{
 			@media screen and (min-width: $break-sm){
@@ -965,9 +966,8 @@
 		}
 	}
 	&--diferenciais{
-		margin-top: 645px;
+		margin-top: 485px;
 		@media screen and (min-width: $break-sm){
-			min-height: 650px;
 			margin-top: 0px;
 		}
 		& .Content{
