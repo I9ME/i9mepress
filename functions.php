@@ -1429,6 +1429,17 @@ function customizer ($customize) {
 					"setting" => "servicos_title",
 				),
 				array(
+					"label" => "Layout dos itens",
+					"descricao" => false,
+					"default" => "",
+					"tipo_de_controle" => "select",
+					"setting" => "servicos_layout",
+					"choices" => array (
+						"light" => "Simples",
+						"shadow" => "Bloco com sombra",
+					),
+				),
+				array(
 					"label" => "Cor de fundo (seção)",
 					"descricao" => false,
 					"default" => "",
@@ -1441,17 +1452,6 @@ function customizer ($customize) {
 					"default" => "",
 					"tipo_de_controle" => "paleta_de_cores",
 					"setting" => "servicos_color_title",
-				),
-				array(
-					"label" => "Layout dos itens",
-					"descricao" => false,
-					"default" => "",
-					"tipo_de_controle" => "select",
-					"setting" => "servicos_layout",
-					"choices" => array (
-						"light" => "Simples",
-						"shadow" => "Bloco com sombra",
-					),
 				),
 				array(
 					"label" => "Aplicar background nos itens",
