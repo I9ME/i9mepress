@@ -1248,7 +1248,7 @@ function customizer ($customize) {
 		array(
 			"section" => "inicio_do_site",
 			"titulo" => "Início do site",
-			"descricao" => "Personalize o estilo do início de sua LP.",
+			"descricao" => "Personalize o início do site.",
 			"prioridade" => 30,
 			"controls" => array(
 				array(
@@ -1287,7 +1287,7 @@ function customizer ($customize) {
 		array(
 			"section" => "formulario_leads",
 			"titulo" => "Formulário de Leads",
-			"descricao" => "Personalize o formulário para captação de leads da sua LP.",
+			"descricao" => "Personalize o formulário para captação de leads.",
 			"prioridade" => 30,
 			"controls" => array(
 				array(
@@ -1317,7 +1317,7 @@ function customizer ($customize) {
 		array(
 			"section" => "botoes",
 			"titulo" => "Botões do site",
-			"descricao" => "Personalize o estilo do início de sua LP.",
+			"descricao" => "Personalize os botões do site.",
 			"prioridade" => 30,
 			"controls" => array(
 				array(
@@ -1340,16 +1340,9 @@ function customizer ($customize) {
 		array(
 			"section" => "diferenciais",
 			"titulo" => "Diferenciais",
-			"descricao" => "Personalize os diferenciais da sua LP.",
+			"descricao" => "Personalize os diferenciais.",
 			"prioridade" => 30,
 			"controls" => array(
-				array(
-					"label" => "Cor de fundo (seção)",
-					"descricao" => false,
-					"default" => "",
-					"tipo_de_controle" => "paleta_de_cores",
-					"setting" => "diferenciais_background",
-				),
 				array(
 					"label" => "Layout dos diferenciais",
 					"descricao" => false,
@@ -1362,25 +1355,25 @@ function customizer ($customize) {
 					),
 				),
 				array(
-					"label" => "Cor de fundo (diferencial)",
+					"label" => "Cor de fundo (seção)",
+					"descricao" => false,
+					"default" => "",
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "diferenciais_background",
+				),
+				array(
+					"label" => "Cor do diferencial",
 					"descricao" => "(Apenas para layout de bloco com sombra)",
 					"default" => "",
 					"tipo_de_controle" => "paleta_de_cores",
 					"setting" => "diferenciais_item_background",
 				),
 				array(
-					"label" => "Cor do título (diferencial)",
+					"label" => "Cor dos textos",
 					"descricao" => false,
 					"default" => "",
 					"tipo_de_controle" => "paleta_de_cores",
-					"setting" => "diferenciais_item_color_title",
-				),
-				array(
-					"label" => "Cor do parágrafo (diferencial)",
-					"descricao" => false,
-					"default" => "",
-					"tipo_de_controle" => "paleta_de_cores",
-					"setting" => "diferenciais_item_color_resume",
+					"setting" => "diferenciais_texts_color",
 				),
 			),
 		),
@@ -1388,7 +1381,7 @@ function customizer ($customize) {
 		array(
 			"section" => "videos",
 			"titulo" => "Vídeos",
-			"descricao" => "Personalize a seção de vídeos da sua LP.",
+			"descricao" => "Personalize a seção de vídeos.",
 			"prioridade" => 30,
 			"controls" => array(
 				array(
@@ -1425,7 +1418,7 @@ function customizer ($customize) {
 		array(
 			"section" => "servicos",
 			"titulo" => "Itens (produtos, serviços, etc)",
-			"descricao" => "Personalize a seção de serviços da sua LP.",
+			"descricao" => "Personalize a seção de serviços.",
 			"prioridade" => 30,
 			"controls" => array(
 				array(
@@ -1434,6 +1427,20 @@ function customizer ($customize) {
 					"default" => "Serviços",
 					"tipo_de_controle" => "text",
 					"setting" => "servicos_title",
+				),
+				array(
+					"label" => "Cor de fundo (seção)",
+					"descricao" => false,
+					"default" => "",
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "servicos_background_color",
+				),
+				array(
+					"label" => "Cor do título",
+					"descricao" => false,
+					"default" => "",
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "servicos_color_title",
 				),
 				array(
 					"label" => "Layout dos itens",
@@ -1451,21 +1458,21 @@ function customizer ($customize) {
 					"descricao" => false,
 					"default" => true,
 					"tipo_de_controle" => "checkbox",
-					"setting" => "servicos_background",
+					"setting" => "servicos_background_check",
 				),
 				array(
-					"label" => "Cor primária da seção",
+					"label" => "Cor dos itens",
 					"descricao" => false,
 					"default" => "",
 					"tipo_de_controle" => "paleta_de_cores",
-					"setting" => "servicos_primary_color",
+					"setting" => "servicos_cards_color",
 				),
 				array(
-					"label" => "Cor secundária da seção",
+					"label" => "Cor dos textos",
 					"descricao" => false,
 					"default" => "",
 					"tipo_de_controle" => "paleta_de_cores",
-					"setting" => "servicos_secondary_color",
+					"setting" => "servicos_texts_color",
 				),
 			)
 		),
@@ -1473,7 +1480,7 @@ function customizer ($customize) {
 		array(
 			"section" => "depoimentos",
 			"titulo" => "Depoimentos",
-			"descricao" => "Personalize a seção de depoimentos da sua LP.",
+			"descricao" => "Personalize a seção de depoimentos.",
 			"prioridade" => 30,
 			"controls" => array(
 				array(
@@ -1484,13 +1491,6 @@ function customizer ($customize) {
 					"setting" => "depoimentos_title",
 				),
 				array(
-					"label" => "Cor do título (seção)",
-					"descricao" => false,
-					"default" => "",
-					"tipo_de_controle" => "paleta_de_cores",
-					"setting" => "depoimentos_color_title",
-				),
-				array(
 					"label" => "Cor de fundo (seção)",
 					"descricao" => false,
 					"default" => "",
@@ -1498,32 +1498,25 @@ function customizer ($customize) {
 					"setting" => "depoimentos_background",
 				),
 				array(
-					"label" => "Cor de fundo (depoimento)",
+					"label" => "Cor do título",
+					"descricao" => false,
+					"default" => "",
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "depoimentos_color_title",
+				),
+				array(
+					"label" => "Cor do depoimento",
 					"descricao" => false,
 					"default" => "",
 					"tipo_de_controle" => "paleta_de_cores",
 					"setting" => "depoimentos_item_background",
 				),
 				array(
-					"label" => "Cor do título (depoimento)",
+					"label" => "Cor dos textos",
 					"descricao" => false,
 					"default" => "",
 					"tipo_de_controle" => "paleta_de_cores",
-					"setting" => "depoimentos_item_color_title",
-				),
-				array(
-					"label" => "Cor do cargo (depoimento)",
-					"descricao" => false,
-					"default" => "",
-					"tipo_de_controle" => "paleta_de_cores",
-					"setting" => "depoimentos_item_color_cargo",
-				),
-				array(
-					"label" => "Cor do parágrafo (depoimento)",
-					"descricao" => false,
-					"default" => "",
-					"tipo_de_controle" => "paleta_de_cores",
-					"setting" => "depoimentos_item_color_resume",
+					"setting" => "depoimentos_color_texts",
 				),
 				array(
 					"label" => "Cor das setas",
@@ -1538,50 +1531,15 @@ function customizer ($customize) {
 		array(
 			"section" => "footer",
 			"titulo" => "Rodapé do site",
-			"descricao" => "Personalize o rodapé da sua LP.",
+			"descricao" => "Personalize o rodapé.",
 			"prioridade" => 30,
 			"controls" => array(
-				array(
-					"label" => "Cor de fundo (seção)",
-					"descricao" => false,
-					"default" => "",
-					"tipo_de_controle" => "paleta_de_cores",
-					"setting" => "footer_background",
-				),
-				array(
-					"label" => "Cor dos ícones",
-					"descricao" => false,
-					"default" => "",
-					"tipo_de_controle" => "paleta_de_cores",
-					"setting" => "footer_color_icon",
-				),
-				array(
-					"label" => "Mostrar logotipo no rodapé",
-					"descricao" => false,
-					"default" => true,
-					"tipo_de_controle" => "checkbox",
-					"setting" => "footer_branding_show",
-				),
 				array(
 					"label" => "Título de localização",
 					"descricao" => false,
 					"default" => "Onde estamos",
 					"tipo_de_controle" => "text",
 					"setting" => "footer_location_title",
-				),
-				array(
-					"label" => "Cor do título de localização",
-					"descricao" => false,
-					"default" => "",
-					"tipo_de_controle" => "paleta_de_cores",
-					"setting" => "footer_location_color_title",
-				),
-				array(
-					"label" => "Cor das localizações",
-					"descricao" => false,
-					"default" => "",
-					"tipo_de_controle" => "paleta_de_cores",
-					"setting" => "footer_location_color_resume",
 				),
 				array(
 					"label" => "Título de contatos",
@@ -1591,27 +1549,6 @@ function customizer ($customize) {
 					"setting" => "footer_contatos_title",
 				),
 				array(
-					"label" => "Cor do título de contatos",
-					"descricao" => false,
-					"default" => "",
-					"tipo_de_controle" => "paleta_de_cores",
-					"setting" => "footer_contatos_color_title",
-				),
-				array(
-					"label" => "Cor dos ícones de contatos",
-					"descricao" => false,
-					"default" => "",
-					"tipo_de_controle" => "paleta_de_cores",
-					"setting" => "footer_contatos_color_icon",
-				),
-				array(
-					"label" => "Cor dos contatos",
-					"descricao" => false,
-					"default" => "",
-					"tipo_de_controle" => "paleta_de_cores",
-					"setting" => "footer_contatos_color_resume",
-				),
-				array(
 					"label" => "Título de redes sociais",
 					"descricao" => false,
 					"default" => "Siga-nos",
@@ -1619,11 +1556,39 @@ function customizer ($customize) {
 					"setting" => "footer_redes_title",
 				),
 				array(
-					"label" => "Cor do título de redes sociais",
+					"label" => "Mostrar logotipo no rodapé",
+					"descricao" => false,
+					"default" => true,
+					"tipo_de_controle" => "checkbox",
+					"setting" => "footer_branding_show",
+				),
+				array(
+					"label" => "Cor de fundo (seção)",
 					"descricao" => false,
 					"default" => "",
 					"tipo_de_controle" => "paleta_de_cores",
-					"setting" => "footer_redes_color_title",
+					"setting" => "footer_background",
+				),
+				array(
+					"label" => "Cor dos textos",
+					"descricao" => false,
+					"default" => "",
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "footer_color_text",
+				),
+				array(
+					"label" => "Cor dos links",
+					"descricao" => false,
+					"default" => "",
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "footer_color_link",
+				),
+				array(
+					"label" => "Cor dos ícones",
+					"descricao" => false,
+					"default" => "",
+					"tipo_de_controle" => "paleta_de_cores",
+					"setting" => "footer_color_icon",
 				),
 				array(
 					"label" => "Cor primária de rede social",

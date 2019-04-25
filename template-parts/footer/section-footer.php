@@ -7,31 +7,18 @@ $sitename = get_bloginfo("name");
 //CUSTOMIZER WORDPRESS
 //=====================
 
-//=====BACKGROUND SEÇÃO=====//
-$section_background = get_theme_mod("footer_background");
+$location_title = get_theme_mod("footer_location_title");
+$contatos_title = get_theme_mod("footer_contatos_title");
+$redes_title = get_theme_mod("footer_redes_title");
 
-//=====COR DOS ÍCONES=====//
-$footer_color_icon = get_theme_mod("footer_color_icon");
-
-//=====MOSTRAR LOGOTIPO NO RODAPÉ=====//
 $show_branding = get_theme_mod("footer_branding_show");
 
-//=====LOCALIZAÇÃO=====//
-$location_title = get_theme_mod("footer_location_title");
-$location_color_title = get_theme_mod("footer_location_color_title");
-$location_color_resume = get_theme_mod("footer_location_color_resume");
-
-
-//=====CONTATOS=====//
-$contatos_title = get_theme_mod("footer_contatos_title");
-$contatos_color_title = get_theme_mod("footer_contatos_color_title");
-$contatos_color_resume = get_theme_mod("footer_contatos_color_resume");
-
-
-//=====REDES SOCIAIS=====//
-$redes_title = get_theme_mod("footer_redes_title");
-$redes_color_title = get_theme_mod("footer_redes_color_title");
-
+//=====CORES DA SEÇÃO=====//
+$section_background = get_theme_mod("footer_background");
+$title_color = get_theme_mod("footer_color_title");
+$text_color = get_theme_mod("footer_color_text");
+$link_color = get_theme_mod("footer_color_link");
+$footer_icon_color = get_theme_mod("footer_color_icon");
 
 //Ícones de redes sociais
 $primary_color = get_theme_mod("footer_redes_primary_color");
@@ -120,14 +107,14 @@ $network = new WP_Query($argsNetwork);
         <?php if ($address->have_posts()): ?>
             <div class="Section-content u-size6of24 u-paddingBottom--inter">
                 <header class="Section-header u-paddingBottom--inter--half">
-                    <h3 class="Section-header-title" style="color:<?php echo $location_color_title; ?>;"><?php echo $location_title; ?></h3>
+                    <h3 class="Section-header-title" style="color:<?php echo $text_color; ?>;"><?php echo $location_title; ?></h3>
                 </header>
                 <?php while ($address->have_posts()):$address->the_post(); 
                 $link_to_maps = get_post_meta($post->ID, '_google_maps_meta_key', true);
                 ?>
                     <div class="Section-content u-marginBottom--inter--half u-displayFlex u-flexAlignItemsCenter">
-                        <?php echo define_svg("location", $footer_color_icon); ?>
-                        <a href="<?php echo $link_to_maps; ?>" class="Section-content-resume" style="color:<?php echo $location_color_resume; ?>;" target="_blank"><?php echo get_the_content(); ?></a>
+                        <?php echo define_svg("location", $footer_icon_color); ?>
+                        <a href="<?php echo $link_to_maps; ?>" class="Section-content-resume" style="color:<?php echo $link_color . "95"; ?>;" target="_blank"><?php echo get_the_content(); ?></a>
                     </div>
                 <?php endwhile; ?>
             </div>
@@ -135,7 +122,7 @@ $network = new WP_Query($argsNetwork);
         <?php if ($contatos->have_posts()): ?>
             <div class="Section-content u-size6of24 u-paddingBottom--inter">
                 <header class="Section-header u-paddingBottom--inter--half">
-                    <h3 class="Section-header-title" style="color:<?php echo $contatos_color_title; ?>;"><?php echo $contatos_title; ?></h3>
+                    <h3 class="Section-header-title" style="color:<?php echo $text_color; ?>;"><?php echo $contatos_title; ?></h3>
                 </header>
                 
                 <ul class="Section-items">
@@ -143,8 +130,8 @@ $network = new WP_Query($argsNetwork);
                         $tipo_contato = get_post_meta($post->ID, '_tipo_contato_meta_key', true);
                     ?>
                         <li class="Section-items-item u-marginBottom--inter--half u-displayFlex u-flexAlignItemsCenter">
-                            <?php echo define_svg($tipo_contato, $footer_color_icon); ?>
-                            <h4 class="Section-items-item-title" style="color:<?php echo $contatos_color_resume; ?>;"><?php echo get_the_content(); ?></h4>
+                            <?php echo define_svg($tipo_contato, $footer_icon_color); ?>
+                            <h4 class="Section-items-item-title" style="color:<?php echo $text_color . "95"; ?>;"><?php echo get_the_content(); ?></h4>
                         </li>
                     <?php endwhile; ?>
                 </ul>
@@ -153,7 +140,7 @@ $network = new WP_Query($argsNetwork);
         <?php if ($network->have_posts()): ?>
             <div class="Section-content u-size6of24">
                 <header class="Section-header u-paddingBottom--inter--half">
-                    <h3 class="Section-header-title" style="color:<?php echo $redes_color_title; ?>;"><?php echo $redes_title; ?></h3>
+                    <h3 class="Section-header-title" style="color:<?php echo $text_color; ?>;"><?php echo $redes_title; ?></h3>
                 </header>
                 <ul class="Section-items Section-items--redesSociais u-displayFlex u-flexWrapWrap u-sizeFull">
                     <?php while ($network->have_posts()):$network->the_post();

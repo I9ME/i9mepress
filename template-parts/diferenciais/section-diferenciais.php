@@ -4,7 +4,8 @@
 // CUSTOMIZER WORDPRESS
 //=====================
 
-// Background seção
+//Cores da seção
+$item_color_texts = get_theme_mod("diferenciais_texts_color");
 $section_background = get_theme_mod("diferenciais_background");
 
 //Layout da seção
@@ -29,11 +30,6 @@ if ($section_layout_get == "light"){
     $item_background = false;
 }
 
-//Título do diferencial
-$item_color_title = get_theme_mod("diferenciais_item_color_title");
-
-//Parágrafo do diferencial
-$item_color_resume = get_theme_mod("diferenciais_item_color_resume");
 
 //=====================
 // END OF CUSTOMIZER
@@ -62,8 +58,8 @@ $query = new WP_Query( $args );
                             <img src="<?php echo $image_id ? $thumbnail : get_template_directory_uri() . "/assets/images/featuretemplate.png" ; ?>" alt="<?php echo get_the_title(); ?>">
                         </div>
                         <div class="Content u-alignCenter">
-                            <h2 class="Section-items-item-title u-paddingBottom--inter--half" style="color: <?php echo $item_color_title; ?>;"><?php echo get_the_title(); ?></h2>
-                            <p class="Section-items-item-resume" style="color: <?php echo $item_color_resume; ?>;"><?php echo get_the_content(); ?></p>
+                            <h2 class="Section-items-item-title u-paddingBottom--inter--half" style="color: <?php echo $item_color_texts; ?>;"><?php echo get_the_title(); ?></h2>
+                            <p class="Section-items-item-resume" style="color: <?php echo $item_color_texts . "95"; ?>;"><?php echo get_the_content(); ?></p>
                         </div>
                     </li>
                 <?php endwhile; ?>
