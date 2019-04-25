@@ -6,24 +6,14 @@
 
     //Título da seção
     $section_title = get_theme_mod("depoimentos_title");
-    $section_color_title = get_theme_mod("depoimentos_color_title");
 
-    // Background seção
+    
+
+    // Cores da seção
     $section_background = get_theme_mod("depoimentos_background");
-
-    // Background depoimentos
     $item_background = get_theme_mod("depoimentos_item_background");
-
-    //Título do item
-    $item_color_title = get_theme_mod("depoimentos_item_color_title");
-
-    //Título do cargo
-    $item_color_cargo = get_theme_mod("depoimentos_item_color_cargo");
-
-    //Parágrafo do item
-    $item_color_resume = get_theme_mod("depoimentos_item_color_resume");
-
-    //Parágrafo do item
+    $title_color = get_theme_mod("depoimentos_color_title");
+    $text_color = get_theme_mod("depoimentos_color_texts");
     $setas_color = get_theme_mod("depoimentos_setas_color");
 
     //=====================
@@ -50,7 +40,7 @@
 <section class="Section Section--style1 Section--depoimentos u-paddingHorizontal" style="background:<?php echo $section_background; ?>;">
     <div class="u-maxSize--container u-alignCenterBox u-paddingVertical">
         <div id="depoimentos" class="Section-header">
-            <h2 class="Section-header-title u-alignCenter" style="color:<?php echo $section_color_title; ?>;"><strong><?php echo $section_title; ?></strong></h2>
+            <h2 class="Section-header-title u-alignCenter" style="color:<?php echo $title_color; ?>;"><strong><?php echo $section_title; ?></strong></h2>
         </div>
         <ul id="depoimentos-carousel" class="Section-items owl-carousel u-paddingVertical u-alignCenter">
             <?php
@@ -62,9 +52,9 @@
                         <figure class="Section-items-item-figure u-borderRadius100">
                             <?php echo get_the_post_thumbnail( $page->ID, 'thumbnail' ); ?>
                         </figure>
-                        <h3 class="Section-items-item-title u-paddingTop--inter--half" style="color:<?php echo $item_color_title; ?>;"><?php echo get_the_title(); ?></h3>
-                        <h4 class="Section-items-item-subtitle u-paddingBottom--inter--half" style="color:<?php echo $item_color_cargo; ?>;"><?php echo $metabox;?></h4>
-                        <p class="Section-items-item-resume" style="color:<?php echo $item_color_resume; ?>;">"<?php echo get_the_content(); ?>"</p>
+                        <h3 class="Section-items-item-title u-paddingTop--inter--half" style="color:<?php echo $text_color; ?>;"><?php echo get_the_title(); ?></h3>
+                        <h4 class="Section-items-item-subtitle u-paddingBottom--inter--half" style="color:<?php echo $text_color . "80"; ?>;"><?php echo $metabox;?></h4>
+                        <p class="Section-items-item-resume" style="color:<?php echo $text_color . "95"; ?>;">"<?php echo get_the_content(); ?>"</p>
                     </li>
                     <?php
                 endwhile;
