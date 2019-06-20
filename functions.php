@@ -875,7 +875,3 @@ function site_branding() {
 	}
 
 }
-
-
-//HOOK CUSTOMIZER
-add_action("customize_register", "customizer");
