@@ -12,5 +12,5 @@
 
 
 <a href="<?php echo get_home_url() ?>">
-	<?php site_branding(); ?>
+
 </a>
