@@ -47,7 +47,7 @@ var sassProdOptions = {
 path = {
     dev     : './_src',
     prod    : './assets',
-    proxy   : 'http://localhost/salupp-sites'
+    proxy   : 'http://localhost/wp-i9me'
 }
 
 /*

@@ -9,8 +9,8 @@ body{
 
 .Site{
     &:after{
-    position: fixed;
-    display: block;
+    // position: fixed;
+    // display: block;
     width: 100%;
     height: $header_height_m * 1.25;
     z-index: 19; 
