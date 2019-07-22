@@ -85,11 +85,21 @@
 	@media screen and (min-width: $break-sm){
 		flex-direction: row-reverse !important;
 	}
+	&--md{
+		@media screen and (min-width: $break-md){
+			flex-direction: row-reverse !important;
+		}
+	}
 }
 
 .u-flexDirectionColumnReverse.u-flexSwitchRowReverse{
 	@media screen and (min-width: $break-sm){
 		flex-direction: row-reverse !important;
+	}
+	&--md{
+		@media screen and (min-width: $break-md){
+			flex-direction: row-reverse !important;
+		}
 	}
 }
 
@@ -97,20 +107,40 @@
 	@media screen and (min-width: $break-sm){
 		flex-direction: row !important;
 	}
+	&--md{
+		@media screen and (min-width: $break-md){
+			flex-direction: row !important;
+		}
+	}
 }
 .u-flexDirectionRow.u-flexSwitchColumn{
 	@media screen and (min-width: $break-sm){
 		flex-direction: column !important;
+	}
+	&--md{
+		@media screen and (min-width: $break-md){
+			flex-direction: column !important;
+		}
 	}
 }
 .u-flexDirectionColumn.u-flexSwitchRow{
 	@media screen and (min-width: $break-sm){
 		flex-direction: row !important;
 	}
+	&--md{
+		@media screen and (min-width: $break-md){
+			flex-direction: row !important;
+		}
+	}
 }
 .u-flexDirectionColumn.u-flexSwitchRow--reverse{
 	@media screen and (min-width: $break-sm){
 		flex-direction: row-reverse !important;
+	}
+	&--md{
+		@media screen and (min-width: $break-md){
+			flex-direction: row-reverse !important;
+		}
 	}
 }
 
