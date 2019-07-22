@@ -6,6 +6,10 @@
 		border-width:2px;
 		border-style: solid;
 	}
+
+	&--uppercase{
+		text-transform: uppercase;
+	}
 	
 	&--largeSize{
 		padding: 15px 30px;
@@ -39,6 +43,55 @@
 			font-size: 20px;
 			line-height: 20px;
 		}
+	}
+
+	// BUTTON STYLES
+
+	&--style1{
+		background: $color_4;
+		border: 2px solid $color_4;
+		&:hover{
+			background: $color_1;
+			color: $color_4;
+		}
+		// & .iconArrowRight{
+		// 	@media screen and (min-width: $break-md){
+		// 		width: calc(4.16667% * 2) !important;
+		// 	}
+		// }
+	}
+	&--style2{
+		background: $color_12;
+		color: $color_1;
+		border: 2px solid $color_12;
+		&:hover{
+			background: $color_1;
+			border: 2px solid $color_1;
+			color: $color_12;
+		}
+		&--outline{
+			&:hover{
+				border: 2px solid $color_12;
+			}
+		}
+		// & .iconArrowRight{
+		// 	@media screen and (min-width: $break-md){
+		// 		width: calc(4.16667% * 2) !important;
+		// 	}
+		// }
+	}
+	&--style3{
+		color: $color_1;
+		letter-spacing: 0 !important;
+		&:hover{
+			color: $color_4;
+			background: $color_1;
+		}
+		// & .iconArrowRight{
+		// 	@media screen and (min-width: $break-md){
+		// 		width: calc(4.16667% * 2) !important;
+		// 	}
+		// }
 	}
 
 }

@@ -47,6 +47,10 @@
 		}
 	}
 	&-content{
+		@media screen and (min-width: $break-md){
+			padding-left: 0px !important;
+			padding-right: 0px !important;
+		}
 		&-subtitle{
 			font-size: $font_size_subtitle_section;
 			color: $color_11;
