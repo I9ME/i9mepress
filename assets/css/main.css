@@ -1677,8 +1677,20 @@ strong {
   }
 }
 
+@media screen and (min-width: 960px) {
+  .u-flexSwitchReverse--mobile.u-flexDirectionColumnReverseToRowReverse--md {
+    flex-direction: row-reverse !important;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .u-flexDirectionColumnReverse.u-flexSwitchRowReverse {
+    flex-direction: row-reverse !important;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .u-flexDirectionColumnReverse.u-flexSwitchRowReverse--md {
     flex-direction: row-reverse !important;
   }
 }
@@ -1689,8 +1701,20 @@ strong {
   }
 }
 
+@media screen and (min-width: 960px) {
+  .u-flexDirectionColumnReverse.u-flexSwitchRow--md {
+    flex-direction: row !important;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .u-flexDirectionRow.u-flexSwitchColumn {
+    flex-direction: column !important;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .u-flexDirectionRow.u-flexSwitchColumn--md {
     flex-direction: column !important;
   }
 }
@@ -1701,8 +1725,20 @@ strong {
   }
 }
 
+@media screen and (min-width: 960px) {
+  .u-flexDirectionColumn.u-flexSwitchRow--md {
+    flex-direction: row !important;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .u-flexDirectionColumn.u-flexSwitchRow--reverse {
+    flex-direction: row-reverse !important;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .u-flexDirectionColumn.u-flexSwitchRow--reverse--md {
     flex-direction: row-reverse !important;
   }
 }
