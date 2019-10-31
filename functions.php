@@ -600,15 +600,17 @@ function column_orderby ( $vars ) {
     return $vars;
 }
 
+//==================
 //FUNÇÕES I9MEPRESS
+//==================
 
-// ============
-//Console PHP - Desenvolvido por Paulo Arthur e SamuraiPetrus
-// (Limitador de string que corta o texto no último espaço em branco)
+// Console PHP - Desenvolvido por Paulo Arthur e SamuraiPetrus
+// (Imprime arrays PHP no Console do Browser)
+
 //=============
 // Parâmetros
 //=============
-//$obj -> (str) Conteúdo a ser impresso pelo console javascript.
+//$obj -> (array) Array a ser impresso.
 
 function console_php($obj){
 	echo '<script type="text/javascript">
@@ -616,9 +618,9 @@ function console_php($obj){
 	</script>';	
 }
 
-// ============
 //  Excerpt Limiter - Desenvolvido por SamuraiPetrus (https://github.com/SamuraiPetrus)
 // (Limitador de string que corta o texto no último espaço em branco)
+
 //=============
 // Parâmetros
 //=============
@@ -660,5 +662,53 @@ function excerpt_limiter($str, $chars=100){
 	}else{
 	
 		return "erro desconhecido, favor contatar o desenvolvedor da função.";
+	}
+}
+
+// Global Query Have Posts - Desenvolvido por SamuraiPetrus
+// (Retorna um booleano se existe ou não posts em um post type)
+
+//=============
+// Parâmetros
+//=============
+//$post_type -> (string) A slug do post type.
+
+function global_query_have_posts($post_type){
+	$args = array(
+		"post_type" => $post_type,
+	);
+	
+	$query = new WP_Query($args);
+	return $query->have_posts();
+}
+
+//  Get Youtube Thumbnail - Desenvolvido por SamuraiPetrus (https://github.com/SamuraiPetrus)
+// (Gera url de thumbnails para youtube)
+
+//=============
+// Parâmetros
+//=============
+//$link -> (str) (obrigatório) link do vídeo.
+//$size -> (int) (opcional, default: 0) id da thumbnail.
+
+function get_youtube_thumbnail($link, $size=0) {
+	$video_id = explode("?v=", $link)[1];
+	
+	$url_host = parse_url($link)["host"];
+	
+	if ($video_id && $url_host == "www.youtube.com") {
+		if ($size == 0) {
+			return "https://img.youtube.com/vi/". $video_id ."/0.jpg";
+		}else if ($size == 1) {
+			return "https://img.youtube.com/vi/". $video_id ."/1.jpg";
+			
+		}else if ($size == 2) {
+			return "https://img.youtube.com/vi/". $video_id ."/2.jpg";
+		}else if ($size >= 3) {
+			return "https://img.youtube.com/vi/". $video_id ."/3.jpg";
+			
+		}
+	}else{
+		return get_template_directory_uri() . "/assets/images/imagem-modelo.png";
 	}
 }

@@ -284,6 +284,90 @@ $('#videos-carousel').owlCarousel({
 });
 
 
+//SISTEMA DE DROPDOWNS I9MEPRESS
+
+//Adicione aqui os droptitles
+
+//Dropdowns: Todos os dropdowns
+//Close on scroll:Dropdowns que serão fechados mediante scroll
+
+$dropdowns = ["one", "two", "three", "four"];
+$close_on_scroll = [$dropdowns[2]];
+
+var global_submenu = ".Submenu-dropdown--"; // + droptitle
+var global_seta = "#Dropdown-seta--"; // + droptitle
+
+
+//AÇÕES
+
+//Ações de dropdown
+
+window.removeAllActives = function () {
+    $(".seta-active").css("transform", "rotate(0deg)");
+    $(".actived")
+    .slideUp()
+    .removeClass("actived");
+}
+
+window.OpenMenu = function (submenu, seta) {
+    submenu.slideDown();
+    removeAllActives();
+    submenu.addClass("actived");
+    seta.addClass("seta-active");
+    seta.css("transform", "rotate(180deg)");
+}
+
+window.CloseMenu = function (submenu, seta) {
+    submenu.slideUp();
+    submenu.removeClass("actived");
+    seta.removeClass("seta-active");
+    seta.css("transform", "rotate(0deg)");
+}
+
+// EVENTOS
+
+//Eventos de dropdown
+
+$dropdowns.forEach(function(droptitle){
+    var submenu = $(global_submenu + droptitle);
+    var seta = $(global_seta + droptitle);
+    $("#Dropdown-" + droptitle).click(function(event){
+        if (submenu.hasClass("actived")){
+            
+            CloseMenu(submenu, seta);
+        
+        }else{
+
+            OpenMenu(submenu, seta);
+        }
+    });
+});
+
+$close_on_scroll.forEach(function(droptitle){
+    var submenu = $(global_submenu + droptitle);
+    var seta = $(global_seta + droptitle);
+
+    $(window).on("scroll", function(){
+        CloseMenu(submenu, seta);
+    });
+});
+
+// APAGAR DROPDOWN MEDIANTE CLIQUE FORA DO BALÃO
+$("body").click(function(event){
+    if (event.target.hasAttribute("click")) {
+        var click = event.target.getAttribute("click")
+    }else{
+        var click = "false";
+    }
+    console.log(click);
+    if(click != "true"){
+        removeAllActives();
+    }
+});
+
+// FIM DE DROPDOWNS I9MEPRESS
+
+
 // /*=========================================================================================
 // // CLOSE FUNCTION
 // =========================================================================================*/
