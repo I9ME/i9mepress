@@ -600,10 +600,65 @@ function column_orderby ( $vars ) {
     return $vars;
 }
 
+//FUNÇÕES I9MEPRESS
+
+// ============
 //Console PHP - Desenvolvido por Paulo Arthur e SamuraiPetrus
+// (Limitador de string que corta o texto no último espaço em branco)
+//=============
+// Parâmetros
+//=============
+//$obj -> (str) Conteúdo a ser impresso pelo console javascript.
 
 function console_php($obj){
 	echo '<script type="text/javascript">
 		console.log('.json_encode($obj).');
 	</script>';	
+}
+
+// ============
+//  Excerpt Limiter - Desenvolvido por SamuraiPetrus (https://github.com/SamuraiPetrus)
+// (Limitador de string que corta o texto no último espaço em branco)
+//=============
+// Parâmetros
+//=============
+//$text -> (str) Texto a ser limitado.
+//$chars -> (int) (default: 100) Número de caracteres do texto final.
+
+function excerpt_limiter($str, $chars=100){
+	
+	if (strlen($str) >= $chars){
+		
+		$str = substr($str, 0, $chars);
+		$split = str_split($str);
+		$final = $chars - 1;
+		
+		if ($split[$final] != " "){
+	
+			$aux = $final;
+	
+			while ($split[$aux] != " ") {
+	
+				unset($split[$aux]);
+				$aux -= 1;
+	
+			}
+			
+			$real_chars = sizeof($split);
+			return substr($str, 0, $real_chars) . "[...]";
+	
+		}else{
+	
+			return substr($str, 0, $chars). "[...]";
+	
+		}
+	
+	}else if (strlen($str) < $chars){
+	
+		return $str;
+	
+	}else{
+	
+		return "erro desconhecido, favor contatar o desenvolvedor da função.";
+	}
 }
