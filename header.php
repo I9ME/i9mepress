@@ -21,6 +21,7 @@
 
 	
 <div id="page" class="Site">
+	<div class="BlackMask"></div>
 	<header id="masthead" class="Site-header u-sizeFull is-animating u-zIndex20 u-paddingHorizontal--inter">
 
 		<!-- DESENVOLVA O HEADER DO SITE AQUI -->
