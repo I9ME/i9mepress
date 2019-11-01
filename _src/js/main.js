@@ -6,6 +6,19 @@
 jQuery(function($) {
 	$(document).ready(function() {
 
+//ContentAsync
+setTimeout(function(){
+    $('.ContentAsync-item').each(function(){
+      var src = $(this).attr('data-img-src');
+      var alt = $(this).attr('data-img-alt');
+      var classCSS = $(this).attr('data-img-class');
+      $('<img>').fadeIn(300).attr('src', src).attr('alt', alt).attr('class', classCSS).appendTo(this);
+    });
+    $('.ContentAsync-item--bg').each(function(){
+      var src = $(this).attr('data-img-bg');
+      $(this).css({'background-image':'url('+src+')'});
+    });
+  }, 800);
 
 
 
