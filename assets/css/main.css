@@ -2092,6 +2092,17 @@ strong {
   background: #FFFFFF;
 }
 
+.Button--greetings {
+  background: #32D9A4;
+  color: #FFFFFF;
+  border-color: #32D9A4;
+}
+
+.Button--greetings:hover {
+  background: transparent;
+  color: #32D9A4;
+}
+
 .u-positionAbsolute {
   position: absolute;
 }

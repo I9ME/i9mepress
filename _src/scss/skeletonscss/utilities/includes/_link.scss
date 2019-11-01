@@ -93,5 +93,14 @@
 		// 	}
 		// }
 	}
+	&--greetings{
+		background: $color_8;
+		color: $color_1;
+		border-color: $color_8;
+		&:hover{
+			background: transparent;
+			color: $color_8;
+		}
+	}
 
 }

@@ -281,26 +281,6 @@ $( ".LightboxClose" ).on( "click", LightboxClose );
 
 
 
-
-
-    $(document)
-        .ready(function () {
-            //initialize paroller.js
-            $('[data-paroller-factor]').paroller();
-            //initialize paroller.js and set options for elements with .paroller class
-            $('.paroller-example').paroller({
-                factorXs: 0.1,
-                factorSm: 0.1,
-                factorMd: -0.4,
-                factorLg: -0.5,
-                factorXl: -0.6,
-                factor: -0.4,
-                type: 'foreground',
-                direction: 'horizontal'
-            });
-        });
-
-
 /*s
 // Carousel
  */
@@ -452,6 +432,50 @@ $("body").click(function(event){
 });
 
 // FIM DE DROPDOWNS I9MEPRESS
+
+
+// ============
+//  SISTEMA DE LIGHTBOX
+//=============
+
+//ABRIR LIGHTBOX
+// DESKTOP - height: 515px; width: 815px;
+// TABLET - height: 485px; width: 615px;
+// MOBILE - height: 315px; width: 305px;
+function OpenImageLightBox (image_src, image_alt) {
+
+    var lightbox = "LightboxImage",
+    content = "<img id='lightboxcontent' class='content u-cursorPointer' src='"+ image_src +"' alt='"+ image_alt +"' />",
+    mobile = {
+        "height": "385px",
+        "width": "335px"
+    },
+    tablet = {
+        "height": "485px",
+        "width": "615px"
+    },
+    desktop = {
+        "height": "600px",
+        "width": "600px"
+    };
+
+    DisplayLightBox(lightbox, mobile, tablet, desktop);
+
+    $("." + lightbox).append(content);
+}
+
+// EVENTO DE FECHAMENTO DO LIGHTBOX AO CLICAR NA MÁSCARA ESCURA
+$(".BlackMask").click(function(){
+    CloseLightBox();
+});
+
+// ASSOCIE AQUI A FUNÇÃO DE ABERTURA DO LIGHTBOX A ELEMENTO DOM DESEJADO
+
+
+
+// ============
+//  FIM DO SISTEMA DE LIGHTBOX
+//=============
 
 
 // /*=========================================================================================
