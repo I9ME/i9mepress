@@ -121,3 +121,76 @@
 		display: none !important;
 	}
 }
+
+//CLASSES DE LAYOUT DO HEADER
+
+.u-setIntroMargins{
+	margin-top: $header_height_m;
+	@media screen and (min-width: $break-sm){
+		margin-top: $header_height_tablet;
+	}
+	@media screen and (min-width: $break-md){
+		margin-top: $header_height_d;
+	}
+}
+
+.u-setMainMenuTop{
+	top: $header_height_m;
+	@media screen and (min-width: $break-sm){
+		top: $header_height_tablet;
+	}
+	@media screen and (min-width: $break-md){
+		top: initial;
+	}
+}
+
+//CLASSES DE LAYOUT DA BARRA DE ROLAGEM
+
+.u-setCustomScrollBar{
+	&::-webkit-scrollbar {
+		width: 5px;
+	}
+	/* Track */
+	&::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px $color_13;
+	border: 1px solid $color_9; 
+	border-radius: 10px;
+	}
+
+	/* Handle */
+	&::-webkit-scrollbar-thumb {
+	background: $color_9; 
+	border-radius: 10px;
+	}
+
+	&--style1{
+		&::-webkit-scrollbar {
+
+		}
+		/* Track */
+		&::-webkit-scrollbar-track {
+
+		}
+	
+		/* Handle */
+		&::-webkit-scrollbar-thumb {
+
+		}	
+	}
+
+	&--style2{
+		&::-webkit-scrollbar {
+
+		}
+		/* Track */
+		&::-webkit-scrollbar-track {
+
+		}
+	
+		/* Handle */
+		&::-webkit-scrollbar-thumb {
+
+		}	
+	}
+
+}

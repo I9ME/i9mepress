@@ -5,31 +5,104 @@
 
 jQuery(function($) {
 	$(document).ready(function() {
+        
+        //=======================
+        // FUNÇÕES GLOBAIS JAVASCRIPT
+        //=======================
 
-//ContentAsync
-setTimeout(function(){
-    $('.ContentAsync-item').each(function(){
-      var src = $(this).attr('data-img-src');
-      var alt = $(this).attr('data-img-alt');
-      var classCSS = $(this).attr('data-img-class');
-      $('<img>').fadeIn(300).attr('src', src).attr('alt', alt).attr('class', classCSS).appendTo(this);
-    });
-    $('.ContentAsync-item--bg').each(function(){
-      var src = $(this).attr('data-img-bg');
-      $(this).css({'background-image':'url('+src+')'});
-    });
-  }, 800);
+            // parseStringMIME: FUNÇÃO QUE CONVERTE STRINGS EM UM DOCUMENTO HTML
 
+            // * PARÂMETROS *
+            //content: conteúdo string a ser convertida
+            //mime: tipo do conteúdo, seguindo os códigos MIME. o padrão é um documento HTML
+            
+            window.parseStringMIME = function (content, mime="text/html") {
 
+                // DOMParser: https://developer.mozilla.org/en-US/docs/Web/API/DOMParser
+                
+                var domparser = new DOMParser();
+                
+                return domparser.parseFromString(content, mime);
+            }
 
+            // DisplayLightBox: Função global de abertura do Lightbox
+            
+            // * PARÂMETROS *
+            // lightbox: Nome da classe do lightbox
+            // mobile, tablet, desktop: arrays com as dimensões dos respectivos dispositivos
 
-/*$(function(){
-      $.stellar({
-        horizontalScrolling: false,
-        verticalOffset: 40
-      });
-    });
-*/
+            window.DisplayLightBox = function (lightbox, mobile, tablet, desktop) {
+                CloseLightBox();
+                // ESTABELECENDO DIMENSÕES DO LIGHTBOX, LEVANDO EM CONTA O DISPOSITIVO
+                if ($("." + lightbox).hasClass(lightbox + "--mobile")) {
+                    
+                    $("." + lightbox).css("height", mobile["height"]);
+                    $("." + lightbox).css("width", mobile["width"]);
+    
+                }else if ($("." + lightbox).hasClass(lightbox + "--tablet")) {
+    
+                    $("." + lightbox).css("height", tablet["height"]);
+                    $("." + lightbox).css("width", tablet["width"]);
+    
+                }else{
+    
+                    $("." + lightbox).css("height", desktop["height"]);
+                    $("." + lightbox).css("width", desktop["width"]);
+    
+                }
+    
+                // APLICANDO MÁSCARA ESCURA AO REDOR DO SITE
+                $(".BlackMask").css("display", "block");
+    
+                // IMPRIMINDO IFRAME NA TELA
+    
+                //IMPEDINDO SCROLL DO USUÁRIO
+                $("body").css("overflow", "hidden");
+    
+                //BOTÃO DE FECHAR
+                var $closebutton = '<div id="imageclosebutton" class="ImageCloseButton is-animating u-positionAbsolute u-cursorPointer"><svg class="u-icon icon-close"><use xlink:href="#icon-close"></use></svg></div>';
+                parseCloseDOM = parseStringDOM($closebutton);
+                var closebutton = parseCloseDOM.getElementById("imageclosebutton");
+                
+                closebutton.onclick = CloseLightBox;
+                
+                $("." + lightbox).append(closebutton);
+    
+            }
+
+            //CloseLightBox: FECHAR LIGHTBOX
+            window.CloseLightBox = function () {
+
+                //REVERTENDO TODOS OS PROCESSOS DE ABERTURA DO LIGHTBOX
+                $(".Lightbox").css("background", "#fff");
+                $(".Lightbox").css("height", "0");
+                $(".Lightbox").css("width", "0");
+
+                $(".BlackMask").css("display", "none");
+                
+                $(".Lightbox").html("");
+
+                $("body").css("overflow", "initial");
+
+            }
+
+        //====================================
+        // FIM DAS FUNÇÕES GLOBAIS JAVASCRIPT
+        //====================================
+
+        //ContentAsync
+        setTimeout(function(){
+            $('.ContentAsync-item').each(function(){
+            var src = $(this).attr('data-img-src');
+            var alt = $(this).attr('data-img-alt');
+            var classCSS = $(this).attr('data-img-class');
+            $('<img>').fadeIn(300).attr('src', src).attr('alt', alt).attr('class', classCSS).appendTo(this);
+            });
+            $('.ContentAsync-item--bg').each(function(){
+            var src = $(this).attr('data-img-bg');
+            $(this).css({'background-image':'url('+src+')'});
+            });
+        }, 800);
 
 
 
@@ -379,6 +452,50 @@ $("body").click(function(event){
 });
 
 // FIM DE DROPDOWNS I9MEPRESS
+
+
+// ============
+//  SISTEMA DE LIGHTBOX
+//=============
+
+//ABRIR LIGHTBOX
+// DESKTOP - height: 515px; width: 815px;
+// TABLET - height: 485px; width: 615px;
+// MOBILE - height: 315px; width: 305px;
+function OpenImageLightBox (image_src, image_alt) {
+
+    var lightbox = "LightboxImage",
+    content = "<img id='lightboxcontent' class='content u-cursorPointer' src='"+ image_src +"' alt='"+ image_alt +"' />",
+    mobile = {
+        "height": "385px",
+        "width": "335px"
+    },
+    tablet = {
+        "height": "485px",
+        "width": "615px"
+    },
+    desktop = {
+        "height": "600px",
+        "width": "600px"
+    };
+
+    DisplayLightBox(lightbox, mobile, tablet, desktop);
+
+    $("." + lightbox).append(content);
+}
+
+// EVENTO DE FECHAMENTO DO LIGHTBOX AO CLICAR NA MÁSCARA ESCURA
+$(".BlackMask").click(function(){
+    CloseLightBox();
+});
+
+// ASSOCIE AQUI A FUNÇÃO DE ABERTURA DO LIGHTBOX A ELEMENTO DOM DESEJADO
+
+
+
+// ============
+//  FIM DO SISTEMA DE LIGHTBOX
+//=============
 
 
 // /*=========================================================================================
