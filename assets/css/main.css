@@ -1376,42 +1376,6 @@ strong {
   }
 }
 
-.Site-header {
-  background: rgba(0, 0, 0, 0);
-  position: absolute;
-}
-
-.Site-header-branding {
-  max-width: 220px;
-  height: 88px;
-  font-size: 30px;
-  color: #FFFFFF;
-  font-weight: 700;
-}
-
-.Site-header-branding-img {
-  height: 88px;
-}
-
-.Site-header-branding-type {
-  height: 66px;
-  width: 205px;
-  left: 10px;
-}
-
-.Site-header-branding-type .ElementImg {
-  left: -20px;
-  letter-spacing: 4px;
-  font-size: 14px;
-  color: #f6f4ed;
-  font-weight: bold;
-}
-
-.Site-header-branding {
-  height: initial;
-  width: initial;
-}
-
 .Site:after {
   width: 100%;
   height: 125px;

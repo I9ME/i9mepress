@@ -129,6 +129,50 @@ $(window).scroll(function(){
 });
 
 // =====================================
+// .whenAppear
+// ativa gatilhos js conforme aparecem no scroll
+// =====================================
+ 
+    /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+
+        var sections = [$("#sua-secao-aqui")];
+
+        sections.forEach( function (objectDOM) {
+
+            /* Check the location of each desired element */
+            objectDOM.each( function(i){
+                
+                var bottom_of_object = $(this).offset().top;
+                var bottom_of_window = $(window).scrollTop() + 100;
+            
+
+                
+                    /* If the object is completely visible in the window, fade it it */
+                    if( bottom_of_window > bottom_of_object ){
+                        
+                        //$(this).animate({'opacity':'1'},500);
+                        $('body').addClass('u-whenAppear'); 
+                        
+
+
+                    } else {
+
+                        $('body').removeClass('u-whenAppear'); 
+                    
+                    } 
+
+            
+                
+                
+            });
+
+        } ); 
+    
+    });
+
+
+// =====================================
 // .ScrollFade
 // Mostra os objetos conforme aparecem no scroll
 // =====================================
