@@ -1,3 +1,6 @@
 .Site-header{
-
+    height: $header_height_m;
+    @media screen and (min-width: $break-md){
+        height: $header_height;
+    }
 }

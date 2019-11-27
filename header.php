@@ -12,23 +12,31 @@
  * @version 1.0
  */
 
- get_template_part('template-parts/header/header','tags');
- 
+
+global $i9mepress;
+
+get_template_part('template-parts/header/header','tags');
+
 ?>
 
-<body <?php body_class(); ?>>
+<body <?php body_class("u-isCollapsed"); ?>>
 
 
 	
 <div id="page" class="Site">
 	<div class="BlackMask"></div>
-	<header id="masthead" class="Site-header u-sizeFull is-animating u-zIndex20 u-paddingHorizontal--inter">
 
-		<!-- DESENVOLVA O HEADER DO SITE AQUI -->
+	<?php if ($i9mepress->has_header) : ?>
 
-	</header><!-- #masthead -->
-
+		<header id="masthead" class="Site-header u-sizeFull u-positionRelative is-animating u-zIndex20 u-paddingVertical">
+			<div class="u-maxSize--container u-alignCenterBox u-positionRelative u-displayFlex u-heightFull">
+				
+				<?=get_template_part("template-parts/header/header", "navigation"); ?>
+			
+			</div>
+		</header><!-- #masthead -->
 	
+	<?php endif; ?>
 
 	<div class="Site-container">
 		<div id="content" class="Site-container-content u-overflowHidden">

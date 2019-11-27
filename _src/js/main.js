@@ -3,6 +3,14 @@
 // INICIO MAIN JS
 ========================================================================================= */
 
+var is_mobile = navigator.userAgent.match(/Android/i)
+|| navigator.userAgent.match(/webOS/i)
+|| navigator.userAgent.match(/iPhone/i)
+|| navigator.userAgent.match(/iPad/i)
+|| navigator.userAgent.match(/iPod/i)
+|| navigator.userAgent.match(/BlackBerry/i)
+|| navigator.userAgent.match(/Windows Phone/i);
+
 jQuery(function($) {
 	$(document).ready(function() {
         
@@ -73,17 +81,41 @@ jQuery(function($) {
             //CloseLightBox: FECHAR LIGHTBOX
             window.CloseLightBox = function () {
 
-                //REVERTENDO TODOS OS PROCESSOS DE ABERTURA DO LIGHTBOX
-                $(".Lightbox").css("background", "#fff");
-                $(".Lightbox").css("height", "0");
-                $(".Lightbox").css("width", "0");
-
+                $(".Lightbox").fadeOut();
+    
                 $(".BlackMask").css("display", "none");
+    
+                if ($("body").hasClass("u-isCollapsed")) {
+    
+                    $("body").css("overflow", "initial");
                 
-                $(".Lightbox").html("");
+                }
+    
+            }
 
-                $("body").css("overflow", "initial");
+            window.OpenMobileMenu = function () {
 
+                if (is_mobile) {
+
+                    $("body").removeClass("u-isCollapsed").addClass("u-isExpanded").css("overflow", "hidden");
+                
+                    //NAV MENU
+                    $("#MainNavigation-container").slideDown("slow");   
+
+                }             
+                
+            }
+
+            window.CloseMobileMenu = function () {
+
+                if (is_mobile) {
+
+                    $("body").removeClass("u-isExpanded").addClass("u-isCollapsed").css("overflow", "initial");
+                    
+                    //NAV MENU
+                    $("#MainNavigation-container").slideUp("slow");
+                
+                }
             }
 
         //====================================
@@ -258,56 +290,23 @@ $(".u-isScrollDown").click(function(event){
     
 });
 
-
 // ==========================
 // Menu Toggle
 // ==========================
 // 
 
+$(".e-Toglle").on("click", function(){
 
-
-    $(".e-Toglle").click(function(event){
-        event.preventDefault();
-        varId = $(this).attr('id');
-        varWidthWindow = $(window).width();
+    if ($("body").hasClass("u-isExpanded")){
         
-        if ($(this).hasClass('a-hzt')){
-            varSide = 'a-hztResize';
-            } else {
-            varSide = '';
-            }
+        CloseMobileMenu();
 
+    } else if ($("body").hasClass("u-isCollapsed")) {
+        console.log("i try, oh my god i try!");
+        OpenMobileMenu();
         
-        if ($(this).hasClass('u-isExpanded')){
-
-        //$('body').css({'overflow':'scroll'});
-        $(this).removeClass('u-isExpanded');
-        $(this).addClass('u-isCollapsed');
-        $('#'+varId+'-container').stop().removeClass('u-isExpanded '+varSide);
-        $('#'+varId+'-container').stop().addClass('u-isCollapsed '+varSide);
-        //if( varId == 'MainNavigation' || varWidthWindow <= 480 ) { $('body').removeClass('u-isScrollOff'); }
-        $('#'+varId+'.SwitchIcon.u-isCollapsed .u-icon').show();
-        $('#'+varId+'.SwitchIcon .iconClose').hide();
-        $('body').removeClass("u-overflowHidden");
-        $('.NavigationLink.Item-level1.is-hasSubMenu, .Navigation--subMenu').removeClass('u-isExpanded');
-        $('.NavigationLink.Item-level1.is-hasSubMenu, .Navigation--subMenu').addClass('u-isCollapsed');
-                
-    }else{
-
-        //$('body').css({'overflow':'hidden'});
-        $('.u-contentHide, .u-contentHide--button, .Navigation .is-hasSubMenu, .Navigation--subMenu').removeClass('u-isExpanded').addClass('u-isCollapsed');
-        $(this).removeClass('u-isCollapsed');
-        $(this).addClass('u-isExpanded');
-        $('#'+varId+'-container').stop().removeClass('u-isCollapsed '+varSide);
-        $('#'+varId+'-container').stop().addClass('u-isExpanded '+varSide);
-        //if( varId == 'MainNavigation' || varWidthWindow <= 480 ) { $('body').addClass('u-isScrollOff'); }
-        $('#'+varId+'.SwitchIcon.u-isExpanded .u-icon').hide();
-        $('#'+varId+'.SwitchIcon .iconClose').show();
-        $('body').addClass("u-overflowHidden");
-
     }
-    });
-
+});
 
 function LightboxClose() {
 //alert( "clicked" );

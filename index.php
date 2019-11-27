@@ -17,7 +17,7 @@ get_header(); ?>
 <!-- teste -->
 <main id="main" class="SiteMain Site-main" role="main">
 
-	<style>
+	<!-- <style>
 
 		body{
 			background: #00375d;
@@ -69,7 +69,7 @@ get_header(); ?>
 	</style>
 	<div class="welcome-box u-alignCenterBox u-marginTop u-alignCenter u-displayFlex u-flexAlignItemsCenter u-flexDirectionColumn u-maxSize--container u-borderRadius10 u-boxShadow animate-this">
 		<div class="rocket-content">
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/space-ship.png" class="rocket" id="rocket" alt="Astronauta">
+			<img src="<?php //echo get_template_directory_uri(); ?>/assets/images/space-ship.png" class="rocket" id="rocket" alt="Astronauta">
 		</div>
 		<div id="greetings">
 			<h1 class="welcome-title u-marginTop--inter">Bem-vindo ao <strong>I9MEPRESS</strong>!</h1>
@@ -91,7 +91,7 @@ get_header(); ?>
 		
 	window.onload = rocket_launch;
 	
-	</script>
+	</script> -->
 
 </main><!-- #main -->
 

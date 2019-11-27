@@ -129,9 +129,25 @@ th.u-isShown {
 /* Control Expand and Collapse */
 
 .u-isCollapsed {
+
+  #icon_open_menu{
+    display: block;
+  }
   
+  #icon_close_menu{
+    display: none;
+  }
+
 }
 .u-isExpanded {
+
+  #icon_open_menu{
+    display: none;
+  }
+  
+  #icon_close_menu{
+    display: block;
+  }
 
 }
 

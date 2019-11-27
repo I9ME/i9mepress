@@ -134,11 +134,16 @@
 	}
 }
 
-.u-setMainMenuTop{
-	top: $header_height_m;
-	@media screen and (min-width: $break-sm){
-		top: $header_height_tablet;
-	}
+.u-setMainMenu{
+	position: fixed;
+	left: 0;
+	height: 100%;
+	overflow: hidden;
+	width: 100% !important;
+	display: none;
+
+	top: $header_height_m + 46px;
+	
 	@media screen and (min-width: $break-md){
 		top: initial;
 	}

@@ -15,6 +15,138 @@
  */
 
 
+//=========================================
+// CLASSE DE CONFIGURAÇÕES GLOBAIS DO TEMA
+//=========================================
+
+// CONTROLA A ESTRUTURA DO SITE POR COMPLETO
+
+class Global_I9ME_Config {
+
+	//$has_header: Controla a exibição do header
+	public $has_header = true;
+
+	//$has_footer: Controla a exibição do footer
+	public $has_footer = true;
+
+	//==================
+	//FUNÇÕES I9MEPRESS
+	//==================
+
+	// Console PHP - Desenvolvido por Paulo Arthur e SamuraiPetrus
+	// (Imprime arrays PHP no Console do Browser)
+
+	//=============
+	// Parâmetros
+	//=============
+	//$obj -> (array) Array a ser impresso.
+
+	public function console_php($obj){
+		echo '<script type="text/javascript">
+			console.log('.json_encode($obj).');
+		</script>';	
+	}
+
+	//  Excerpt Limiter - Desenvolvido por SamuraiPetrus (https://github.com/SamuraiPetrus)
+	// (Limitador de string que corta o texto no último espaço em branco)
+
+	//=============
+	// Parâmetros
+	//=============
+	//$text -> (str) Texto a ser limitado.
+	//$chars -> (int) (default: 100) Número de caracteres do texto final.
+
+	public function excerpt_limiter($str, $chars=100){
+		
+		if (strlen($str) >= $chars){
+			
+			$str = substr($str, 0, $chars);
+			$split = str_split($str);
+			$final = $chars - 1;
+			
+			if ($split[$final] != " "){
+		
+				$aux = $final;
+		
+				while ($split[$aux] != " ") {
+		
+					unset($split[$aux]);
+					$aux -= 1;
+		
+				}
+				
+				$real_chars = sizeof($split);
+				return substr($str, 0, $real_chars) . "[...]";
+		
+			}else{
+		
+				return substr($str, 0, $chars). "[...]";
+		
+			}
+		
+		}else if (strlen($str) < $chars){
+		
+			return $str;
+		
+		}else{
+		
+			return "erro desconhecido, favor contatar o desenvolvedor da função.";
+		}
+	}
+
+	// Global Query Have Posts - Desenvolvido por SamuraiPetrus
+	// (Retorna um booleano se existe ou não posts em um post type)
+
+	//=============
+	// Parâmetros
+	//=============
+	//$post_type -> (string) A slug do post type.
+
+	public function global_query_have_posts($post_type){
+		$args = array(
+			"post_type" => $post_type,
+		);
+		
+		$query = new WP_Query($args);
+		return $query->have_posts();
+	}
+
+	//  Get Youtube Thumbnail - Desenvolvido por SamuraiPetrus (https://github.com/SamuraiPetrus)
+	// (Gera url de thumbnails para youtube)
+
+	//=============
+	// Parâmetros
+	//=============
+	//$link -> (str) (obrigatório) link do vídeo.
+	//$size -> (int) (opcional, default: 0) id da thumbnail.
+
+	public function get_youtube_thumbnail($link, $size=0) {
+		$video_id = explode("?v=", $link)[1];
+		
+		$url_host = parse_url($link)["host"];
+		
+		if ($video_id && $url_host == "www.youtube.com") {
+			if ($size == 0) {
+				return "https://img.youtube.com/vi/". $video_id ."/0.jpg";
+			}else if ($size == 1) {
+				return "https://img.youtube.com/vi/". $video_id ."/1.jpg";
+				
+			}else if ($size == 2) {
+				return "https://img.youtube.com/vi/". $video_id ."/2.jpg";
+			}else if ($size >= 3) {
+				return "https://img.youtube.com/vi/". $video_id ."/3.jpg";
+				
+			}
+		}else{
+			return get_template_directory_uri() . "/assets/images/imagem-modelo.png";
+		}
+	}
+
+}
+
+$i9mepress = new Global_I9ME_Config();
+
+
 
 function skeleton_setup() {
 	load_theme_textdomain( 'templates-lp' );
@@ -608,117 +740,4 @@ function column_orderby ( $vars ) {
         $vars = array_merge( $vars, array( 'meta_key' => 'var_tipo', 'orderby' => 'meta_value_num' ) );
     }
     return $vars;
-}
-
-//==================
-//FUNÇÕES I9MEPRESS
-//==================
-
-// Console PHP - Desenvolvido por Paulo Arthur e SamuraiPetrus
-// (Imprime arrays PHP no Console do Browser)
-
-//=============
-// Parâmetros
-//=============
-//$obj -> (array) Array a ser impresso.
-
-function console_php($obj){
-	echo '<script type="text/javascript">
-		console.log('.json_encode($obj).');
-	</script>';	
-}
-
-//  Excerpt Limiter - Desenvolvido por SamuraiPetrus (https://github.com/SamuraiPetrus)
-// (Limitador de string que corta o texto no último espaço em branco)
-
-//=============
-// Parâmetros
-//=============
-//$text -> (str) Texto a ser limitado.
-//$chars -> (int) (default: 100) Número de caracteres do texto final.
-
-function excerpt_limiter($str, $chars=100){
-	
-	if (strlen($str) >= $chars){
-		
-		$str = substr($str, 0, $chars);
-		$split = str_split($str);
-		$final = $chars - 1;
-		
-		if ($split[$final] != " "){
-	
-			$aux = $final;
-	
-			while ($split[$aux] != " ") {
-	
-				unset($split[$aux]);
-				$aux -= 1;
-	
-			}
-			
-			$real_chars = sizeof($split);
-			return substr($str, 0, $real_chars) . "[...]";
-	
-		}else{
-	
-			return substr($str, 0, $chars). "[...]";
-	
-		}
-	
-	}else if (strlen($str) < $chars){
-	
-		return $str;
-	
-	}else{
-	
-		return "erro desconhecido, favor contatar o desenvolvedor da função.";
-	}
-}
-
-// Global Query Have Posts - Desenvolvido por SamuraiPetrus
-// (Retorna um booleano se existe ou não posts em um post type)
-
-//=============
-// Parâmetros
-//=============
-//$post_type -> (string) A slug do post type.
-
-function global_query_have_posts($post_type){
-	$args = array(
-		"post_type" => $post_type,
-	);
-	
-	$query = new WP_Query($args);
-	return $query->have_posts();
-}
-
-//  Get Youtube Thumbnail - Desenvolvido por SamuraiPetrus (https://github.com/SamuraiPetrus)
-// (Gera url de thumbnails para youtube)
-
-//=============
-// Parâmetros
-//=============
-//$link -> (str) (obrigatório) link do vídeo.
-//$size -> (int) (opcional, default: 0) id da thumbnail.
-
-function get_youtube_thumbnail($link, $size=0) {
-	$video_id = explode("?v=", $link)[1];
-	
-	$url_host = parse_url($link)["host"];
-	
-	if ($video_id && $url_host == "www.youtube.com") {
-		if ($size == 0) {
-			return "https://img.youtube.com/vi/". $video_id ."/0.jpg";
-		}else if ($size == 1) {
-			return "https://img.youtube.com/vi/". $video_id ."/1.jpg";
-			
-		}else if ($size == 2) {
-			return "https://img.youtube.com/vi/". $video_id ."/2.jpg";
-		}else if ($size >= 3) {
-			return "https://img.youtube.com/vi/". $video_id ."/3.jpg";
-			
-		}
-	}else{
-		return get_template_directory_uri() . "/assets/images/imagem-modelo.png";
-	}
 }

@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*
-Main Style site ZoeWeb
-Author: Diogo Soares | I9ME WEB & DESIGN
+Main Style I9MEPRESS
+Author: I9ME WEB & DESIGN
 Author URI: http://www.i9me.com.br
 Escrita de CSS Baseeada em SUIT CSS - https://github.com/suitcss/suit
 */
@@ -1376,9 +1376,19 @@ strong {
   }
 }
 
+.Site-header {
+  height: 70px;
+}
+
+@media screen and (min-width: 960px) {
+  .Site-header {
+    height: 87.5px;
+  }
+}
+
 .Site:after {
   width: 100%;
-  height: 125px;
+  height: 87.5px;
   z-index: 19;
   content: "";
   background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
@@ -1395,7 +1405,7 @@ strong {
 }
 
 .Intro--home {
-  padding-top: 100px;
+  padding-top: 70px;
   /* background-image: url('../images/Intro--bg--mobile.png'); */
   background-position: top center;
   background-size: cover;
@@ -1904,7 +1914,7 @@ strong {
 }
 
 .u-setIntroMargins {
-  margin-top: 100px;
+  margin-top: 70px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1919,18 +1929,18 @@ strong {
   }
 }
 
-.u-setMainMenuTop {
-  top: 100px;
-}
-
-@media screen and (min-width: 768px) {
-  .u-setMainMenuTop {
-    top: 100px;
-  }
+.u-setMainMenu {
+  position: fixed;
+  left: 0;
+  height: 100%;
+  overflow: hidden;
+  width: 100% !important;
+  display: none;
+  top: 116px;
 }
 
 @media screen and (min-width: 960px) {
-  .u-setMainMenuTop {
+  .u-setMainMenu {
     top: initial;
   }
 }
@@ -3226,6 +3236,22 @@ th.u-isShown {
 }
 
 /* Control Expand and Collapse */
+.u-isCollapsed #icon_open_menu {
+  display: block;
+}
+
+.u-isCollapsed #icon_close_menu {
+  display: none;
+}
+
+.u-isExpanded #icon_open_menu {
+  display: none;
+}
+
+.u-isExpanded #icon_close_menu {
+  display: block;
+}
+
 .u-overflowHidden {
   overflow: hidden;
 }
@@ -3264,52 +3290,30 @@ th.u-isShown {
   height: 1em;
 }
 
-.Navigation--menu {
-  position: fixed;
-  left: 0px;
+.e-Toglle {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
 }
 
-.Navigation--menu .Navigation-items-item .NavigationLink-icon {
-  top: 0px;
-  height: 26px;
+.e-Toglle .u-icon {
+  color: #000000;
 }
 
-.Navigation--menu .Navigation-items-item .NavigationLink-icon--left {
-  left: 10px;
+.Navigation--menu--main {
+  background: gray;
 }
 
-.Navigation--menu .Navigation-items-item .NavigationLink-icon--right {
-  right: -20px;
+.Navigation--menu--main .Navigation-items-item {
+  text-align: left;
 }
 
-.Navigation--menu .Navigation-items-item .NavigationLink-icon .u-icon {
+.Navigation--menu--main .Navigation-items-item:last-child {
+  padding-bottom: 0 !important;
+}
+
+.Navigation--menu--main .NavigationLink {
   font-size: 20px;
-}
-
-.Navigation--menu--style1 {
-  background: #8f7e22;
-}
-
-@media screen and (min-width: 960px) {
-  .Navigation--menu--style1 {
-    background: none;
-  }
-}
-
-.Navigation--menu--style2 {
-  background: #FFFFFF;
-}
-
-@media screen and (min-width: 960px) {
-  .Navigation--menu--style2 {
-    background: none;
-  }
-}
-
-@media screen and (min-width: 960px) {
-  .Navigation--menu {
-    overflow: visible !important;
-  }
 }
 
 /* @custom-media --lg-viewport (min-width: 960px);
@@ -5438,6 +5442,10 @@ header {
 } */
 .u-objectFitCover {
   object-fit: cover;
+}
+
+.u-objectFitContain {
+  object-fit: contain;
 }
 
 .u-imageMax100 {

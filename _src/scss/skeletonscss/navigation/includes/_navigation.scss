@@ -1,73 +1,31 @@
+.e-Toglle{
+	top: 50%;
+	transform: translateY(-50%);
+	right: 0;
+	& .u-icon{
+        color: $color_11;
+    }
+}
+
 .Navigation{
 	&--menu{
-		position:fixed;	
-		left: 0px;
-
-		&.Navigation{
-			&.Navigation--menu--main{
-
+		&--main{
+			background: gray;
+			& .Navigation{
+				 &-items{
+					 &-item{
+						 text-align: left;
+						 &:last-child{
+							 padding-bottom: 0 !important;
+						 }
+					 }
+				 }
+			}
+			& .NavigationLink{
+				font-size: 20px;
 			}
 		}
-
-		.Navigation--menu{
-
-		} //.Navigation--menu
-
-		& .Navigation-items{
-			&-item{
-				& .NavigationLink{
-					&-icon{
-						top: 0px;
-						height: 26px;
-						&--left{
-							left: 10px;
-						}
-						&--right{
-							right: -20px;
-						}
-						& .u-icon{
-							font-size: 20px;
-						}
-					}
-				}
-			}
-		}
-		&--style1{
-			background: $color_3;
-			& .Navigation-items{
-				&-item{
-
-				}
-			}
-			@media screen and (min-width: $break-md){
-				background: none;
-				& .Navigation-items{
-					&-item{
-
-					}
-				}
-			}
-		}
-		&--style2{
-			background: $color_1;
-			& .Navigation-items{
-				&-item{
-
-				}
-			}
-			@media screen and (min-width: $break-md){
-				background: none;
-				& .Navigation-items{
-					&-item{
-
-					}
-				}
-			}
-		}
-		@media screen and (min-width: $break-md){
-			overflow: visible !important;
-		}
-	} // Navigation--menu
+	}
 }
 
 // ===================
