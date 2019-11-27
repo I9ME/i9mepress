@@ -31,7 +31,7 @@ get_template_part('template-parts/header/header','tags');
 		<header id="masthead" class="Site-header u-sizeFull u-positionRelative is-animating u-zIndex20 u-paddingVertical">
 			<div class="u-maxSize--container u-alignCenterBox u-positionRelative u-displayFlex u-heightFull">
 				
-				<?=get_template_part("template-parts/header/header", "navigation"); ?>
+				<?php //get_template_part("template-parts/header/header", "navigation"); ?>
 			
 			</div>
 		</header><!-- #masthead -->
