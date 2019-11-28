@@ -2,11 +2,9 @@
 
 // CONTROLA A ESTRUTURA DO SITE POR COMPLETO
 class i9mepress_construct {
+	
+	public $has_header = false;
 
-	//$has_header: Controla a exibição do header
-	public $has_header = true;
-
-	//$has_footer: Controla a exibição do footer
 	public $has_footer = true;
 
 	public function console_php($obj){
