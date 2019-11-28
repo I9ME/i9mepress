@@ -17,7 +17,7 @@ get_header(); ?>
 <!-- teste -->
 <main id="main" class="SiteMain Site-main" role="main">
 
-	<style>
+	<!-- <style>
 
 		body{
 			background: #00375d;
@@ -91,7 +91,7 @@ get_header(); ?>
 		
 	window.onload = rocket_launch;
 	
-	</script>
+	</script> -->
 
 </main><!-- #main -->
 

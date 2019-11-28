@@ -19,134 +19,9 @@
 // CLASSE DE CONFIGURAÇÕES GLOBAIS DO TEMA
 //=========================================
 
-// CONTROLA A ESTRUTURA DO SITE POR COMPLETO
+include "includes/class-i9mepress.php";
 
-class Global_I9ME_Config {
-
-	//$has_header: Controla a exibição do header
-	public $has_header = true;
-
-	//$has_footer: Controla a exibição do footer
-	public $has_footer = true;
-
-	//==================
-	//FUNÇÕES I9MEPRESS
-	//==================
-
-	// Console PHP - Desenvolvido por Paulo Arthur e SamuraiPetrus
-	// (Imprime arrays PHP no Console do Browser)
-
-	//=============
-	// Parâmetros
-	//=============
-	//$obj -> (array) Array a ser impresso.
-
-	public function console_php($obj){
-		echo '<script type="text/javascript">
-			console.log('.json_encode($obj).');
-		</script>';	
-	}
-
-	//  Excerpt Limiter - Desenvolvido por SamuraiPetrus (https://github.com/SamuraiPetrus)
-	// (Limitador de string que corta o texto no último espaço em branco)
-
-	//=============
-	// Parâmetros
-	//=============
-	//$text -> (str) Texto a ser limitado.
-	//$chars -> (int) (default: 100) Número de caracteres do texto final.
-
-	public function excerpt_limiter($str, $chars=100){
-		
-		if (strlen($str) >= $chars){
-			
-			$str = substr($str, 0, $chars);
-			$split = str_split($str);
-			$final = $chars - 1;
-			
-			if ($split[$final] != " "){
-		
-				$aux = $final;
-		
-				while ($split[$aux] != " ") {
-		
-					unset($split[$aux]);
-					$aux -= 1;
-		
-				}
-				
-				$real_chars = sizeof($split);
-				return substr($str, 0, $real_chars) . "[...]";
-		
-			}else{
-		
-				return substr($str, 0, $chars). "[...]";
-		
-			}
-		
-		}else if (strlen($str) < $chars){
-		
-			return $str;
-		
-		}else{
-		
-			return "erro desconhecido, favor contatar o desenvolvedor da função.";
-		}
-	}
-
-	// Global Query Have Posts - Desenvolvido por SamuraiPetrus
-	// (Retorna um booleano se existe ou não posts em um post type)
-
-	//=============
-	// Parâmetros
-	//=============
-	//$post_type -> (string) A slug do post type.
-
-	public function global_query_have_posts($post_type){
-		$args = array(
-			"post_type" => $post_type,
-		);
-		
-		$query = new WP_Query($args);
-		return $query->have_posts();
-	}
-
-	//  Get Youtube Thumbnail - Desenvolvido por SamuraiPetrus (https://github.com/SamuraiPetrus)
-	// (Gera url de thumbnails para youtube)
-
-	//=============
-	// Parâmetros
-	//=============
-	//$link -> (str) (obrigatório) link do vídeo.
-	//$size -> (int) (opcional, default: 0) id da thumbnail.
-
-	public function get_youtube_thumbnail($link, $size=0) {
-		$video_id = explode("?v=", $link)[1];
-		
-		$url_host = parse_url($link)["host"];
-		
-		if ($video_id && $url_host == "www.youtube.com") {
-			if ($size == 0) {
-				return "https://img.youtube.com/vi/". $video_id ."/0.jpg";
-			}else if ($size == 1) {
-				return "https://img.youtube.com/vi/". $video_id ."/1.jpg";
-				
-			}else if ($size == 2) {
-				return "https://img.youtube.com/vi/". $video_id ."/2.jpg";
-			}else if ($size >= 3) {
-				return "https://img.youtube.com/vi/". $video_id ."/3.jpg";
-				
-			}
-		}else{
-			return get_template_directory_uri() . "/assets/images/imagem-modelo.png";
-		}
-	}
-
-}
-
-$i9mepress = new Global_I9ME_Config();
-
-
+global $i9mepress;
 
 function skeleton_setup() {
 	load_theme_textdomain( 'templates-lp' );
@@ -239,33 +114,20 @@ add_action( 'wp_enqueue_scripts', 'skeleton_scripts' );
 
 // Add scripts to wp_footer()
 function theme_footer_script() {
-
-
-//SVG
-
-//JOGUE DENTRO DE <defs> OS <symbol> DO ICOMOON
-
-echo'<svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<defs>
-
-<symbol id="icon-close" viewBox="0 0 20 20">
-<title>close</title>
-<path d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"></path>
-</symbol>
-
-<symbol id="icon-menu" viewBox="0 0 20 20">
-<title>menu</title>
-<path d="M0 3h20v2h-20v-2zM0 9h20v2h-20v-2zM0 15h20v2h-20v-2z"></path>
-</symbol>
-
-</defs>
-</svg>';
-$icon_type = "u-icon--mail iconEnvelope";
-$use_link = "#iconLink";
-
+	global $i9mepress;
 ?>
- <link rel="stylesheet"  type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/owl.carousel.min.css" />
- <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+<svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+	<defs>
+
+		<?php foreach ($i9mepress->SVGen() as $sym) {
+			echo $sym;
+		} ?>
+
+	</defs>
+
+</svg>
 
 <?php
 }
