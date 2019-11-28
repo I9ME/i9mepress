@@ -81,7 +81,7 @@ body{
 								right: 15px;
 								top: 20px;
 								left: inherit;
-								color: $color_9;
+								color: $color_6;
 							}
 						}
 					}
@@ -101,12 +101,11 @@ body{
 
 
 .Breadcrumbs{
-	//border-top: 1px solid $color_8;
-	//border-bottom: 1px solid $color_8;
+	//border-top: 1px solid $color_5;
+	//border-bottom: 1px solid $color_5;
 	font-size: 13px;
 	& a{
 		font-weight: bold;
-		color: $color_2;
 		&:hover{
 			color: $color_3;
 		}

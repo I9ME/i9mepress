@@ -53,7 +53,7 @@
 		}
 		&-subtitle{
 			font-size: $font_size_subtitle_section;
-			color: $color_11;
+			color: $color_1;
 		}
 
 	}
@@ -105,7 +105,7 @@
 							display: block;
 							width: 1px;
 							height: 50%;
-							background: $color_9;
+							background: $color_6;
 							top: 50%;
 							-moz-transform: translateY(-50%);
 							-webkit-transform: translateY(-50%);
@@ -215,7 +215,6 @@
 					}
 					&-item{
 						& .Navigation-link{
-							color: $color_7;
 							font-size: $font_size_subtitle_section;
 							width: 40px;
 							height: 40px;
@@ -264,9 +263,7 @@
 							transform: translateX(-50%);
 						}
 						&-item{
-							& .Navigation-link{
-								color: $color_7;
-								font-size: $font_size_subtitle_section;
+							& .Navigation-link{								font-size: $font_size_subtitle_section;
 								width: 40px;
 								height: 40px;
 								background: $color_5;
@@ -357,7 +354,6 @@
 						display: inline-block;
 						position: relative;
 						padding: 5px 5px;
-						border: 1px solid $color_7;
 						border-radius: 50px;
 						& i{
 							position: relative;
@@ -400,19 +396,19 @@
 	// STYLES
 	// =============
 	&--style1{ //<section> style section
-		color: $color_10;
+		color: $color_8;
 		background: $color_1;
 		& .Section-header{
 			&-title{
-				color: $color_10;
+				color: $color_8;
 				&--beforeTitleLine{
 					&:before{
-						background: $color_10;
+						background: $color_8;
 					}
 				}
 			}
 			&-subtitle{
-				color: $color_10;
+				color: $color_8;
 				font-size: 20px;
 			}
 		}
@@ -420,18 +416,18 @@
 		& .Section{
 			&-header{
 				&-title{
-					color: $color_11;
+					color: $color_1;
 					font-weight: bolder;
 					@media screen and (min-width: $break-md){
 					}
 					&--beforeTitleLine{
 						&:before{
-							background: $color_10;
+							background: $color_8;
 						}
 					}
 				}
 				&-subtitle{
-					color: $color_10;
+					color: $color_8;
 					font-weight: bolder;
 				}
 			}
@@ -444,7 +440,7 @@
 				background: none;
 			}
 			&--background{
-				color: $color_1 !important;
+				color: $color_0 !important;
 				background: $color_2;
 				&:hover{
 					background: $color_3;
@@ -476,7 +472,7 @@
 					color: $color_2;
 				}
 				&-resume{
-					color: $color_10;
+					color: $color_8;
 				}
 
 				&-caption{
@@ -510,18 +506,18 @@
 			&--prev{}
 			&--next{}
 			&--content{
-				color: $color_1 !important;
+				color: $color_0 !important;
 				& svg{
 					font-size: 20px;
 				}
 			}	
 
 			&--border{
-				border-color: $color_8;
+				border-color: $color_5;
 				background: $color_1;
 				color: $color_2;
 				&:hover{
-					border-color: $color_1 !important;
+					border-color: $color_0 !important;
 					box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.25);
 				}
 			}
@@ -534,8 +530,6 @@
 
 			}
 			&--tabs{
-				background-color: $color_7;
-				border-color: $color_7;
 				color: $color_2;
 				&.active{
 					background-color: $color_2;
@@ -588,7 +582,7 @@
 				}
 			}
 			&-subtitle{
-				color: $color_11;
+				color: $color_1;
 			}
 		}
 		& .ReadMore{
@@ -648,26 +642,26 @@
 					font-weight: bold;	
 		}
 		& .Button--background{
-					border-color: $color_8;
-					background: $color_8;
+					border-color: $color_5;
+					background: $color_5;
 					color: $color_1;
 					font-weight: bold;	
 		}
 		& .Button--background.Button--border{
-					border-color: $color_8;
+					border-color: $color_5;
 					color: $color_1;
 					&:hover{
 						background: none;
-						color: $color_8;
-						border-color: $color_8;
+						color: $color_5;
+						border-color: $color_5;
 					}
 		}
 		& .navController{
 			&--border{
-				border-color: $color_8;
+				border-color: $color_5;
 				background: $color_1;
 				&:hover{
-					border-color: $color_1 !important;
+					border-color: $color_0 !important;
 					box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.25);
 				}
 			}
@@ -753,10 +747,10 @@
 		}
 		& .navController{
 			&--border{
-				border-color: $color_8;
+				border-color: $color_5;
 				background: $color_1;
 				&:hover{
-					border-color: $color_1 !important;
+					border-color: $color_0 !important;
 					box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.25);
 				}
 			}
@@ -991,7 +985,7 @@
 						margin-bottom: 0px;
 					}
 					&-title{
-						color: $color_11;
+						color: $color_1;
 					}
 					@media screen and (min-width: $break-sm){
 						margin-bottom: 37.5px;
@@ -1025,13 +1019,13 @@
 						}
 					}
 					&-title{
-						color: $color_11;
+						color: $color_1;
 						font-weight: bolder;
 						letter-spacing: 1px;
 						padding-bottom: 0px !important; 
 					}
 					&-subtitle{
-						color: $color_9;
+						color: $color_6;
 						font-weight: normal;
 						font-size: 13px;
 					}
@@ -1053,7 +1047,7 @@
 			& .icon{
 				height: 40px;
 				width: 40px;
-				fill: $color_10;
+				fill: $color_8;
 			}
 			font-size: 70px !important;
 			&:focus{
@@ -1151,9 +1145,9 @@
 			& .icon{
 				height: 40px;
 				width: 40px;
-				fill: $color_10;
+				fill: $color_8;
 			}
-			background: $color_1 !important;
+			background: $color_0 !important;
 			font-size: 70px !important;
 		}
 		& .owl-prev{
@@ -1164,7 +1158,7 @@
 		}
 	}
 	&--features{
-		background: $color_13;
+		background: $color_7;
 		@media screen and (min-width: $break-md){
 			padding-bottom: 37.5px !important;
 		}
@@ -1179,7 +1173,7 @@
 			&-items{
 				&-item{
 					&-title{
-						color: $color_11;
+						color: $color_1;
 					}
 					&--light{
 						&:last-child{

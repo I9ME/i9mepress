@@ -12,10 +12,16 @@
  * @version 1.0
  */
 
+ global $i9mepress;
+
 ?>
+
+
 		</div><!-- #content -->		
 		<footer class="Site-footer" role="contentinfo">
-				<?php get_template_part('template-parts/footer/section','footer'); ?>
+
+				<?php echo $i9mepress->has_footer ? get_template_part('template-parts/footer/section','footer') : ""; ?>
+				
 		</footer>
 	</div><!-- .site-content-contain -->
 </div><!-- #page -->

@@ -61,18 +61,10 @@
 		// }
 	}
 	&--style2{
-		background: $color_12;
 		color: $color_1;
-		border: 2px solid $color_12;
 		&:hover{
 			background: $color_1;
 			border: 2px solid $color_1;
-			color: $color_12;
-		}
-		&--outline{
-			&:hover{
-				border: 2px solid $color_12;
-			}
 		}
 		// & .iconArrowRight{
 		// 	@media screen and (min-width: $break-md){
@@ -94,12 +86,12 @@
 		// }
 	}
 	&--greetings{
-		background: $color_8;
-		color: $color_1;
-		border-color: $color_8;
+		background: $color_5;
+		color: $color_0;
+		border-color: $color_5;
 		&:hover{
 			background: transparent;
-			color: $color_8;
+			color: $color_5;
 		}
 	}
 

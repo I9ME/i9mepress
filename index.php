@@ -17,7 +17,7 @@ get_header(); ?>
 <!-- teste -->
 <main id="main" class="SiteMain Site-main" role="main">
 
-	<!-- <style>
+	<style>
 
 		body{
 			background: #00375d;
@@ -65,6 +65,11 @@ get_header(); ?>
 		#greetings{
 			transition: all .6s;
 		}
+		.Site-footer{
+			bottom: 0;
+			position: absolute;
+			width: 100%;
+		}
 
 	</style>
 	<div class="welcome-box u-alignCenterBox u-marginTop u-alignCenter u-displayFlex u-flexAlignItemsCenter u-flexDirectionColumn u-maxSize--container u-borderRadius10 u-boxShadow animate-this">
@@ -91,7 +96,7 @@ get_header(); ?>
 		
 	window.onload = rocket_launch;
 	
-	</script> -->
+	</script>
 
 </main><!-- #main -->
 

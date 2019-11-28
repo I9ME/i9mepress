@@ -5,29 +5,22 @@
 
 //== colors tests =================
 
-$color_1: #FFFFFF;
-$color_2: #f6f4ed; // 
-$color_3: #8f7e22; // Azul Salupp
-$color_4: #47c2ea; // Azul claro Salupp
-$color_5: #cdcdcd; // Cinza formulário intro Salupp
-$color_6: #ff9f50; // Laranja Popular Salupp
-$color_7: #f9f9f9; // PRATA ESCURO
-$color_8: #32D9A4; // Verde Popular Salupp
-$color_9: #999999; // Cinza Médio 2
-$color_10: #555555; // Cinza Escuro
-$color_11: #000000; // Preto
-$color_12: #39d0ad; // Verde CTA
-$color_13: #f5f5f5; // CINZA quase branco
-$color_14: #efefef; // Cinza Claro 2
-$color_15: #d4cbaf; // Verde opaco claro
-$color_16: #d2c6aa; //BEGE claro
-$color_17: #f3eeee; //Cinza Planos Salupp
-$color_18: #56a256; //Verde
-$color_19: #a18c59; //Bege escuro
-$color_20: #f9ebd9; //Cor da section locais
-$color_21: #ececec; //Cinza Borda header login
-$color_22: #bb74eb; //ROXO ELOHS
-$color_23: #6b002a; //VERMELHO VINHO INTRO PAGE
+//MAIN COLOR PALLETTE
+$color_0: #FFFFFF;
+$color_1: #000000;
+$color_2: #D50C0D; // COR PRIMÁRIA DO SITE
+$color_3: #D62027; // COR SECUNDÁRIA DO SITE
+$color_4: #47c2ea; // COR TERCIÁRIA DO SITE
+$color_5: #3F9A3D; // COR CTA
+//TONS DE CINZA
+$color_6: #999999; // Super escuro
+$color_7: #b6b6b6; // Escuro
+$color_8: #D4D4D4; // Claro
+$color_9: #f9f9f9; // Super claro
+
+//CUSTOMIZER
+$color_10: #002a47; //Tom de cinza
+$color_11: #1E1E23; //VERMELHO VINHO INTRO PAGE
 
 
 
@@ -65,8 +58,6 @@ $header_height_m: 70px;
 $header_height: $header_height_m * 1.25;
 $header_height_tablet: 100px;
 $header_height_d: 100px;
-
-
 
 
 //==============================

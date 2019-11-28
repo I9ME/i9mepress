@@ -27,7 +27,7 @@
 	line-height: normal;
 }
 
-/* 
+
 @font-face {
 	font-family: 'Cambria';
 	src: url('../../assets/fonts/Cambria.eot');
@@ -37,9 +37,8 @@
 		url('../../assets/fonts/Cambria.eot?#iefix') format('embedded-opentype');
 	font-weight: normal;
 	font-style: normal;
-} */
+}
 
-/* 
 @font-face {
 	font-family: 'Cambria';
 	src: url('http://pizzavignoli.com.br/wp-content/uploads/2016/06/Cambria.eot');
@@ -49,4 +48,10 @@
 		url('http://pizzavignoli.com.br/wp-content/uploads/2016/06/Cambria.eot?#iefix') format('embedded-opentype');
 	font-weight: normal;
 	font-style: normal;
-} */
+}
+
+$fonte: "Cambria";
+
+.u-CallFont#{$fonte}{
+	font-family: $fonte;
+}

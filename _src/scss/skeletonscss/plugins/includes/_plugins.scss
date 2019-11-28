@@ -1,42 +1,92 @@
-.owl-dots{
-	position:relative;
-	display: flex;
-	justify-content: center;
-	padding: 20px 0px 0px 0px;
-
-	@media screen and (min-width: $break-sm){
-		margin: $v_spacing / 2 0px;
+.Carousel{
+	.owl{
+		&-stage-outer{
+			-moz-transition: all $time_animate * 2.5;
+			-webkit-transition: all $time_animate * 2.5;
+			-o-transition: all $time_animate * 2.5;
+			transition: all $time_animate * 2.5;
+		}
+		&-prev,
+		&-next{
+			position: absolute;
+			z-index: 10;
+		}
+		&-dots{
+			position:relative;
+			display: flex;
+			justify-content: center;
+			padding: 20px 0px 0px 0px;
+		
+			@media screen and (min-width: $break-sm){
+				margin: $v_spacing / 2 0px;
+			}
+			margin-bottom: 0px !important;
+		
+			flex-direction: row;
+		}
+		
+		&-dot{
+			width: 20px;
+			height: 20px;
+			border-radius: 50px;
+			margin: 0 5px;
+			background: none !important;
+			border: 2px solid $color_0 !important;
+		
+			&.active{
+				background: $color_0 !important;
+			}
+			@media screen and (min-width: $break-sm){
+				width: 22px;
+				height: 22px;
+			}
+		}
 	}
-	margin-bottom: 0px !important;
-
-	flex-direction: row;
-}
-.owl-dot{
-	width: 30px;
-	height: 30px;
-	border-radius: 50px;
-	margin: 0 5px;
-	background: none !important;
-	border: 2px solid rgba(0,0,0,0.5) !important;
-
-	&.active{
-		background: rgba(0,0,0,0.5) !important;
+	&--style1{
+		.owl{
+			&-prev{
+				bottom: 20px;
+				right: 80px;
+			}
+			&-next{
+				bottom: 20px;
+				right: 21px;			
+			}
+		}
 	}
-	@media screen and (min-width: $break-sm){
-		width: 22px;
-		height: 22px;
+	&--style2{
+		.owl{
+			&-prev,
+			&-next{
+				top: 50%;
+				transform: translateY(-50%);
+			}
+			&-prev{
+				left: -80px;
+			}
+			&-next{
+				right: -80px;
+			}
+			@media screen and (min-width: $break-figma) {
+				&-prev{
+					left: -110px;
+				}
+				&-next{
+					right: -110px;
+				}
+			}
+		}
+		.owl-dots{
+			.owl-dot{
+				background: none !important;
+				border: 2px solid $color_6 !important;
+
+				&.active{
+					background: $color_6 !important;
+				}
+			}
+		}
 	}
-}
-
-#cases-videos-carousel .owl-dots{
-	flex-direction: row-reverse;
-}
-
-
-.owl-carousel .owl-stage, 
-.owl-carousel.owl-drag .owl-item{
--ms-touch-action: auto !important;
-    touch-action: auto !important;
 }
 
 .Lightbox{

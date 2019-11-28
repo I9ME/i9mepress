@@ -48,7 +48,6 @@ $mainSelector: '.Form';
 	}
 	& #{$mainSelector}-label{
 		font-size:$font_size_text;
-		color: $color_6;
 	}
 	& ._form-thank-you { 
 		    position:relative; 
@@ -67,7 +66,7 @@ $mainSelector: '.Form';
 	&--style1{
 		& .LegalText{
 			font-size: 14px;
-			color: $color_10;
+			color: $color_8;
 			line-height: 130%;
 			& ._error-inner{
 				color: red;
@@ -81,7 +80,7 @@ $mainSelector: '.Form';
 			left: 6px;
 			font-weight: bold;
 			font-size: 11px;
-			color: $color_10;
+			color: $color_8;
 			z-index: 2;
 		}
 		
@@ -89,7 +88,6 @@ $mainSelector: '.Form';
 		& span.required{
 				position: absolute;
 				font-size: 18px;
-				color: $color_2;
 				right: -10px;
 			    line-height: 12px;
 			    display: block;
@@ -107,26 +105,26 @@ $mainSelector: '.Form';
 			}
 		}
 		& #{$mainSelector}-input:not([type="submit"]){
-			border: 1px solid $color_9;
+			border: 1px solid $color_6;
 			text-indent: 9px;
 
-			color: $color_11;
+			color: $color_1;
 			font-weight: normal;
 
 			&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-			  color: $color_9;
+			  color: $color_6;
 			  font-weight: normal;
 			}
 			&::-moz-placeholder { /* Firefox 19+ */
-			  color: $color_9;
+			  color: $color_6;
 			  font-weight: normal;
 			}
 			&:-ms-input-placeholder { /* IE 10+ */
-			  color: $color_9;
+			  color: $color_6;
 			  font-weight: normal;
 			}
 			&:-moz-placeholder { /* Firefox 18- */
-			  color: $color_9;
+			  color: $color_6;
 			  font-weight: normal;
 			}
 			
@@ -187,23 +185,19 @@ $mainSelector: '.Form';
 			color: rgba(255,255,255,0.75);
 			padding-left: 42px;
 			font-size: 14px;
-			color: $color_10;
+			color: $color_8;
 			font-weight: bold;
 
 			&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-			  color: $color_19;
 			  font-size: 18px;
 			}
 			&::-moz-placeholder { /* Firefox 19+ */
-			  color: $color_19;
 			  font-size: 18px;
 			}
 			&:-ms-input-placeholder { /* IE 10+ */
-			  color: $color_19;
 			  font-size: 18px;
 			}
 			&:-moz-placeholder { /* Firefox 18- */
-			  color: $color_19;
 			  font-size: 18px;
 			}
 
@@ -220,7 +214,6 @@ $mainSelector: '.Form';
 			right: 3px;
 			bottom: 3px;
 			z-index: 2;
-			background: linear-gradient(to bottom right, $color_2, $color_3)!important;
 		}
 		& #{$mainSelector}{
 			&-row{
@@ -231,7 +224,7 @@ $mainSelector: '.Form';
 					top: 50%;
 					transform: translateY(-50%);
 					left: 5px;										
-					color: $color_9;			
+					color: $color_6;			
 				}
 				
 			}
@@ -315,13 +308,13 @@ $mainSelector: '.Form';
 			margin-bottom: -420px;
 		}
 		& .wpcf7-response-output{
-			color: $color_11;
+			color: $color_1;
 			margin-top: 0px;
 			margin-left: 0px;
 			margin-right: 0px;
 		}
 		& ._form-label{
-			color: $color_11;
+			color: $color_1;
 			margin-bottom: $v_spacing / 4;
 		}
 		& ._form_error{
@@ -359,7 +352,6 @@ $mainSelector: '.Form';
 	&-content{
 		& .u-icon{
 			font-size: 20px;
-			color: $color_16 !important;
 		}
 	}
 }
