@@ -199,18 +199,36 @@ add_action( 'after_setup_theme', 'skeleton_setup' );
  */
 function skeleton_scripts() {
 
+
 	$skeleton_version = '1.0';
 
 	// Add custom fonts, used in the main stylesheet.
 
 	// Theme stylesheet.
+	
+	//JQUERY SCRIPTS
+	wp_enqueue_script('jquery-wordpress', get_template_directory_uri() . "/assets/js/jquery-3.2.1.min.js");
+	wp_enqueue_script( 'jquery-ui', get_template_directory_uri() . '/assets/js/jquery-ui.min.js', array(), $skeleton_version, true );
+	wp_enqueue_script( 'migrate', get_template_directory_uri() . '/assets/js/jquery-migrate-3.0.0.min.js');
+
+	//OWL CAROUSEL SCRIPTS AND STYLES
+	wp_enqueue_style('owl-carousel-css', get_template_directory_uri() . '/assets/css/owl.carousel.min.css');
+	wp_enqueue_script('owl-carousel-js', get_template_directory_uri() . '/assets/js/owl.carousel.min.js');
+
+	//STELLAR
+	wp_enqueue_script( 'stellar', get_template_directory_uri() . '/assets/js/jquery.stellar.min.js', array(), $skeleton_version, true );
+
+	//TYPER JS
+	wp_enqueue_script( 'typer', get_template_directory_uri() . '/assets/js/typer.min.js', array(), $skeleton_version, true );
+
+	//THEME STYLES AND SCRIPTS
 	wp_enqueue_style('css-main', get_template_directory_uri() . '/assets/css/main.min.css', array(), $skeleton_version, 'all');
 	wp_enqueue_script( 'js-main', get_template_directory_uri() . '/assets/js/main.min.js', array(), $skeleton_version, true );
-	
-	
-
 
 ?>
+
+<!-- RAJDHANI FOR I9ME LOGO -->
+<link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
 
 <?php
 
@@ -248,16 +266,6 @@ $use_link = "#iconLink";
 ?>
  <link rel="stylesheet"  type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/owl.carousel.min.css" />
  <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
-<!-- BIBLIOTECAS JAVASCRIPT -->
-
- <script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery-3.2.1.min.js"></script>
-
- <script src="<?php // echo get_template_directory_uri(); ?>/assets/js/jquery.paroller.min.js"></script>
-
- <script src="<?php echo get_template_directory_uri(); ?>/assets/js/owl.carousel.min.js"></script>
- 
-<!-- FIM DAS BIBLIOTECAS JAVASCRIPT -->
 
 <?php
 }
@@ -741,3 +749,13 @@ function column_orderby ( $vars ) {
     }
     return $vars;
 }
+
+function dequeue_jquery_migrate( $scripts ) {
+    if ( ! is_admin() && ! empty( $scripts->registered['jquery'] ) ) {
+        $scripts->registered['jquery']->deps = array_diff(
+            $scripts->registered['jquery']->deps,
+            [ 'jquery-migrate' ]
+        );
+    }
+}
+add_action( 'wp_default_scripts', 'dequeue_jquery_migrate' );

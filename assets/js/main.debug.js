@@ -81,16 +81,17 @@ jQuery(function($) {
             //CloseLightBox: FECHAR LIGHTBOX
             window.CloseLightBox = function () {
 
-                $(".Lightbox").fadeOut();
-    
+                //REVERTENDO TODOS OS PROCESSOS DE ABERTURA DO LIGHTBOX
+                $(".Lightbox").css("background", "#fff");
+                $(".Lightbox").css("height", "0");
+                $(".Lightbox").css("width", "0");
+
                 $(".BlackMask").css("display", "none");
-    
-                if ($("body").hasClass("u-isCollapsed")) {
-    
-                    $("body").css("overflow", "initial");
                 
-                }
-    
+                $(".Lightbox").html("");
+
+                $("body").css("overflow", "initial");
+
             }
 
             window.OpenMobileMenu = function () {
@@ -161,36 +162,77 @@ $(window).scroll(function(){
 });
 
 // =====================================
-// .whenAppear
+// .whenAppear / u-triggerAppear
 // ativa gatilhos js conforme aparecem no scroll
 // =====================================
  
     /* Every time the window is scrolled ... */
     $(window).scroll( function(){
 
-        var sections = [$("#sua-secao-aqui")];
+        var whenAppear_sections = [$("#secao-eventos")];
 
-        sections.forEach( function (objectDOM) {
+        whenAppear_sections.forEach( function (objectDOM) {
 
             /* Check the location of each desired element */
             objectDOM.each( function(i){
                 
                 var bottom_of_object = $(this).offset().top;
                 var bottom_of_window = $(window).scrollTop() + 100;
-            
-
+        
                 
                     /* If the object is completely visible in the window, fade it it */
                     if( bottom_of_window > bottom_of_object ){
                         
                         //$(this).animate({'opacity':'1'},500);
-                        $('body').addClass('u-whenAppear'); 
+                        $('body').addClass('u-whenAppear');
                         
 
 
                     } else {
 
-                        $('body').removeClass('u-whenAppear'); 
+                        $('body').removeClass('u-whenAppear');
+                    
+                    } 
+
+            
+                
+                
+            });
+
+        } );
+
+        var triggerAppear_sections = [
+            $("#secao-intro"), 
+            $("#secao-eventos-sociais"), 
+            $("#secao-eventos-corporativos"), 
+            $("#secao-vignoli-vai-ate-voce"),
+            $("#secao-galeria"),
+            $("#secao-depoimentos"),
+            $("#secao-premios"),
+            $("#secao-lojas"),
+            $("#secao-contato")
+        ];
+
+        triggerAppear_sections.forEach( function (objectDOM) {
+
+            /* Check the location of each desired element */
+            objectDOM.each( function(i){
+                
+                var bottom_of_object = $(this).offset().top;
+                var bottom_of_window = $(window).scrollTop() + 300;
+        
+                
+                    /* If the object is completely visible in the window, fade it it */
+                    if( bottom_of_window > bottom_of_object ){
+                        
+                        //$(this).animate({'opacity':'1'},500);
+                        $(this).addClass('u-triggerAppear');
+                        
+
+
+                    } else {
+
+                        $(this).removeClass('u-triggerAppear');
                     
                     } 
 
@@ -204,68 +246,18 @@ $(window).scroll(function(){
     });
 
 
-// =====================================
-// .ScrollFade
-// Mostra os objetos conforme aparecem no scroll
-// =====================================
- 
-    /* Every time the window is scrolled ... */
-    $(window).scroll( function(){
-    
-        /* Check the location of each desired element */
-        $('.u-isScrollFade').each( function(i){
-            
-            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height() + 100;
-            var bottom_of_window_ = $(window).scrollTop() + $(window).height();
-
-             if ( $(this).hasClass('is-repeat') ) {
-                 /* If the object is completely visible in the window, fade it it */
-                  if( bottom_of_window > bottom_of_object && bottom_of_window < bottom_of_object + $(window).height() ){
-                      
-                      $(this).addClass('u-isScrollFade--on'); 
-                      
+//ScrollDown
 
 
-                  } else {
-
-                     $(this).removeClass('u-isScrollFade--on'); 
-                  
-                  } 
-
-             } else {
-
-                if( bottom_of_window > bottom_of_object && bottom_of_window < bottom_of_object + $(window).height() ){
-                  
-                  $(this).addClass('u-isScrollFade--on'); 
-                  
-                }
-
-            }
-            
-            
-        }); 
-    
-    });
-
-
-//=======================================================
-//Aplica a animação no scroll mediante clique no menu
-//=======================================================
-
-$(".u-isScrollDown").click(function(event){        
+$(".u-isScrollDown").click(function(event){
     event.preventDefault();
     
 
-    $('html,body').animate({scrollTop:$(this.hash).offset().top - 100}, 1000);
+    $('html,body').animate({scrollTop:$(this.hash).offset().top - 50}, 1000);
 
-    $(".e-Toglle").removeClass("u-isExpanded").addClass("u-isCollapsed");
-    $(".Navigation--menu").removeClass("u-isExpanded").addClass("u-isCollapsed"); 
-
-      if ($(".Navigation--main").hasClass('u-isExpanded')){
-        $("#MainNavigation-container, .NavigationButton.NavigationButton--main").removeClass("u-isExpanded")
-        $("#MainNavigation-container, .NavigationButton.NavigationButton--main").addClass("u-isCollapsed"); 
-     }
+      if ($("body").hasClass('u-isExpanded')){
+          CloseMobileMenu();
+      }
 
     
     varHash = $(this).attr('href');
@@ -290,6 +282,7 @@ $(".u-isScrollDown").click(function(event){
     
 });
 
+
 // ==========================
 // Menu Toggle
 // ==========================
@@ -302,11 +295,12 @@ $(".e-Toglle").on("click", function(){
         CloseMobileMenu();
 
     } else if ($("body").hasClass("u-isCollapsed")) {
-        console.log("i try, oh my god i try!");
+
         OpenMobileMenu();
         
     }
 });
+
 
 function LightboxClose() {
 //alert( "clicked" );
@@ -348,9 +342,12 @@ $('#default-carousel').owlCarousel({
 
 $('#depoimentos-carousel').owlCarousel({
     loop:true,
-    margin:0,
-    dots: false,
+    margin:100,
+    dots: true,
     responsiveClass:true,
+    navSpeed: 1100,
+    dotSpeed: 1100,
+    navText: ['<i class="FigureIcon FigureIcon--SetaLeft u-displayBlock"></i>','<i class="FigureIcon FigureIcon--SetaRight u-displayBlock"></i>'],
     responsive:{
         0:{
             items:1,
@@ -359,11 +356,12 @@ $('#depoimentos-carousel').owlCarousel({
             nav:false
         },
         600:{
-            items:2,
-            dots:true
+            items:1,
+            dots:false,
+            nav: true
         },
         1000:{
-            items:3,
+            items:1,
             dots:false,
             nav:true
         }
@@ -392,6 +390,87 @@ $('#videos-carousel').owlCarousel({
     }
 });
 
+$('#mobile-estrutura-carousel').owlCarousel({
+    loop:true,
+    margin:0,
+    dots:true,
+    responsiveClass:true,
+    // autoplay: true,
+    // autoplayTimeout: 2000,
+    // autoplaySpeed: 1000,
+    nav: true,
+    navText: ['<i class="FigureIcon FigureIcon--whiteSetaLeft u-displayBlock"></i>','<i class="FigureIcon FigureIcon--whiteSetaRight u-displayBlock"></i>'],
+    responsive:{
+        0:{
+            items:1,
+            dotClass: "owl-dot owl-dot-case",
+            dots:false,
+        },
+        600:{
+            items:1,
+            dots:false,
+        },
+        1000:{
+            items:1,
+            dots:false,
+        }
+    }
+});
+
+$('#galeria-carousel').owlCarousel({
+    loop:true,
+    margin:0,
+    dots:true,
+    responsiveClass:true,
+    // autoplay: true,
+    // autoplayTimeout: 2000,
+    // autoplaySpeed: 1000,
+    nav: true,
+    navText: ['<i class="FigureIcon FigureIcon--whiteSetaLeft u-displayBlock"></i>','<i class="FigureIcon FigureIcon--whiteSetaRight u-displayBlock"></i>'],
+    responsive:{
+        0:{
+            items:1,
+            dotClass: "owl-dot owl-dot-case",
+            dots:false,
+        },
+        600:{
+            items:1,
+            dots:false,
+        },
+        1000:{
+            items:1,
+            dots:false,
+        }
+    }
+});
+
+$('#lojas-carousel').owlCarousel({
+    loop:true,
+    margin:30,
+    dots: true,
+    responsiveClass:true,
+    navSpeed: 1100,
+    dotSpeed: 1100,
+    navText: ['<i class="FigureIcon FigureIcon--SetaLeft u-displayBlock"></i>','<i class="FigureIcon FigureIcon--SetaRight u-displayBlock"></i>'],
+    responsive:{
+        0:{
+            items:1,
+            dots:true,
+            dotClass: "owl-dot owl-dot-case",
+            nav:false
+        },
+        600:{
+            items:1,
+            dots:false,
+            nav: true
+        },
+        1000:{
+            items:1,
+            dots:false,
+            nav:true
+        }
+    }
+});
 
 //SISTEMA DE DROPDOWNS I9MEPRESS
 
@@ -462,17 +541,17 @@ $close_on_scroll.forEach(function(droptitle){
 });
 
 // APAGAR DROPDOWN MEDIANTE CLIQUE FORA DO BALÃO
-$("body").click(function(event){
-    if (event.target.hasAttribute("click")) {
-        var click = event.target.getAttribute("click")
-    }else{
-        var click = "false";
-    }
-    console.log(click);
-    if(click != "true"){
-        removeAllActives();
-    }
-});
+// $("body").click(function(event){
+//     console.log(event.target);
+//     if (event.target.hasAttribute("click")) {
+//         var click = event.target.getAttribute("click")
+//     }else{
+//         var click = "false";
+//     }
+//     if(click != "true"){
+//         removeAllActives();
+//     }
+// });
 
 // FIM DE DROPDOWNS I9MEPRESS
 
@@ -519,6 +598,43 @@ $(".BlackMask").click(function(){
 // ============
 //  FIM DO SISTEMA DE LIGHTBOX
 //=============
+
+
+//DETECTA SE O INPUT FOI PREENCHIDO
+
+var form_input_array = Array.from(document.getElementsByClassName("Form-input"));
+
+form_input_array.forEach(function(element){
+
+    element.oninput = function () {
+
+        if (element.value != "") {
+
+            element.classList.add("Form-input--written");
+
+        }else {
+
+            element.classList.remove("Form-input--written");
+
+        }   
+    }
+});
+
+//REMOVE SPAN DO CONTACT FORM
+var span = $(".wpcf7-form-control-wrap");
+
+span.each(function(){
+    
+    var span = $(this);
+    var input = $(this).children();
+    var form_row = $(this).parent();
+
+    form_row.append(span);
+    form_row.prepend(input);
+});
+
+//STELLAR JS
+$.stellar();
 
 
 // /*=========================================================================================
@@ -569,9 +685,7 @@ function LightboxCall(content, utm_source, campaign_id, source, source_url, sour
       var loading = true;
       var $window = $(window);
       var $content = $('.Lightbox-window-content');
-      console.log("Até aqui funciona");
       var assets_url = assets.url_assets;
-      console.log(assets_url); 
   
       // funcção que busca os posts
       var load_posts = function() {
@@ -626,6 +740,3 @@ function KeyUpEsc(evt) {
 }
 
 jQuery(document).on( "keyup", KeyUpEsc );
-
-// Mais formas de Fechar o LightBox
-
