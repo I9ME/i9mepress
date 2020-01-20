@@ -162,88 +162,68 @@ $(window).scroll(function(){
 });
 
 // =====================================
-// .whenAppear / u-triggerAppear
+// .u-triggerAppear
 // ativa gatilhos js conforme aparecem no scroll
 // =====================================
- 
-    /* Every time the window is scrolled ... */
-    $(window).scroll( function(){
+// Usage -> [seletor, animation_delay, pullback]
+// seletor: Seletor JQuery
+// animation_delay: Delay de aparição da animação, se 0, aparece quando o conteúdo está no topo da tela.
+// pullback: se "verdadeiro", A animação vai e volta mediante scroll.
 
-        var whenAppear_sections = [$("#secao-eventos")];
+var triggerAppear_sections = [
+    $("#secao-quem-somos"),
+    $("#secao-quem-somos-1"),
+    $("#secao-quem-somos-2"),
+    $("#secao-quem-somos-3"),
+    $("#caminho-comeco"),
+    $("#caminho-final"),
+    $("#secao-como-funciona"),
+    [$("#secao-como-funciona-1"), 0, true],
+    $("#secao-compre-2hugs"),
+    $("#secao-compre-2hugs-1"),
+    [$("#secao-compre-2hugs-2"), 600, false],
+    $("#secao-formulario"),
+    $("#secao-formulario-1")
+];
 
-        whenAppear_sections.forEach( function (objectDOM) {
+triggerAppear_sections.forEach( function (arrayDOM) {
 
-            /* Check the location of each desired element */
-            objectDOM.each( function(i){
-                
-                var bottom_of_object = $(this).offset().top;
-                var bottom_of_window = $(window).scrollTop() + 100;
+    if ($.type(arrayDOM) != "array") {
+        var $arrayDOM = arrayDOM,
+        $anime_delay = 300,
+        // Caso "true" A classe ".u-triggerAppear" desaparece quando o scroll subir.
+        trigger_pullback = false;
+    }else{
+        var $arrayDOM = arrayDOM[0],
+        $anime_delay = arrayDOM[1],
+        // Caso "true" A classe ".u-triggerAppear" desaparece quando o scroll subir.
+        trigger_pullback = arrayDOM[2];
+
+    }
+
+    /* Check the location of each desired element */
+    $arrayDOM.each( function(i){
+        var bottom_of_object = $(this).offset().top;
+        var bottom_of_window = $(window).scrollTop() + $anime_delay;
+
         
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
                 
-                    /* If the object is completely visible in the window, fade it it */
-                    if( bottom_of_window > bottom_of_object ){
-                        
-                        //$(this).animate({'opacity':'1'},500);
-                        $('body').addClass('u-whenAppear');
-                        
-
-
-                    } else {
-
-                        $('body').removeClass('u-whenAppear');
-                    
-                    } 
-
-            
+                //$(this).animate({'opacity':'1'},500);
+                $(this).addClass('u-triggerAppear');
                 
-                
-            });
-
-        } );
-
-        var triggerAppear_sections = [
-            $("#secao-intro"), 
-            $("#secao-eventos-sociais"), 
-            $("#secao-eventos-corporativos"), 
-            $("#secao-vignoli-vai-ate-voce"),
-            $("#secao-galeria"),
-            $("#secao-depoimentos"),
-            $("#secao-premios"),
-            $("#secao-lojas"),
-            $("#secao-contato")
-        ];
-
-        triggerAppear_sections.forEach( function (objectDOM) {
-
-            /* Check the location of each desired element */
-            objectDOM.each( function(i){
-                
-                var bottom_of_object = $(this).offset().top;
-                var bottom_of_window = $(window).scrollTop() + 300;
-        
-                
-                    /* If the object is completely visible in the window, fade it it */
-                    if( bottom_of_window > bottom_of_object ){
-                        
-                        //$(this).animate({'opacity':'1'},500);
-                        $(this).addClass('u-triggerAppear');
-                        
 
 
-                    } else {
+            } else if (trigger_pullback) {
+                $(this).removeClass('u-triggerAppear');                    
+            } 
 
-                        $(this).removeClass('u-triggerAppear');
-                    
-                    } 
-
-            
-                
-                
-            });
-
-        } ); 
-    
     });
+
+} ); 
+
+});
 
 
 //ScrollDown
