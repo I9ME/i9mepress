@@ -221,9 +221,7 @@ triggerAppear_sections.forEach( function (arrayDOM) {
 
     });
 
-} ); 
-
-});
+} );
 
 
 //ScrollDown
