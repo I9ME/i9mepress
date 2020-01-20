@@ -23,6 +23,11 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-watch": "^5.0.1",
-    "gulp.spritesmith": "^6.10.1"
+    "gulp.spritesmith": "^6.11.0"
+  },
+  "dependencies": {
+    "handlebars": "^4.7.2",
+    "lodash.template": "^4.5.0",
+    "static-eval": "^2.0.3"
   }
 }
