@@ -1,5 +1,25 @@
 .Site-header{
     height: $header_height_m;
+    &-branding{
+        width: 85%;
+        &-content{
+            .Branding{
+                font-size: 25px;
+                letter-spacing: 3px;
+                color: $color_0;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                font-family: "Rajdhani";
+                text-transform: uppercase;
+            }
+        }
+    }
+    @media screen and (min-width: $break-sm){
+        &-branding{
+            width: 45%;
+        }
+    }
     @media screen and (min-width: $break-md){
         height: $header_height;
     }

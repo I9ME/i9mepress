@@ -1341,6 +1341,27 @@ strong {
   height: 70px;
 }
 
+.Site-header-branding {
+  width: 85%;
+}
+
+.Site-header-branding-content .Branding {
+  font-size: 25px;
+  letter-spacing: 3px;
+  color: #FFFFFF;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: "Rajdhani";
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  .Site-header-branding {
+    width: 45%;
+  }
+}
+
 @media screen and (min-width: 960px) {
   .Site-header {
     height: 87.5px;
@@ -1982,12 +2003,14 @@ strong {
   overflow: hidden;
   width: 100% !important;
   display: none;
-  top: 116px;
+  top: 70px;
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1115px) {
   .u-setMainMenu {
     top: initial;
+    position: relative;
+    display: flex;
   }
 }
 
@@ -3351,6 +3374,30 @@ th.u-isShown {
 
 .Navigation--menu--main .NavigationLink {
   font-size: 20px;
+  font-family: "Rajdhani";
+}
+
+@media screen and (min-width: 960px) {
+  .Navigation--menu--main {
+    background: transparent;
+    padding: 0 !important;
+  }
+  .Navigation--menu--main .Navigation-items {
+    margin-top: 0 !important;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .Navigation--menu--main .Navigation-items-item {
+    margin-right: 20px;
+    padding-bottom: 0 !important;
+  }
+  .Navigation--menu--main .Navigation-items-item:last-child {
+    margin-right: 0;
+  }
+  .Navigation--menu--main .NavigationLink {
+    color: #FFFFFF;
+  }
 }
 
 /* @custom-media --lg-viewport (min-width: 960px);

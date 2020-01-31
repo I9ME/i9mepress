@@ -28,11 +28,10 @@ get_header(); ?>
 		}
 
 		.welcome-box{
-			width: 500px;
+			width: 100%;
 			padding: 30px;
 			
 			background: white;
-			
 		}
 
 		.welcome-title{
@@ -71,17 +70,30 @@ get_header(); ?>
 			width: 100%;
 		}
 
+		@media screen and (min-width: 768px){
+			.welcome-box{
+				width: 500px;
+			}
+		}
+		@media screen and (min-width: 960px){
+			body{
+				height: 1300px;
+			}
+		}
+
 	</style>
-	<div class="welcome-box u-alignCenterBox u-marginTop u-alignCenter u-displayFlex u-flexAlignItemsCenter u-flexDirectionColumn u-maxSize--container u-borderRadius10 u-boxShadow animate-this">
-		<div class="rocket-content">
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/space-ship.png" class="rocket" id="rocket" alt="Astronauta">
+	<div class="u-maxSize--container u-alignCenterBox u-paddingVertical">
+		<div class="welcome-box u-alignCenterBox u-marginTop--inter u-alignCenter u-displayFlex u-flexAlignItemsCenter u-flexDirectionColumn u-borderRadius10 u-boxShadow animate-this">
+			<div class="rocket-content">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/space-ship.png" class="rocket" id="rocket" alt="Astronauta">
+			</div>
+			<div id="greetings">
+				<h1 class="welcome-title u-marginTop--inter">Bem-vindo ao <strong>I9MEPRESS</strong>!</h1>
+				<p class="welcome-resume">Próxima parada: <?=get_bloginfo("name")?>.</p>
+			</div>
+			<a href="https://github.com/I9ME/i9mepress" target="_blank" class="Button Button--greetings Button--border is-animating Button--mediumSize u-marginTop--inter">Documentação</a>
+			
 		</div>
-		<div id="greetings">
-			<h1 class="welcome-title u-marginTop--inter">Bem-vindo ao <strong>I9MEPRESS</strong>!</h1>
-			<p class="welcome-resume">O ponto de partida para sua solução digital.</p>
-		</div>
-		<a href="https://github.com/I9ME/i9mepress" target="_blank" class="Button Button--greetings Button--border is-animating Button--mediumSize u-marginTop--inter">Documentação</a>
-		
 	</div>
 	<script>
 

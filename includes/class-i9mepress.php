@@ -3,7 +3,7 @@
 // CONTROLA A ESTRUTURA DO SITE POR COMPLETO
 class i9mepress_construct {
 	
-	public $has_header = false;
+	public $has_header = true;
 
 	public $has_footer = true;
 

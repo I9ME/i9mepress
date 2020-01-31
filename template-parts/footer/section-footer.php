@@ -1,6 +1,6 @@
 <?php global $i9mepress; ?>
 <div class="Site-footer-content Site-footer-content--secondary">
-    <div class="Section-content u-maxSize--container u-alignCenterBox u-displayFlex u-flexDirectionColumn u-flexJustifyContentSpaceBetween u-paddingHorizontal--inter u-paddingVertical u-alignCenter u-flexAlignItemsCenter">
+    <div class="Section-content u-maxSize--container u-alignCenterBox u-displayFlex u-flexDirectionColumn u-flexJustifyContentSpaceBetween u-paddingHorizontal--inter--half u-paddingVertical u-alignCenter u-flexAlignItemsCenter">
 
         <span class="Copyrights u-paddingBottom--inter">© 2019 I9ME Web & Design. Todos os direitos reservados.</span>
 

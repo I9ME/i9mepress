@@ -181,10 +181,12 @@ $varWeight: 3px;
 	width: 100% !important;
 	display: none;
 
-	top: $header_height_m + 46px;
+	top: $header_height_m;
 	
-	@media screen and (min-width: $break-md){
+	@media screen and (min-width: 1115px){
 		top: initial;
+		position: relative;
+		display: flex;
 	}
 }
 
