@@ -170,58 +170,62 @@ $(window).scroll(function(){
 // animation_delay: Delay de aparição da animação, se 0, aparece quando o conteúdo está no topo da tela.
 // pullback: se "verdadeiro", A animação vai e volta mediante scroll.
 
-var triggerAppear_sections = [
-    $("#secao-quem-somos"),
-    $("#secao-quem-somos-1"),
-    $("#secao-quem-somos-2"),
-    $("#secao-quem-somos-3"),
-    $("#caminho-comeco"),
-    $("#caminho-final"),
-    $("#secao-como-funciona"),
-    [$("#secao-como-funciona-1"), 0, true],
-    $("#secao-compre-2hugs"),
-    $("#secao-compre-2hugs-1"),
-    [$("#secao-compre-2hugs-2"), 600, false],
-    $("#secao-formulario"),
-    $("#secao-formulario-1")
-];
+/* Every time the window is scrolled ... */
+$(window).scroll( function(){
 
-triggerAppear_sections.forEach( function (arrayDOM) {
+    var triggerAppear_sections = [
+        $("#secao-intro"), 
+        [$("#secao-eventos-sociais"), 300, false, true],
+        $("#secao-galeria"),
+        $("#secao-depoimentos"),
+        $("#secao-premios"),
+        $("#secao-lojas"),
+        $("#secao-contato")
+    ];
 
-    if ($.type(arrayDOM) != "array") {
-        var $arrayDOM = arrayDOM,
-        $anime_delay = 300,
-        // Caso "true" A classe ".u-triggerAppear" desaparece quando o scroll subir.
-        trigger_pullback = false;
-    }else{
-        var $arrayDOM = arrayDOM[0],
-        $anime_delay = arrayDOM[1],
-        // Caso "true" A classe ".u-triggerAppear" desaparece quando o scroll subir.
-        trigger_pullback = arrayDOM[2];
+    triggerAppear_sections.forEach( function (arrayDOM) {
 
-    }
+        if ($.type(arrayDOM) != "array") {
+            var $arrayDOM = arrayDOM,
+            $anime_delay = 300,
+            // Caso "true" A classe ".u-triggerAppear" desaparece quando o scroll subir.
+            trigger_pullback = false,
+            $header_trigger = false;
+        }else{
+            var $arrayDOM = arrayDOM[0],
+            $anime_delay = arrayDOM[1],
+            // Caso "true" A classe ".u-triggerAppear" desaparece quando o scroll subir.
+            trigger_pullback = arrayDOM[2],
+            $header_trigger = arrayDOM[3];
 
-    /* Check the location of each desired element */
-    $arrayDOM.each( function(i){
-        var bottom_of_object = $(this).offset().top;
-        var bottom_of_window = $(window).scrollTop() + $anime_delay;
+        }
 
-        
-            /* If the object is completely visible in the window, fade it it */
-            if( bottom_of_window > bottom_of_object ){
-                
-                //$(this).animate({'opacity':'1'},500);
-                $(this).addClass('u-triggerAppear');
-                
+        /* Check the location of each desired element */
+        $arrayDOM.each( function(i){
+            var bottom_of_object = $(this).offset().top;
+            var bottom_of_window = $(window).scrollTop() + $anime_delay;
 
+            
+                /* If the object is completely visible in the window, fade it it */
+                if( bottom_of_window > bottom_of_object ){
+                    
+                    //$(this).animate({'opacity':'1'},500);
+                    $(this).addClass('u-triggerAppear');
+                    if ($header_trigger) {
+                        $("body").addClass("u-headerTrigger");
+                    }
 
-            } else if (trigger_pullback) {
-                $(this).removeClass('u-triggerAppear');                    
-            } 
+                } else if (trigger_pullback) {
+                    $(this).removeClass('u-triggerAppear');
+                } else if ($header_trigger) {
+                    $("body").removeClass("u-headerTrigger");
+                }
 
-    });
+        });
 
-} );
+    } );
+
+});
 
 
 //ScrollDown
