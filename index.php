@@ -69,6 +69,26 @@ get_header(); ?>
 			position: absolute;
 			width: 100%;
 		}
+		
+		.contributors-list{
+			padding-bottom: 8px;
+		}
+		.contributors-list-item-image{
+			width: 40px;
+			height: 40px;
+			border-radius: 40px;
+			opacity: 0.6;
+			transition: all .3s;
+		}
+		.contributors-list-item-image:hover{
+			opacity: 1;
+		}
+		.contributors-title{
+			color: #999;
+			letter-spacing: 1px;
+			font-weight: lighter;
+			font-size: 12px;
+		}
 
 		@media screen and (min-width: 768px){
 			.welcome-box{
@@ -87,11 +107,31 @@ get_header(); ?>
 			<div class="rocket-content">
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/space-ship.png" class="rocket" id="rocket" alt="Astronauta">
 			</div>
-			<div id="greetings">
+			<div id="greetings" class="u-paddingBottom--inter--half">
 				<h1 class="welcome-title u-marginTop--inter">Bem-vindo ao <strong>I9MEPRESS</strong>!</h1>
 				<p class="welcome-resume">Próxima parada: <?=get_bloginfo("name")?>.</p>
 			</div>
-			<a href="https://github.com/I9ME/i9mepress" target="_blank" class="Button Button--greetings Button--border is-animating Button--mediumSize u-marginTop--inter">Documentação</a>
+			<div class="contributors u-paddingBottom--inter--half u-size10of24">
+				<ul class="contributors-list u-displayFlex u-flexJustifyContentSpaceBetween">
+					<li class="contributors-list-item">
+						<a href="https://github.com/diogoi9me" target="_blank" class="contributors-link">
+							<img class="contributors-list-item-image" title="@diogoi9me" src="<?=get_template_directory_uri()?>/assets/images/diogo.png" alt="Diogo Soares">
+						</a>
+					</li>
+					<li class="contributors-list-item">
+						<a href="https://github.com/SamuraiPetrus" class="contributors-link" target="_blank">
+							<img class="contributors-list-item-image" title="@SamuraiPetrus" src="<?=get_template_directory_uri()?>/assets/images/petrus.jpeg" alt="Petrus Nogueira">
+						</a>
+					</li>
+					<li class="contributors-list-item">
+						<a href="https://github.com/PauloArthur" title="@PauloArthur" target="_blank" class="contributors-link">
+							<img class="contributors-list-item-image" src="<?=get_template_directory_uri()?>/assets/images/paulo.jpeg" alt="Paulo Arhtur Costa Mendes">
+						</a>
+					</li>
+				</ul>
+				<h2 class="contributors-title">Contribuidores</h2>
+			</div>
+			<a href="https://github.com/I9ME/i9mepress" target="_blank" class="Button Button--greetings Button--border is-animating Button--mediumSize">Documentação</a>
 			
 		</div>
 	</div>
