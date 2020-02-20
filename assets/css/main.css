@@ -16,7 +16,7 @@ Escrita de CSS Baseada em SUIT CSS - https://github.com/suitcss/suit
  */
 :root {
   color: #D4D4D4;
-  font-family: "Nunito", sans-serif;
+  font-family: "Nunito";
   font-size: 15px;
   font-weight: normal;
 }
@@ -24,8 +24,6 @@ Escrita de CSS Baseada em SUIT CSS - https://github.com/suitcss/suit
 html {
   box-sizing: border-box;
   /* 1 */
-  font-family: sans-serif;
-  /* 2 */
 }
 
 body {
@@ -134,7 +132,7 @@ a {
 }
 
 strong {
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 /**
@@ -239,13 +237,13 @@ strong {
 }
 
 @media screen and (min-width: 960px) {
-  .Section-content {
+  .Section-grid {
     padding-left: 0px !important;
     padding-right: 0px !important;
   }
 }
 
-.Section-content-subtitle {
+.Section-grid-subtitle {
   font-size: 20px;
   color: #000000;
 }
@@ -1140,101 +1138,6 @@ strong {
 .u-setCustomScrollBar--style2 {
   /* Track */
   /* Handle */
-}
-
-.Button {
-  font-weight: bold;
-  font-size: 16px;
-  letter-spacing: 2px;
-}
-
-.Button--border {
-  border-width: 2px;
-  border-style: solid;
-}
-
-.Button--uppercase {
-  text-transform: uppercase;
-}
-
-.Button--largeSize {
-  padding: 15px 30px;
-}
-
-.Button--largeSize.u-hasIcon {
-  padding-left: 37px !important;
-}
-
-.Button--largeSize .u-icon {
-  font-size: 20px;
-  line-height: 20px;
-}
-
-.Button--mediumSize {
-  padding: 10px 20px;
-}
-
-.Button--mediumSize.u-hasIcon {
-  padding-left: 27px !important;
-}
-
-.Button--mediumSize .u-icon {
-  font-size: 20px;
-  line-height: 20px;
-}
-
-.Button--smallSize {
-  padding: 5px 10px;
-  font-size: 14px;
-}
-
-.Button--smallSize.u-hasIcon {
-  padding-left: 17px !important;
-}
-
-.Button--smallSize .u-icon {
-  font-size: 20px;
-  line-height: 20px;
-}
-
-.Button--style1 {
-  background: #47c2ea;
-  border: 2px solid #47c2ea;
-}
-
-.Button--style1:hover {
-  background: #000000;
-  color: #47c2ea;
-}
-
-.Button--style2 {
-  color: #000000;
-}
-
-.Button--style2:hover {
-  background: #000000;
-  border: 2px solid #000000;
-}
-
-.Button--style3 {
-  color: #000000;
-  letter-spacing: 0 !important;
-}
-
-.Button--style3:hover {
-  color: #47c2ea;
-  background: #000000;
-}
-
-.Button--greetings {
-  background: #3F9A3D;
-  color: #FFFFFF;
-  border-color: #3F9A3D;
-}
-
-.Button--greetings:hover {
-  background: transparent;
-  color: #3F9A3D;
 }
 
 .u-positionAbsolute {
@@ -2261,23 +2164,56 @@ Padding Horizontal
 }
 
 @font-face {
-  font-family: 'Cambria';
-  src: url("../../assets/fonts/Cambria.eot");
-  src: url("../../assets/fonts/Cambria.woff") format("woff"), url("../../assets/fonts/Cambria.ttf") format("truetype"), url("../../assets/fonts/Cambria.svg#Cambria") format("svg"), url("../../assets/fonts/Cambria.eot?#iefix") format("embedded-opentype");
+  font-family: 'Nunito';
+  src: url("../fonts/Nunito/Nunito-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Cambria';
-  src: url("http://pizzavignoli.com.br/wp-content/uploads/2016/06/Cambria.eot");
-  src: url("http://pizzavignoli.com.br/wp-content/uploads/2016/06/Cambria.woff") format("woff"), url("http://pizzavignoli.com.br/wp-content/uploads/2016/06/Cambria.ttf") format("truetype"), url("http://pizzavignoli.com.br/wp-content/uploads/2016/06/Cambria.svg#Cambria") format("svg"), url("http://pizzavignoli.com.br/wp-content/uploads/2016/06/Cambria.eot?#iefix") format("embedded-opentype");
+  font-family: 'Nunito';
+  src: url("../fonts/Nunito/Nunito-Italic.ttf") format("truetype");
   font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url("../fonts/Nunito/Nunito-Medium.ttf") format("truetype");
+  font-weight: 500;
   font-style: normal;
 }
 
-.u-CallFontCambria {
-  font-family: "Cambria";
+@font-face {
+  font-family: 'Nunito';
+  src: url("../fonts/Nunito/Nunito-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url("../fonts/Nunito/Nunito-SemiBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url("../fonts/Nunito/Nunito-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url("../fonts/Nunito/Nunito-Bold.ttf") format("truetype");
+  font-weight: bolder;
+  font-style: normal;
+}
+
+.u-CallFontNunito {
+  font-family: "Nunito";
 }
 
 /**
@@ -2446,6 +2382,101 @@ th.u-isShown {
   display: inline-block;
   width: 1em;
   height: 1em;
+}
+
+.Button {
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.Button--border {
+  border-width: 2px;
+  border-style: solid;
+}
+
+.Button--uppercase {
+  text-transform: uppercase;
+}
+
+.Button--largeSize {
+  padding: 15px 30px;
+}
+
+.Button--largeSize.u-hasIcon {
+  padding-left: 37px !important;
+}
+
+.Button--largeSize .u-icon {
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.Button--mediumSize {
+  padding: 10px 20px;
+}
+
+.Button--mediumSize.u-hasIcon {
+  padding-left: 27px !important;
+}
+
+.Button--mediumSize .u-icon {
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.Button--smallSize {
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.Button--smallSize.u-hasIcon {
+  padding-left: 17px !important;
+}
+
+.Button--smallSize .u-icon {
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.Button--style1 {
+  background: #47c2ea;
+  border: 2px solid #47c2ea;
+}
+
+.Button--style1:hover {
+  background: #000000;
+  color: #47c2ea;
+}
+
+.Button--style2 {
+  color: #000000;
+}
+
+.Button--style2:hover {
+  background: #000000;
+  border: 2px solid #000000;
+}
+
+.Button--style3 {
+  color: #000000;
+  letter-spacing: 0 !important;
+}
+
+.Button--style3:hover {
+  color: #47c2ea;
+  background: #000000;
+}
+
+.Button--greetings {
+  background: #3F9A3D;
+  color: #FFFFFF;
+  border-color: #3F9A3D;
+}
+
+.Button--greetings:hover {
+  background: transparent;
+  color: #3F9A3D;
 }
 
 .e-Toglle {
@@ -4680,7 +4711,7 @@ select {
   padding: 0 5px;
   min-height: 50px;
   font-size: 15px;
-  font-family: "Nunito", sans-serif;
+  font-family: "Nunito";
   outline: none !important;
 }
 
@@ -4688,11 +4719,11 @@ input[type="submit"] {
   cursor: pointer;
   font-size: 15px;
   font-weight: bold;
-  font-family: "Nunito", sans-serif;
+  font-family: "Nunito";
 }
 
 .Form {
-  font-family: "Nunito", sans-serif;
+  font-family: "Nunito";
 }
 
 .Form-border--0 {

@@ -29,28 +29,50 @@
 
 
 @font-face {
-	font-family: 'Cambria';
-	src: url('../../assets/fonts/Cambria.eot');
-	src: url('../../assets/fonts/Cambria.woff') format('woff'),
-		url('../../assets/fonts/Cambria.ttf') format('truetype'),
-		url('../../assets/fonts/Cambria.svg#Cambria') format('svg'), 
-		url('../../assets/fonts/Cambria.eot?#iefix') format('embedded-opentype');
+	font-family: 'Nunito';
+	src: url('../fonts/Nunito/Nunito-Regular.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Cambria';
-	src: url('http://pizzavignoli.com.br/wp-content/uploads/2016/06/Cambria.eot');
-	src: url('http://pizzavignoli.com.br/wp-content/uploads/2016/06/Cambria.woff') format('woff'),
-		url('http://pizzavignoli.com.br/wp-content/uploads/2016/06/Cambria.ttf') format('truetype'),
-		url('http://pizzavignoli.com.br/wp-content/uploads/2016/06/Cambria.svg#Cambria') format('svg'), 
-		url('http://pizzavignoli.com.br/wp-content/uploads/2016/06/Cambria.eot?#iefix') format('embedded-opentype');
+	}
+	@font-face {
+	font-family: 'Nunito';
+	src: url('../fonts/Nunito/Nunito-Italic.ttf') format('truetype');
 	font-weight: normal;
+	font-style: italic;
+	}
+	
+	@font-face {
+	font-family: 'Nunito';
+	src: url('../fonts/Nunito/Nunito-Medium.ttf') format('truetype');
+	font-weight: 500;
 	font-style: normal;
-}
+	}
+	@font-face {
+	font-family: 'Nunito';
+	src: url('../fonts/Nunito/Nunito-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+	}
+	@font-face {
+	font-family: 'Nunito';
+	src: url('../fonts/Nunito/Nunito-SemiBold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+	}
+	@font-face {
+	font-family: 'Nunito';
+	src: url('../fonts/Nunito/Nunito-BoldItalic.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+	}
+	@font-face {
+	font-family: 'Nunito';
+	src: url('../fonts/Nunito/Nunito-Bold.ttf') format('truetype');
+	font-weight: bolder;
+	font-style: normal;
+	}
 
-$fonte: "Cambria";
+$fonte: "Nunito";
 
 .u-CallFont#{$fonte}{
 	font-family: $fonte;

@@ -83,7 +83,7 @@ function skeleton_scripts() {
 	
 	//JQUERY SCRIPTS
 	wp_enqueue_script('jquery-wordpress', get_template_directory_uri() . "/assets/js/jquery-3.2.1.min.js");
-	wp_enqueue_script( 'jquery-ui', get_template_directory_uri() . '/assets/js/jquery-ui.min.js', array(), $skeleton_version, true );
+	// wp_enqueue_script( 'jquery-ui', get_template_directory_uri() . '/assets/js/jquery-ui.min.js', array(), $skeleton_version, true );
 	wp_enqueue_script( 'migrate', get_template_directory_uri() . '/assets/js/jquery-migrate-3.0.0.min.js');
 
 	//OWL CAROUSEL SCRIPTS AND STYLES
