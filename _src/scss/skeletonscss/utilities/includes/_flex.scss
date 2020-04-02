@@ -83,70 +83,70 @@
 .u-flexSwitchReverse--mobile.u-flexDirectionColumnReverseToRowReverse{
 	flex-direction: column-reverse;
 	@media screen and (min-width: $break-sm){
-		flex-direction: row-reverse !important;
+		flex-direction: row-reverse;
 	}
 	&--md{
 		@media screen and (min-width: $break-md){
-			flex-direction: row-reverse !important;
+			flex-direction: row-reverse;
 		}
 	}
 }
 
 .u-flexDirectionColumnReverse.u-flexSwitchRowReverse{
 	@media screen and (min-width: $break-sm){
-		flex-direction: row-reverse !important;
+		flex-direction: row-reverse;
 	}
 	&--md{
 		@media screen and (min-width: $break-md){
-			flex-direction: row-reverse !important;
+			flex-direction: row-reverse;
 		}
 	}
 }
 
 .u-flexDirectionColumnReverse.u-flexSwitchRow{
 	@media screen and (min-width: $break-sm){
-		flex-direction: row !important;
+		flex-direction: row;
 	}
 	&--md{
 		@media screen and (min-width: $break-md){
-			flex-direction: row !important;
+			flex-direction: row;
 		}
 	}
 }
 .u-flexDirectionRow.u-flexSwitchColumn{
 	@media screen and (min-width: $break-sm){
-		flex-direction: column !important;
+		flex-direction: column;
 	}
 	&--md{
 		@media screen and (min-width: $break-md){
-			flex-direction: column !important;
+			flex-direction: column;
 		}
 	}
 }
 .u-flexDirectionColumn.u-flexSwitchRow{
 	@media screen and (min-width: $break-sm){
-		flex-direction: row !important;
+		flex-direction: row;
 	}
 	&--md{
 		@media screen and (min-width: $break-md){
-			flex-direction: row !important;
+			flex-direction: row;
 		}
 	}
 }
 .u-flexDirectionColumn.u-flexSwitchRow--reverse{
 	@media screen and (min-width: $break-sm){
-		flex-direction: row-reverse !important;
+		flex-direction: row-reverse;
 	}
 	&--md{
 		@media screen and (min-width: $break-md){
-			flex-direction: row-reverse !important;
+			flex-direction: row-reverse;
 		}
 	}
 }
 
 // .u-flexSwitchReverse--mobile.u-flexDirectionRowReverse{
 // 	@media screen and (max-width: $break-sm){
-// 		flex-direction: column-reverse !important;
+// 		flex-direction: column-reverse;
 // 	}	
 // }
 

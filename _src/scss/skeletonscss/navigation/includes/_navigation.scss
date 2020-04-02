@@ -16,7 +16,7 @@
 					 &-item{
 						 text-align: left;
 						 &:last-child{
-							 padding-bottom: 0 !important;
+							 padding-bottom: 0;
 						 }
 					 }
 				 }
@@ -27,16 +27,16 @@
 			}
 			@media screen and (min-width: $break-md) {
 				background: transparent;
-				padding: 0 !important;
+				padding: 0;
 				.Navigation{
 					&-items{
-						margin-top: 0 !important;
+						margin-top: 0;
 						flex-direction: row;
 						align-items: center;
 						justify-content: flex-end;
 						&-item{
 							margin-right: 20px;
-							padding-bottom: 0 !important;
+							padding-bottom: 0;
 							&:last-child{
 								margin-right: 0;
 							}

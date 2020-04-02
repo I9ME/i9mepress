@@ -17,12 +17,12 @@ get_header(); ?>
 	<?php
 		if ( function_exists('yoast_breadcrumb') ) {
 			yoast_breadcrumb('
-			<p class="Breadcrumbs u-displayFlex u-marginVertical u-maxSize--container u-alignCenterBox u-marginHorizontal--inter--half u-paddingHorizontal--inter--half" id="breadcrumbs">','</p>
+			<p class="Breadcrumbs u-displayFlex u-marginVertical Grid u-marginHorizontal--inter--half u-paddingHorizontal--inter--half" id="breadcrumbs">','</p>
 			');
 		}
 	?>
 
-	<div class="u-maxSize--container u-alignCenterBox u-paddingVertical--hzt u-flex u-flexDirectionRow u-flexSwitchReverse--mobile u-flex ">
+	<div class="Grid u-paddingVertical--hzt u-flex u-flexDirectionRow u-flexSwitchReverse--mobile u-flex ">
 		<main class="SiteMain-main u-size19of24">
 			<?php get_template_part('template-parts/blog/blog','loop');?>
 		</main>

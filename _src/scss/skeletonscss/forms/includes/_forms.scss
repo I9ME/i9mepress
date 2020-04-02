@@ -9,7 +9,7 @@ select{
 	min-height: $sizeColumns_px;
 	font-size: $font_size_text;
 	font-family: $fontFamily;
-	outline: none !important;
+	outline: none;
 }
 
 input[type="submit"]{
@@ -27,7 +27,7 @@ $mainSelector: '.Form';
 
 	&-border{
 		&--0{
-			border: 0px !important;
+			border: 0px;
 		}
 	}
 
@@ -99,8 +99,8 @@ $mainSelector: '.Form';
 		& #{$mainSelector}-input{
 			
 			&--textarea{
-				height: inherit !important;
-				text-indent: 0px !important;
+				height: inherit;
+				text-indent: 0px;
 				padding: $v_spacing / 1.5 14px;
 			}
 		}
@@ -275,7 +275,7 @@ $mainSelector: '.Form';
 				color: $color_1;
 
 				&#{$mainSelector}-input--searchSubmit{
-					border: none !important;
+					border: none;
 					position: absolute;
 					z-index: 20;
 					right: 0px;
@@ -284,7 +284,7 @@ $mainSelector: '.Form';
 			}
 		}
 		@media screen and (min-width: $break-sm){
-			margin: 0px 0 0 2.5% !important;
+			margin: 0px 0 0 2.5%;
 		}
 	}
 	&--rounded{
@@ -296,7 +296,7 @@ $mainSelector: '.Form';
 	&--intro-page{
 		& .Form-input{
 			&--textarea{
-				height: 100px !important;
+				height: 100px;
 			}
 		}
 		background: $color_1;
@@ -304,7 +304,7 @@ $mainSelector: '.Form';
 		@media screen and (min-width: $break-sm){
 			padding-top: $v_spacing;
 			padding-bottom: $v_spacing / 2;
-			margin-top: 0px !important;
+			margin-top: 0px;
 			margin-bottom: -420px;
 		}
 		& .wpcf7-response-output{
@@ -329,7 +329,7 @@ $mainSelector: '.Form';
 			&-line{
 				&--input{
 					@media screen and (min-width: $break-sm){
-						margin-top: $v_spacing / 4 !important;
+						margin-top: $v_spacing / 4;
 					}
 				}
 				@media screen and (min-width: $break-sm){
@@ -343,7 +343,7 @@ $mainSelector: '.Form';
 .Form{
 	&-input{
 		&--textarea{
-			padding-left: 15px !important;
+			padding-left: 15px;
 		}
 	}
 	&-row{

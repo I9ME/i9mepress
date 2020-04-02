@@ -29,7 +29,7 @@ get_template_part('template-parts/header/header','tags');
 	<?php if ($i9mepress->has_header) : ?>
 
 		<header id="masthead" class="Site-header u-sizeFull u-positionRelative is-animating u-zIndex20 u-paddingVertical">
-			<div class="u-maxSize--container u-alignCenterBox u-positionRelative u-displayFlex u-heightFull">
+			<div class="Grid u-positionRelative u-displayFlex u-heightFull">
 				
 				<?php get_template_part("template-parts/header/header", "branding"); ?>
 				<?php get_template_part("template-parts/header/header", "navigation"); ?>

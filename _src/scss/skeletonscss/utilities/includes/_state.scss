@@ -3,19 +3,19 @@
  */
 
 .u-isActionable {
-  cursor: pointer !important;
+  cursor: pointer;
 }
 
 .u-cursorPointer {
-  cursor: pointer !important;
+  cursor: pointer;
 }
 
 .u-isDisabled {
-  cursor: default !important;
+  cursor: default;
 }
 
 .u-isDraggable {
-  cursor: move !important;
+  cursor: move;
 }
 
 /**
@@ -23,8 +23,8 @@
  */
 
 .u-isHidden {
-  display: none !important;
-  visibility: hidden !important;
+  display: none;
+  visibility: hidden;
 }
 
 /**
@@ -32,22 +32,22 @@
  */
 
 .u-isShown {
-  display: block !important;
-  visibility: visible !important;
+  display: block;
+  visibility: visible;
 }
 
 table.u-isShown {
-  display: table !important;
+  display: table;
 }
 
 tr.u-isShown,
 tr.u-isShown {
-  display: table-row !important;
+  display: table-row;
 }
 
 td.u-isShown,
 th.u-isShown {
-  display: table-cell !important;
+  display: table-cell;
 }
 
 /**
@@ -55,13 +55,13 @@ th.u-isShown {
  */
 
 .u-isHiddenVisually {
-  position: absolute !important;
-  overflow: hidden !important;
-  width: 1px !important;
-  height: 1px !important;
-  padding: 0 !important;
-  border: 0 !important;
-  clip: rect(1px, 1px, 1px, 1px) !important;
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
 }
 
 /*
@@ -73,7 +73,7 @@ th.u-isShown {
 */
 
 // .u-isInvisible {
-//   visibility: hidden !important;
+//   visibility: hidden;
 //   width: 0px;
 //   height: 0px;
 //   overflow: hidden;
@@ -81,7 +81,7 @@ th.u-isShown {
 // }
 
 .u-isVisible {
-  visibility: visible !important;
+  visibility: visible;
 }
 
 .u-opacity10{

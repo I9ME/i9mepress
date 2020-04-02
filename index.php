@@ -102,8 +102,8 @@ get_header(); ?>
 		}
 
 	</style>
-	<div class="u-maxSize--container u-alignCenterBox u-paddingVertical">
-		<div class="welcome-box u-alignCenterBox u-marginTop--inter u-alignCenter u-displayFlex u-flexAlignItemsCenter u-flexDirectionColumn u-borderRadius10 u-boxShadow animate-this">
+	<div class="Grid u-paddingVertical">
+		<div class="welcome-box Grid u-marginTop--inter u-alignCenter u-displayFlex u-flexAlignItemsCenter u-flexDirectionColumn u-borderRadius10 u-boxShadow animate-this">
 			<div class="rocket-content">
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/space-ship.png" class="rocket" id="rocket" alt="Astronauta">
 			</div>

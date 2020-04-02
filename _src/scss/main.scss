@@ -39,14 +39,6 @@ Escrita de CSS Baseada em SUIT CSS - https://github.com/suitcss/suit
 
 @import './skeletonscss/utilities/index.scss';
 
-//==============================
-// Components
-//============================== 
-// @Import custom-components  | Button  | Flex Embed | Grid
-
-@import './skeletonscss/components/index.scss';
-
-
 
 //==============================
 // Navigation
@@ -118,6 +110,18 @@ Escrita de CSS Baseada em SUIT CSS - https://github.com/suitcss/suit
 
 @import './skeletonscss/plugins/index.scss';
 
+//==============================
+// Keyframes
+//==============================
+
+@import './skeletonscss/keyframes/index.scss';
+
+//==============================
+// Components
+//============================== 
+// @Import custom-components  | Button  | Flex Embed | Grid
+
+@import './skeletonscss/components/index.scss';
 
 	
 /*--------------------------------------------------------------

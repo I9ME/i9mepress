@@ -20,7 +20,7 @@
 			@media screen and (min-width: $break-sm){
 				margin: $v_spacing / 2 0px;
 			}
-			margin-bottom: 0px !important;
+			margin-bottom: 0px;
 		
 			flex-direction: row;
 		}
@@ -30,11 +30,11 @@
 			height: 20px;
 			border-radius: 50px;
 			margin: 0 5px;
-			background: none !important;
-			border: 2px solid $color_0 !important;
+			background: none;
+			border: 2px solid $color_0;
 		
 			&.active{
-				background: $color_0 !important;
+				background: $color_0;
 			}
 			@media screen and (min-width: $break-sm){
 				width: 22px;
@@ -78,11 +78,11 @@
 		}
 		.owl-dots{
 			.owl-dot{
-				background: none !important;
-				border: 2px solid $color_6 !important;
+				background: none;
+				border: 2px solid $color_6;
 
 				&.active{
-					background: $color_6 !important;
+					background: $color_6;
 				}
 			}
 		}
@@ -164,7 +164,7 @@
 			display: block;
 
 			& .Lightbox-window{
-				width: $sizeColumns * 15 !important;
+				width: $sizeColumns * 15;
 			 }
 		}
 
@@ -178,7 +178,7 @@
 			display: block;
 
 			& .Lightbox-window{
-				width: $sizeColumns * 15 !important;
+				width: $sizeColumns * 15;
 			 }
 		}
 
@@ -204,7 +204,7 @@
 	&.GalleryPhoto{
 		& .Lightbox{
 			&-window{
-				top: calc(50% + 19px) !important;
+				top: calc(50% + 19px);
 				&-content{
 					&:before{
 						position: absolute;
@@ -230,12 +230,12 @@
 		}
 
 		& .Lightbox-window{
-					width: 90% !important;
+					width: 90%;
 					@media screen and (min-width: $break-sm){
-						width: auto !important;
+						width: auto;
 					}
 					@media screen and (min-width: $break-md){
-						width: auto !important;
+						width: auto;
 					}
 					// opacity: 1;
 					// height: auto;
@@ -270,7 +270,7 @@
 // // OWL CAROUSEL CORRIGINDO SOMBRA CORTADA
 
 // .owl-stage-outer { 
-// 	overflow: visible !important;
+// 	overflow: visible;
 // }
 
 // .owl-item {

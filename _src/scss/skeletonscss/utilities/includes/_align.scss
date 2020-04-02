@@ -19,39 +19,36 @@
 .u-alignJustify{
 	text-align: justify;
 }
-.u-alignCenterBox{
-	margin-left: auto;
-	margin-right: auto;
-}
+
 .u-absoluteCenter{
 	position: absolute;
-	left: 50% !important;
-	transform: translateX(-50%) !important;
+	left: 50%;
+	transform: translateX(-50%);
 }
 .u-absoluteCenterMiddle{
 	position: absolute;
-	left: 50% !important;
-	top: 50% !important;
-	transform: translateX(-50%) translateY(-50%) !important;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
 }
 
 .u-absoluteRightMiddle{
 	position: absolute;
-	right: 0px !important;
-	top: 50% !important;
-	transform: translateY(-50%) !important;
+	right: 0px;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 .u-absoluteLeftMiddle{
 	position: absolute;
-	left: 0px !important;
-	top: 50% !important;
-	transform: translateY(-50%) !important;
+	left: 0px;
+	top: 50%;
+	transform: translateY(-50%);
 }
 .u-absoluteMiddle{
 	position: absolute;
-	top: 50% !important;
-	transform: translateY(-50%) !important;
+	top: 50%;
+	transform: translateY(-50%);
 }
 .u-absoluteTopLeft{
 	position: absolute;
@@ -66,21 +63,21 @@
 
 .u-absoluteTopCenter{
 	position: absolute;
-	left: 50% !important;
-	top: 0px !important;
-	transform: translateX(-50%) !important;
+	left: 50%;
+	top: 0px;
+	transform: translateX(-50%);
 }
 
 .u-absoluteTop{
 	position: absolute;
-	top: 0px !important;
+	top: 0px;
 }
 
 .u-absoluteBottomCenter{
 	position: absolute;
-	left: 50% !important;
-	bottom: 0px !important;
-	transform: translateX(-50%) !important;
+	left: 50%;
+	bottom: 0px;
+	transform: translateX(-50%);
 }
 
 .u-left0{
